@@ -1,0 +1,107 @@
+---
+import Layout from "../layouts/Layout.astro";
+const allTarifs = await Astro.glob(
+	`../content/tarifs/epilationlaser/femme/*.md`,
+);
+const nosTarifs = allTarifs.map((n) => ({
+	title: n.frontmatter.name,
+	image: n.frontmatter.image,
+	Content: n.Content,
+}));
+---
+
+<div class="relative mt-12 mb-12">
+	<div class="mySwiper">
+		<div class="swiper mySwiperThumbs">
+			<div class="swiper-wrapper">
+				{
+					nosTarifs.slice(0, 5).map(({ title, image }) => (
+						<div
+							class="swiper-slide"
+							style={`background-image:url("/thumbs/${image}")`}>
+							<h4>{title}</h4>
+							<div class="overlay" />
+						</div>
+					))
+				}
+			</div>
+		</div>
+		<div class="swiper-wrapper mt-8 mainswiper">
+			{
+				nosTarifs.slice(0, 5).map(({ title, Content }) => (
+					<div class="swiper-slide">
+						<Content />
+					</div>
+				))
+			}
+		</div>
+	</div>
+</div>
+
+<script>
+	import Swiper from "swiper/bundle";
+	import "swiper/css/bundle";
+
+	function initializeTarifsLaser() {
+		var swiperThumbs = new Swiper(".mySwiperThumbs", {
+			slidesPerView: 'auto',
+			freeMode: false, // Assurez-vous que le freeMode est false
+			watchSlidesProgress: true,
+			slideToClickedSlide: true,
+		});
+		var swiper = new Swiper(".mySwiper", {
+			slideActiveClass: "swiper-slide-active",
+			effect: "fade",
+			fadeEffect: {
+				crossFade: true,
+			},
+			spaceBetween: 10,
+			freeMode: false,
+			slidesPerView: 1,
+			watchSlidesProgress: false,
+			thumbs: {
+				swiper: swiperThumbs,
+			},
+		});
+	}
+	initializeTarifsLaser();
+	document.addEventListener("astro:page-load", initializeTarifsLaser);
+</script>
+
+<style lang="scss">
+	.swiper-fade .mySwiperThumbs .swiper-slide {
+		pointer-events: auto !important;
+		transition-property: opacity;
+		transition:300ms ease all;
+	}
+
+	.mySwiperThumbs {
+		.swiper-wrapper {
+			@apply mx-auto text-center flex flex-wrap justify-center gap-4 sm:gap-6;
+		}
+		.swiper-slide {
+			@apply cursor-pointer h-36 rounded-lg overflow-hidden  text-center text-white text-base flex flex-col justify-end items-center leading-6 pb-6 filter grayscale transition-all duration-300 ease-in-out bg-cover bg-center bg-no-repeat hover:grayscale-0 max-w-[200px];
+			h4 {
+				@apply text-[18px] z-20 relative;
+			}
+			&.swiper-slide-thumb-active {
+				@apply filter grayscale-0;
+			}
+			.overlay {
+				@apply bg-black bg-opacity-10 absolute top-0 left-0 right-0 bottom-0 z-10;
+			}
+		}
+		.swiper-slide-thumb-active {
+			@apply font-bold;
+		}
+	}
+
+	.mainswiper {@apply text-center;
+		.swiper-slide {
+			@apply text-left text-base bg-white h-0 mx-auto;
+			&.swiper-slide-active {
+				@apply h-auto  mx-auto;
+			}
+		}
+	}
+</style>

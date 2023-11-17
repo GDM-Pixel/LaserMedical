@@ -1,0 +1,282 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import HeroBox from "../components/HeroBox.astro";
+import Accordion from "../components/Accordion.astro";
+import TarifsEpilationLaser from "../components/TarifsEpilationLaser.astro";
+import TarifAvantage from "../components/TarifAvantage.astro";
+import { Image } from "astro:assets";
+import EsraImage from "../assets/img/esra-chami.png";
+import JulienImage from "../assets/img/julien-lefevre.png";
+import MagaliImage from "../assets/img/magali.png";
+import FionaImage from "../assets/img/fiona.png";
+import EmelyneImage from "../assets/img/emelyne.png";
+import SophieImage from "../assets/img/sophie.png";
+import CarteStDenis from "../assets/img/carte-saint-denis.png";
+import CarteStLeu from "../assets/img/carte-saint-leu.png";
+import Footer from "../components/Footer.astro";
+import GoogleMaps from "../components/GoogleMaps.astro";
+import HomeBlogSlider from "../components/HomeBlogSlider.astro";
+import EpilationLaser from "../assets/img/epilation-laser.png";
+import PeauMate from "../assets/img/peau-mate.png";
+import VideoLaser1 from "../assets/img/video-laser-1.png";
+import ResultatsLaser1 from "../assets/img/resultats-laser-1.png";
+//<Image src={HeroEpilationLaserImage} alt="Dr Esra Chami" />
+---
+
+<Layout title="Page des composants" description="Ceci est la meta description">
+	<div class="hero-element">
+		<div class="overlay"></div>
+		<Header />
+		<HeroBox />
+	</div>
+	<main>
+		<section class="container gauche-droite pt-24 pb-24">
+			<div class="lg:flex lg:flex-row gap-8 mb-24">
+				<div class="col lg:w-1/2 flex flex-col justify-center">
+					<h3 class="text-lg md:text-xl lg:text-xxl mb-6">
+						Principe de l'épilation laser
+					</h3>
+					<p class="text-base mb-3">
+						Le principe de fonctionnement des lasers repose sur l’émission d’une
+						lumière ayant pour cible la mélanine, pigment responsable de la
+						couleur noire des poils.
+					</p>
+					<p class="text-base">
+						La lumière du laser absorbée par la mélanine augmente la chaleur au
+						niveau du poil et le brûle jusqu’à sa racine (le bulbe). Lorsque le
+						follicule pileux et le bulbe sont détruits, il n’y a plus de
+						repousse possible: le poil est alors définitivement épilé.
+					</p>
+				</div>
+				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
+					<Image src={EpilationLaser} alt="Epilation Laser" class="w-full" />
+				</div>
+			</div>
+			<div class="lg:flex lg:flex-row-reverse gap-8 mb-6">
+				<div class="col lg:w-1/2 flex flex-col justify-center">
+					<h3 class="text-lg md:text-xl lg:text-xxl mb-6">
+						Pour les peaux mates
+					</h3>
+					<p class="text-base mb-3">
+						Le traitement des patients de phototype de peau élevé (peaux mates
+						et noires) requiert l’utilisation de lasers spécifiques comme le
+						Nd-Yag (longueur d’onde de 1064 nm). Ce type de laser permet une
+						absorption d’énergie suffisante pour détruire les poils tout en
+						préservant la peau.
+					</p>
+					<p class="text-base">
+						Nos centres sont équipés de plateformes laser à la pointe de la
+						technologie associants chacune un laser alexandrite et un laser Nd
+						Yag : le GentleMax Pro Plus de CANDELA®, le SYNCHRO REPLA:Y
+						EXCELLIUM de DEKA® et le laser THUNDER MT de chez QUANTA® .
+					</p>
+				</div>
+				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
+					<Image src={PeauMate} alt="Peau mate" class="w-full" />
+				</div>
+			</div>
+
+			<div class="mt-24 rounded-ss-lg rounded-se-lg overflow-hidden shadow-md">
+				<Accordion
+					items={[
+						{
+							title: "En savoir plus",
+							answer:
+								"<p>Un poil ne pousse pas de façon continue : il possède plusieurs cycles de vie, et c’est uniquement pendant une de ces phases que le <strong>traitement laser</strong> peut fonctionner.</p><p><strong>Le poil est réceptif</strong> au traitement seulement durant <strong>sa période de croissance phase anagène</strong>. Durant cette phase, la tige pilaire est profonde et en contact avec toutes les structures permanentes du poil. Après cette phase (phase catagène et télogène), le bulbe pileux régresse, se détache de la papille dermique et la synthèse de mélanine est stoppée.</p><p>Ces modifications physiologiques empêchent la destruction de l’ensemble des structures pilaires. Par conséquent, si les poils sont traités en dehors de la phase de croissance, ils repoussent après les séances d’épilation laser.</p><p>En fonction des zones,<strong> environ 20% des poils se trouvent en phase anagène</strong>, ce qui explique que plusieurs séances de laser soient nécessaires pour un traitement complet et définitif.</p>",
+						},
+					]}
+				/>
+			</div>
+		</section>
+
+		<section
+			class="bigtopo text-justify py-24 px-8 bg-grey-400 text-white bg-[url('/img/bg-zone-traitable-laser.jpg')]">
+			<h2 class="section-title dark text-center">
+				Zones traitables et indications
+			</h2>
+			<div class="max-w-3xl mx-auto">
+				<p class="mb-3 text-base">
+					Toutes les couleurs de peaux peuvent être traitées par l’épilation
+					définitive au laser. Cependant, seuls les patients ayant des poils
+					bruns peuvent en bénéficier. Les poils roux, blonds ou trop fins comme
+					les duvets ne sont pas accessibles au traitement laser car ils sont
+					pauvres en mélanine (pigment noir de la peau et des poils).
+				</p>
+				<p class="mb-3 text-base">
+					L’utilisation du laser Nd Yag avec une longueur d’onde adaptée permet
+					d’épiler les peaux noires avec des résultats équivalents à ceux
+					obtenus sur peaux blanches.
+				</p>
+				<h2 class="text-center mt-10 mb-6">Poil incarné</h2>
+				<p class="mb-3 text-base">
+					L’épilation définitive au laser est le seul traitement efficace pour
+					les patients sujets aux poils incarnés. Le poil incarné est un
+					follicule pileux repoussant sous la peau. Cette affection est
+					secondaire à l’épilation à la cire ou électrique et au rasage d’une
+					zone du corps avec des poils drus (maillot, jambes, barbe). Le poil
+					incarné peut être douloureux et se complique souvent de furoncles
+					(bouton blanc inflammatoire centré par un poil) laissant des tâches
+					foncées sur la peau.
+				</p>
+				<h2 class="text-center mt-10 mb-6">Hirsutisme</h2>
+				<p class="mb-6 text-base">
+					L’épilation définitive au laser a également une place importante dans
+					la prise en charge thérapeutique de l’hirustisme. Cet état
+					pathologique est défini par le développement d’une pilosité importante
+					dans les régions du corps où elle est normalement absente chez la
+					femme : visage , poitrine, ventre, dos, fesses. On différencie
+					l’hirsutisme de l’hypertrichose, définie comme le développement
+					excessif de la pilosité dans des zones qui sont normalement pourvues
+					chez la femme ( jambes, aisselles ..)
+				</p>
+			</div>
+		</section>
+
+		<section class="container gauche-droite pt-24 pb-24 px-8">
+			<h2 class="semi-section-title">Déroulement d’une séance</h2>
+			<div class="lg:flex lg:flex-row gap-8 mb-24">
+				<div class="col lg:w-1/2 flex flex-col justify-center">
+					<div class="rounded-ss-lg rounded-se-lg overflow-hidden shadow-md">
+						<Accordion
+							items={[
+								{
+									title: "Consultation initiale",
+									answer:
+										"<p>Une première consultation par un médecin est réalisée de façon systématique. Elle permet l’examen de votre peau, vérifier l’absence de contre indications et d’établir les paramètres qui seront ensuite utilisés pour un traitement optimal.</p>",
+									isopen: true,
+								},
+								{
+									title: "Avant votre séance d’épilation",
+									answer:
+										"<p>Une première consultation par un médecin est réalisée de façon systématique. Elle permet l’examen de votre peau, vérifier l’absence de contre indications et d’établir les paramètres qui seront ensuite utilisés pour un traitement optimal.</p>",
+								},
+								{
+									title: "La séance d’épilation définite au laser",
+									answer:
+										"<p>Une première consultation par un médecin est réalisée de façon systématique. Elle permet l’examen de votre peau, vérifier l’absence de contre indications et d’établir les paramètres qui seront ensuite utilisés pour un traitement optimal.</p>",
+								},
+								{
+									title: "Entre deux séances d’épilation laser",
+									answer:
+										"<p>Une première consultation par un médecin est réalisée de façon systématique. Elle permet l’examen de votre peau, vérifier l’absence de contre indications et d’établir les paramètres qui seront ensuite utilisés pour un traitement optimal.</p>",
+								},
+							]}
+							extraClass="clearaccordion"
+						/>
+					</div>
+				</div>
+				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
+					<Image
+						src={VideoLaser1}
+						alt="Video Laser"
+						class="rounded-lg w-full"
+					/>
+				</div>
+			</div>
+			<div class="lg:flex lg:flex-row-reverse gap-8 mb-6">
+				<div class="col lg:w-1/2 flex flex-col justify-center">
+					<h3 class="text-lg md:text-xl lg:text-xxl mb-6">
+						Résultats de l’épilation définitive au laser
+					</h3>
+					<p class="text-base mb-3">
+						Après chaque séance d’épilation définitive, vos poils se raréfient,
+						sont plus fins et plus petits.
+					</p>
+					<p class="text-base mb-3">
+						Les publications d’études médicales sur l’efficacité et les
+						résultats de l’épilation laser sont très nombreuses. Elles montrent
+						que dans la plupart des cas, <strong
+							>les 6 premières séances d’épilation laser permettent une
+							élimination définitive de 90 à 100% des poils</strong
+						>.
+					</p>
+					<p class="text-base mb-3">
+						Exceptionnellement, la réduction des poils peut être faible à modéré
+						et ceci sans explication connue.
+					</p>
+					<p class="text-base mb-3">
+						Afin de vous garantir un résultat optimal, <strong
+							>il est important de suivre les recommandations de votre médecin</strong
+						>.
+					</p>
+					<p class="text-base">
+						Celles- ci favoriseront le bon déroulement des séances d’épilation,
+						et amélioreront votre confort une fois le traitement terminé.
+					</p>
+				</div>
+				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
+					<Image
+						src={ResultatsLaser1}
+						alt="Résultats de l'épilation au laser"
+						class="rounded-lg w-full"
+					/>
+				</div>
+			</div>
+		</section>
+
+		<section
+			class="bigtopo text-justify px-8 py-24 bg-grey-400 text-white bg-[url('/img/bg-zone-traitable-laser.jpg')]">
+			<h2 class="section-title dark text-center">Questions / Réponses</h2>
+			<div class="max-w-3xl mx-auto">
+				<Accordion
+					items={[
+						{
+							title: "Est-ce que c’est douloureux ?",
+							answer:
+								"<p>Nos plate-formes laser de dernière génération sont équipées d’un <strong>système de refroidissement externe</strong> atténuant significativement la douleur lors de la séance.</p><p><strong>La douleur ressentie</strong> pendant une séance d’épilation laser est très variable en fonction des patients. Elle est souvent décrite comme un simple picotement ou la sensation d’un coup d’élastique sur la peau.</p><p>Si le patient ressent une douleur lors du traitement, le médecin pourra alors prescrire une <strong>crème anesthésiante</strong> à appliquer pendant une durée d’une à deux heures avant la séance (afin de rendre le traitement plus confortable).</p>",
+							isopen: true,
+						},
+						{
+							title:
+								"Combien de séances sont nécessaires et à quelle fréquence ?",
+							answer:
+								"<p>Un traitement d’<strong>épilation définitive </strong>au laser nécessite <strong>en général 4 à 8 séances par zone</strong>. Le délai entre les séances varie avec l’avancée du traitement. Il est d’environ 4 à 8 semaines entre la première et la seconde séance, de 2 mois entre la seconde et la troisième séance, et de 2 à 3 mois entre les séances ultérieures. La durée d’un traitement complet d’épilation définitive au laser est donc de 8 à 16 mois.</p><p><strong>Plusieurs facteurs rentrent en jeu dans le résultat du traitement</strong> d’épilation laser et donc dans le nombre de séances nécessaires afin d’atteindre l’objectif fixé :</p><p><strong>Pilosité de la zone à traiter</strong></p><p><strong>Couleur et diamètre du poil</strong> (meilleure cible si poil noir et épais).</p><p><strong>Zone traitée</strong> : il faut moins de séances pour les aisselles, le maillot, les jambes, et plus de séances pour le visage, les cuisses, le dos.</p><p><strong>L’expérience du médecin laseriste</strong> et la bonne connaissance des pratiques de laser épilatoire : protocole de traitement adapté à la peau et à la pilosité du patient.</p>",
+						},
+						{
+							title: "Quels sont les risques ?",
+							answer:
+								"<p><strong>Les effets indésirables sont exceptionnels</strong> et sont représentés principalement par les brûlures supérficielles. <strong>L’utilisation d’un laser adapté à votre couleur de peau</strong> et le respect des contres indications au traitement laser <strong>permettent de totalement les éviter.</strong></p><p>Les brûlures superficielles se traduisent par une rougeur et l’apparition de quelques petites croûtes qui évoluent avec une guérison complète en 2 à 3 semaines.</p>",
+						},
+						{
+							title: "Peut-on se raser entre les séances ?",
+							answer:
+								"<p>Oui, il est autorisé de se raser entre 2 séances d’épilation laser.</p>",
+						},
+						{
+							title: "Quelle différence entre laser et lumière pulsée ?",
+							answer:
+								"<p>L’épilation laser est un traitement sûr et efficace s’il est pratiqué par un médecin formé à ces appareils.</p><p>Pour les patients, il est souvent difficile de différencier les lasers des appareils de lumière pulsée (appelée également IPL ou lampe flash). Même si leur principe de fonctionnement est proche, <strong>l’efficacité des lampes flash (ou lumière pulsée) est non comparable.</strong></p><p>En effet, <strong>l’énergie délivrée par la lumière pulsée est largement inférieure à celle du laser</strong>, insuffisante pour détruire le poil. Avec la lumière pulsée, on parlera plutôt d’épilation « temporaire », car la plupart des poils traités repousseront dans les années suivant les séances. Elles peuvent également représenter un risque de brûlure plus important si elles ne sont pas manipulées par des mains expertes.</p><p>La réglementation encadrant l’utilisation de lasers médicaux ainsi que la lumière intense pulsée est relativement stricte. Il ressort sans ambiguïté des différents textes de loi l’interdiction d’utilisation d’un laser médical ainsi que de la lumière pulsée par un professionnel non-médecin. Seuls les médecins sont autorisés à pratiquer des épilations définitives et privilégient l’utilisation des lasers dont la puissance garantit de bien meilleurs résultats que la lumière pulsée.</p>",
+						},
+					]}
+				/>
+			</div>
+		</section>
+	</main>
+
+	<!-- FIN DE GAUCHE DROITE -->
+
+	<section class="tarifs pt-24 text-center pb-24 px-8">
+		<h2 class="section-title">Tarifs</h2>
+		<TarifsEpilationLaser />
+		<a href="/demander-un-rdv/" class="cta rounded brown">Prendre RDV</a>
+		<TarifAvantage />
+	</section>
+</Layout>
+
+<Footer />
+
+<style lang="scss">
+	
+	main {
+		margin: auto;
+	}
+	.hero-element {
+		background: url("/img/hero-epilation-laser-bck.webp") no-repeat center
+			center;
+		@apply relative bg-cover bg-center;
+	}
+	.overlay {
+		@apply absolute top-0 bottom-0 left-0 right-0  bg-black bg-opacity-50 pointer-events-none  transition-all duration-500;
+	}
+</style>

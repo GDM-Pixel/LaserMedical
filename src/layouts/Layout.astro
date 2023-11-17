@@ -1,9 +1,19 @@
 ---
 interface Props {
 	title: string;
+	description: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
+
+import Repere from "../components/Repere.astro";
+const url = new URL(Astro.request.url);
+let slug =
+	url.pathname
+		.slice(1) // Enlève le premier '/'
+		.replace(/\/$/, "") // Enlève un éventuel '/' à la fin
+		.replace(/\//g, "-") || // Remplace les '/' intermédiaires par des '-'
+	"home"; // 'home' pour la page d'accueil
 ---
 
 <!doctype html>
@@ -16,11 +26,12 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class={slug}>
 		<slot />
+		<Repere />
 	</body>
 </html>
-<style is:global>
+<style is:global lang="scss">
 	:root {
 		--accent: 136, 58, 234;
 		--accent-light: 224, 204, 250;
@@ -34,18 +45,227 @@ const { title } = Astro.props;
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
+		background: #ffffff;
 		background-size: 224px;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+
+	body {
+		overflow-x: clip;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: "Open Sans", sans-serif;
+		@apply font-bold;
+	}
+	h1 {
+		@apply text-xxl;
+	}
+	h2 {
+		@apply text-xl;
+	}
+	h3 {
+		@apply text-lg;
+	}
+	h4 {
+		@apply text-md;
+	}
+	h5 {
+		@apply text-base;
+	}
+	h6 {
+		@apply text-sm;
+	}
+	h2.section-title {
+		@apply text-md lg:text-xxl font-bold relative mb-8 leading-tight max-w-4xl mx-auto text-center;
+		&:before,
+		&:after {
+			@apply absolute w-32 h-[1px] hidden lg:block top-7;
+		}
+		&:before {
+			@apply -left-40 bg-black content-[""];
+		}
+		&:after {
+			@apply -right-40 bg-black content-[""];
+		}
+		&.dark {
+			@apply text-white;
+			&:before,
+			&:after {
+				@apply absolute w-32 h-[1px] block top-7;
+			}
+			&:before {
+				@apply -left-40 bg-white content-[""];
+			}
+			&:after {
+				@apply -right-40 bg-white content-[""];
+			}
+		}
+	}
+	h2.semi-section-title {
+		@apply text-md lg:text-xxl font-bold relative mb-8 leading-tight max-w-4xl mr-auto text-left inline-block;
+		&:after {
+			@apply absolute w-64 h-[2px] hidden lg:block top-7  -right-80 bg-black content-[""];
+		}
+
+		&.dark {
+			@apply text-white;
+			
+			&:after {
+				@apply absolute w-64 h-[2px] block top-7 -right-80 bg-white content-[""];
+			}
+		
+			
+		}
+	}
+	.herobox .c-breadcrumbs {
+		@apply text-white mx-auto px-6 py-2 capitalize bg-transparent relative;
+		ol {
+			@apply flex flex-row justify-center;
+			li:first-of-type {
+				@apply flex;
+			}
+			svg {
+				@apply fill-white;
+			}
+			a.c-breadcrumbs__link {
+				@apply text-white text-[12px] font-semibold flex flex-col items-center justify-center;
+				&:hover {
+					@apply text-white;
+				}
+			}
+		}
+	}
+	.accordion-content p {
+		@apply mb-3;
+		&:last-of-type {
+			@apply mb-0;
+		}
+	}
+	@media screen and (max-width: 767px) {
+		.container {
+			@apply max-w-full;
+		}
+	}
+
+	.inner_container_lg {
+		@apply mx-auto;
+		max-width: 1600px;
+	}
+	a {
+		@apply text-black transition-all duration-300;
+		&:hover {
+			@apply text-brown-400 transition-all duration-300;
+		}
+	}
+	.cta {
+		@apply font-bold px-6 py-3 drop-shadow-lg shadow-grey-700 text-base;
+		&.white {
+			@apply border-4 border-solid text-white border-white;
+			&:hover {
+				@apply text-black border-white bg-white;
+			}
+		}
+		&.black {
+			@apply border-4 border-solid text-black border-black;
+			&:hover {
+				@apply bg-black text-white border-black;
+			}
+		}
+		&.big {
+			@apply text-md px-8 py-4;
+		}
+
+		&.rounded {
+			@apply rounded-full;
+			&.brown {
+				@apply pt-2 pb-3 px-8 text-white bg-brown-500 transition-all duration-300;
+				&:hover {
+					@apply bg-brown-700;
+				}
+			}
+		}
+		&.sktn {
+			@apply border-4 border-solid bg-transparent;
+			&.black {
+				@apply border-black text-black transition-all duration-300;
+				&:hover {
+					@apply text-white bg-black border-black transition-all duration-300;
+				}
+			}
+			&.white {
+				@apply border-white text-white transition-all duration-300;
+				&:hover {
+					@apply text-black bg-white border-white transition-all duration-300;
+				}
+			}
+		}
+	}
+	.gogdm {
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	.section-header {
+		@apply flex flex-col justify-center font-bold text-center items-center  mb-10 max-w-3xl mx-auto;
+		h2 {
+			@apply text-xxxl mb-4;
+		}
+		&.dark {
+			@apply text-white;
+			h2 {
+				@apply text-white;
+			}
+		}
+		&.left {
+			@apply text-left block max-w-full;
+		}
+	}
+</style>
+<style>
+	@keyframes fadeIn {
+		0% {
+			opacity: 0;
+			transform: translateX(60px);
+		}
+		100% {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+	@keyframes fadeOut {
+		0% {
+			opacity: 1;
+			transform: translateX(0);
+		}
+		100% {
+			opacity: 0;
+			transform: translateX(-200px);
+		}
+	}
+
+	@keyframes fadeInFromBottom {
+		0% {
+			opacity: 0;
+			transform: translateY(60px);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes fadeOutToLeft {
+		0% {
+			opacity: 1;
+			transform: translateX(0);
+		}
+		100% {
+			opacity: 0;
+			transform: translateX(-200px);
+		}
 	}
 </style>

@@ -1,0 +1,52 @@
+---
+import { Image } from 'astro:assets';
+interface Props {
+	title: string;
+	intro: string;
+	body: any;
+	imgsrc: ImageMetadata;
+	imgalt: string;
+	reverse: boolean;
+	
+}
+
+const { title, intro, body, imgsrc, imgalt, reverse } = Astro.props;
+---
+
+<!-- GAUCHE DROITE -->
+<div class="container gauche-droite">
+	<div class={reverse ? "lg:flex lg:flex-row-reverse gap-8" : "lg:flex lg:flex-row gap-8"}>
+		<div class="col lg:w-1/2">
+			<h2>{title}</h2>
+			<p class="intro">{intro}</p>
+			<div class="body" set:html={body} />
+		</div>
+		<div class="col lg:w-1/2 lg:mt-0 mt-8">
+			<Image src={imgsrc} alt={imgalt} />
+		</div>
+	</div>
+</div>
+<!-- FIN DE GAUCHE DROITE -->
+<style lang="scss">
+	.container {
+		@apply mt-20 mb-20 ; 
+        .col {@apply  flex flex-col justify-center;}
+	}
+	@media screen and (max-width: 767px) {
+		.container {
+		@apply mt-20 mb-20 max-w-full; 
+      
+	}
+	}
+	.h6 {
+		@apply text-grey-400 text-sm font-semibold uppercase mb-4 block;
+	}
+	h2 {
+		@apply text-grey-400 md:text-xxxl text-xl font-bold mb-4;
+	}
+	p.intro {
+		@apply text-lg font-semibold mb-4;
+	}
+	p {
+	}
+</style>

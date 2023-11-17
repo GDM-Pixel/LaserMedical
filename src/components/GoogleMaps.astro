@@ -1,0 +1,96 @@
+---
+
+---
+
+<!-- Lightbox container -->
+<div id="lightbox" class="lightbox hidden">
+  <div class="lightbox-content">
+    <span class="close-btn" onclick="closeGmaps()">&times;</span>
+    <iframe id="lightbox-frame" src="" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+<script type="text/javascript">
+
+const mapUrls = {
+  map1: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d783.6566076053825!2d55.45574398493561!3d-20.883330993039703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21827f09e8be6423%3A0x7a38cb56e8104ce!2sLaser%20M%C3%A9dical%20Saint-Denis%20%7C%20m%C3%A9decine%20esth%C3%A9tique%20R%C3%A9union!5e0!3m2!1sfr!2sfr!4v1700056241129!5m2!1sfr!2sfr",
+  map2: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2629.903641322961!2d55.30124186801948!3d-21.222115420267535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x218297f1cc777895%3A0xafb40546f512bbc7!2sLaser%20M%C3%A9dical%20Saint-Leu%20%7C%20m%C3%A9decine%20esth%C3%A9tique%20R%C3%A9union!5e0!3m2!1sfr!2sfr!4v1700056577608!5m2!1sfr!2sfr"
+  // Vous pouvez ajouter autant de cartes que vous le souhaitez ici
+};
+  function setupGmaps() {
+    const lightbox = document.getElementById("lightbox");
+    if (!lightbox) return;
+    lightbox.style.opacity = "0";
+    lightbox.classList.add("hidden");
+
+    document
+      .getElementById("lightbox")
+      .addEventListener("click", function (event) {
+        if (event.target === event.currentTarget) {
+          closeGmaps();
+        }
+      });
+
+    function openGmaps(mapKey) {
+      const iframe = document.getElementById("lightbox-frame");
+      iframe.src = mapUrls[mapKey];
+      lightbox.classList.remove("hidden");
+      setTimeout(() => (lightbox.style.opacity = "1"), 10);
+    }
+
+    function closeGmaps() {
+      lightbox.style.opacity = "0";
+      setTimeout(() => lightbox.classList.add("hidden"), 500);
+    }
+    window.openGmaps = openGmaps;
+    window.closeGmaps = closeGmaps; 
+  }
+  setupGmaps();
+  document.addEventListener("astro:page-load", setupGmaps);
+</script>
+
+<style lang="scss">
+  .lightbox {
+  display:flex;
+  align-items:center;
+  justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    iframe {
+      width: 100%;
+      height: 450px;
+    }
+  }
+
+  .lightbox.hidden {
+    display: none;
+    pointer-events: none;
+  }
+
+  .lightbox:not(.hidden) {
+    opacity: 1;
+  }
+
+
+  .lightbox-content {
+  @apply flex flex-col max-w-[800px] rounded-xl p-6 bg-white;
+  width: 800px; // ou la largeur que vous voulez pour le contenu
+  height: 450px; // ou la hauteur que vous voulez pour le contenu
+
+}
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+</style>
