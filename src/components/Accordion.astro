@@ -22,7 +22,8 @@ const { items, extraClass = "" } = Astro.props;
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
+  function initAccordion() {
+  
     const allAccordionsGroups = document.querySelectorAll('.accordion-wrapper');
 
     allAccordionsGroups.forEach((wrapper) => {
@@ -66,7 +67,11 @@ const { items, extraClass = "" } = Astro.props;
         });
       });
     });
-  });
+  }
+document.addEventListener('astro:content-ready', initAccordion);
+document.addEventListener('astro:page-load', initAccordion);
+
+  
 </script>
 
 <style lang="scss">

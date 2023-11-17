@@ -1,1 +1,701 @@
-COUCOU
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import HeroBox from "../components/HeroBox.astro";
+import Accordion from "../components/Accordion.astro";
+import TarifsEpilationLaser from "../components/TarifsEpilationLaser.astro";
+import TarifAvantage from "../components/TarifAvantage.astro";
+import { Image } from "astro:assets";
+import Footer from "../components/Footer.astro";
+import EpilationLaser from "../assets/img/epilation-laser.png";
+import PeauMate from "../assets/img/peau-mate.png";
+import VideoLaser1 from "../assets/img/video-laser-1.png";
+import ResultatsLaser1 from "../assets/img/resultats-laser-1.png";
+import AcideHyal1 from "../assets/img/acide-hyal1.png";
+import AcideHyal2 from "../assets/img/acide-hyal2.png";
+import ZoneLevres from "../assets/img/zone-levre.png";
+import ZoneCernes from "../assets/img/zone-cernes.png";
+import ZoneRides from "../assets/img/zone-rides.png";
+import ZonePeau from "../assets/img/zone-peau.png";
+import ZoneSillonNG from "../assets/img/zone-sillon-ng.png";
+import ZoneVisageCreuse from "../assets/img/zone-visage-creuse.png";
+import ZoneOvalBajoues from "../assets/img/zone-oval-bajoues.png";
+import ZoneNez from "../assets/img/zone-nez.png";
+import ZoneMains from "../assets/img/zone-mains.png";
+import Evaluation from "../assets/img/evaluation.png";
+import SeanceInjection from "../assets/img/seance-injection.png";
+import ResultAcide1 from "../assets/img/result-acide-1.png";
+import ResultAcide2 from "../assets/img/result-acide-2.png";
+import ResultAcide3 from "../assets/img/result-acide-3.png";
+import ResultAcide4 from "../assets/img/result-acide-4.png";
+import ResultAcide5 from "../assets/img/result-acide-5.png";
+import AutreLevre from "../assets/img/autre-levre.png";
+import AutreDoubleMenton from "../assets/img/autre-double-menton .png";
+import AutreSillonNG from "../assets/img/autre-sillon-nasogenien .png";
+import AutreCernes from "../assets/img/autre-cernes .png";
+//import HeroAcideHyaluronique from "../assets/img/hero-acide-hyaluronique.png";
+---
+
+<Layout title="Page des composants" description="Ceci est la meta description">
+	<div class="hero-element">
+		<div class="overlay"></div>
+		<Header />
+		<HeroBox
+			title="Injection acide hyaluronique"
+			body="L’injection d’acide hyaluronique est le traitement de médecine esthétique le plus réalisé dans le monde. Il est utilisée pour combler les rides et sillons naso géniens, redonner du volume au visage et améliorer l’hydratation de la peau. Avec des résultats immédiats et naturels, l’acide hyaluronique est le traitement de choix pour lutter contre les signes du vieillissement."
+		/>
+	</div>
+	<main>
+		<section class="container gauche-droite pt-24 pb-24">
+			<div class="lg:flex lg:flex-row-reverse gap-8 mb-24">
+				<div class="col lg:w-1/2 flex flex-col justify-center">
+					<h3 class="text-lg md:text-xl lg:text-xxl mb-6">
+						L’acide hyaluronique, qu’est-ce que c’est ?
+					</h3>
+					<p class="text-base mb-3">
+						L’acide hyaluronique est une molécule présente naturellement dans
+						notre peau et les différents tissus de l’organisme. Il exerce une
+						fonction essentielle dans le maintien de la qualité cutanée.
+					</p>
+					<p class="text-base">
+						L’acide hyaluronique est un produit résorbable, sans spécificité
+						d’espèces ni de tissus. Il n’existe donc pas de risques d’allergie
+						et aucun test n’est nécessaire avant le traitement. Les effets
+						secondaires après injection sont minimes.
+					</p>
+				</div>
+				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
+					<Image
+						src={AcideHyal1}
+						alt="L'acide Hyaluronique, c'est quoi ?"
+						class="w-full"
+					/>
+				</div>
+			</div>
+			<div class="lg:flex lg:flex-row gap-8 mb-6">
+				<div class="col lg:w-1/2 flex flex-col justify-center">
+					<h3 class="text-lg md:text-xl lg:text-xxl mb-6">
+						Pour quoi utiliser l’acide hyaluronique ?
+					</h3>
+					<p class="text-base mb-3">
+						Avec le temps, la peau s’affine et les rides apparaissent. L’acide
+						hyaluronique présent dans la derme diminue, entrainant une
+						altération de la qualité de la peau.
+					</p>
+					<p class="text-base">
+						Au centre laser médical, nous utilisons l’acide hyaluronique de la
+						gamme Juvederm® fabriqué et distribué en France par les
+						laboratoires Allergan. Juvéderm® offre un panel d’acide
+						hyaluronique de réticulations différentes aux propriétés
+						exceptionnelles tels que Juvederm® Voluma with lidocaïne ou encore
+						Juvéderm® Volift with lidocaïne.
+					</p>
+				</div>
+				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
+					<Image
+						src={AcideHyal2}
+						alt="Dans quels cas utiliser l'acide hyaluronique ?"
+						class="w-full"
+					/>
+				</div>
+			</div>
+
+			<div class="mt-24 rounded-ss-lg rounded-se-lg overflow-hidden shadow-md">
+				<Accordion
+					items={[
+						{
+							title: "En savoir plus",
+							answer:
+								"<p><strong>L’acide hyaluronique est utilisé dans plusieurs spécialitées médicales et notamment pour le traitement de l’arthose du genou</strong>. Les injections d’acide hyaluronique sont maintenant pratiquées depuis plus de 20 ans dans le domaine de la médecine esthétique. Grâce à ses propriétés exceptionnelles, l’acide hyaluronique a très rapidement remplacé les autres produits injectables comme le collagène dans la correction des rides et des pertes de volume du visage.</p>",
+						},
+					]}
+				/>
+			</div>
+		</section>
+		<section class="zone-slider">
+			<div class="relative mt-12 mb-12">
+				<div class="mySwiper">
+					<button class="swiper-button-next">Next</button>
+					<button class="swiper-button-prev">Prev</button>
+					<div class="swiper mySwiperThumbsZone container">
+						<div class="swiper-wrapper container">
+							<div class="swiper-slide">
+								<Image
+									src={ZoneLevres}
+									alt="Zone Levres"
+									class="absolute w-full h-full object-cover -z-10"
+								/>
+								<h4>Lèvres</h4>
+								<div class="overlay"></div>
+							</div>
+							<div class="swiper-slide">
+								<Image
+									src={ZoneCernes}
+									alt="Zone Cernes"
+									class="absolute w-full h-full object-cover -z-10"
+								/>
+								<h4>Cernes</h4>
+								<div class="overlay"></div>
+							</div>
+							<div class="swiper-slide">
+								<Image
+									src={ZoneRides}
+									alt="Zone Rides"
+									class="absolute w-full h-full object-cover -z-10"
+								/>
+								<h4>Comblement des rides</h4>
+								<div class="overlay"></div>
+							</div>
+							<div class="swiper-slide">
+								<Image
+									src={ZonePeau}
+									alt="Zone Peau"
+									class="absolute w-full h-full object-cover -z-10"
+								/>
+								<h4>Hydratation et éclat de la peau</h4>
+								<div class="overlay"></div>
+							</div>
+							<div class="swiper-slide">
+								<Image
+									src={ZoneSillonNG}
+									alt="Zone Sillon NG"
+									class="absolute w-full h-full object-cover -z-10"
+								/>
+								<h4>Comblement du sillon naso génien</h4>
+								<div class="overlay"></div>
+							</div>
+							<div class="swiper-slide">
+								<Image
+									src={ZoneVisageCreuse}
+									alt="Zone Visage"
+									class="absolute w-full h-full object-cover -z-10"
+								/>
+								<h4>Visage creusé</h4>
+								<div class="overlay"></div>
+							</div>
+							<div class="swiper-slide">
+								<Image
+									src={ZoneOvalBajoues}
+									alt="Zone Bajoues"
+									class="absolute w-full h-full object-cover -z-10"
+								/>
+								<h4>Oval du visage et bajoues</h4>
+								<div class="overlay"></div>
+							</div>
+							<div class="swiper-slide">
+								<Image
+									src={ZoneNez}
+									alt="Zone Nez"
+									class="absolute w-full h-full object-cover -z-10"
+								/>
+								<h4>Nez</h4>
+								<div class="overlay"></div>
+							</div>
+							<div class="swiper-slide">
+								<Image
+									src={ZoneMains}
+									alt="Zone Main"
+									class="absolute w-full h-full object-cover -z-10"
+								/>
+								<h4>Mains</h4>
+								<div class="overlay"></div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-wrapper mt-8 mainswiper">
+						<div class="swiper-slide">
+							<div class="elemcontainer">
+								<div>
+									<Image
+										src={ZoneLevres}
+										alt="Zone Levres"
+										class="w-full h-auto"
+									/>
+								</div><div class="text-left flex flex-col justify-center">
+									<h3>Lèvres</h3><p>
+										On redéfinit les contours des lèvres par l’injection d’acide
+										hyaluronique dans les crêtes philtrales et l’ourlet.
+									</p>
+									<p>
+										On injecte directement dans les lèvres rouges si l’on
+										recherche une augmentation de volume.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="elemcontainer">
+								<div>
+									<Image
+										src={ZoneCernes}
+										alt="Zone Cernes"
+										class="w-full h-auto"
+									/>
+								</div><div class="text-left flex flex-col justify-center">
+									<h3>Cernes</h3><p>
+										Le cerne correspond au creux séparant la paupière inférieure
+										de la joue donnant un air fatigué au visage. L’injection du
+										cerne est souvent associée au comblement de la vallée des
+										larmes.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="elemcontainer">
+								<div>
+									<Image
+										src={ZoneRides}
+										alt="Zone Rides"
+										class="w-full h-auto"
+									/>
+								</div><div class="text-left flex flex-col justify-center">
+									<h3>Comblement des rides</h3><p>
+										On injecte l’acide hyaluronique très superficiellement le
+										long des rides (blanching technique).
+									</p><p>
+										Lors de la séance, l’effet est immédiat avec une nette
+										amélioration des résultats les jours suivants. Toutes les
+										rides du visage peuvent être traitées notamment celles
+										localisées sur le pourtour des lèvres et des yeux.
+									</p><p>
+										Pour un résultat optimal, le comblement des rides est
+										souvent associé à l’injection de toxine botulique.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="elemcontainer">
+								<div>
+									<Image src={ZonePeau} alt="Zone Peau" class="w-full h-auto" />
+								</div><div class="text-left flex flex-col justify-center">
+									<h3>Hydratation et éclat de la peau</h3><p>
+										Le traitement consiste à réaliser des micro-injections dans
+										le derme moyen de la peau d’acide hyaluronique pur non
+										réticulé.
+									</p>
+									<p>
+										Le protocole recommandé du traitement mésolift par
+										Profhilo® comprend 2 séances espacées d’1 mois puis une
+										séance d’entretien tous les 6 mois.
+									</p>
+									<p>
+										L’injection peut être réalisée sur le visage, le décolleté
+										ou encore les mains.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="elemcontainer">
+								<div>
+									<Image
+										src={ZoneSillonNG}
+										alt="Zone naso génien"
+										class="w-full h-auto"
+									/>
+								</div><div class="text-left flex flex-col justify-center">
+									<h3>Comblement du sillon naso génien</h3><p>
+										L’injection d’acide hyaluronique au niveau du sillon naso
+										génien permet de l’atténuer et de bloquer la ptose.
+									</p>
+									<p>
+										Elle peut être associée à l’injection des pommettes et de la
+										vallée des larmes ayant un effet liftant sur les joues.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="elemcontainer">
+								<div>
+									<Image
+										src={ZoneVisageCreuse}
+										alt="Zone visage"
+										class="w-full h-auto"
+									/>
+								</div><div class="text-left flex flex-col justify-center">
+									<h3>Visage creusé</h3><p>
+										L’objectif est de restaurer les volumes suite à la fonte des
+										graisses du visage. Plusieurs régions du visage sont
+										concernées : les tempes, la vallée des larmes, les joues ou
+										encore le front.
+									</p>
+									<p>
+										Ces signes du vieillissement sont plus souvent retrouvés sur
+										un visage initialement mince et longiligne.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="elemcontainer">
+								<div>
+									<Image
+										src={ZoneOvalBajoues}
+										alt="Zone ovale du visage"
+										class="w-full h-auto"
+									/>
+								</div><div class="text-left flex flex-col justify-center">
+									<h3>Ovale du visage et jawline</h3><p>
+										L’injection d’acide hyaluronique est réalisée en avant et en
+										arrière de la zone de la bajoue.
+									</p>
+									<p>
+										L’effet obtenu est de masquer les éventuelles bajoues et
+										redéfinir les contours de l’ovale du visage (appelés
+										jawline).
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="elemcontainer">
+								<div>
+									<Image src={ZoneNez} alt="Zone nez" class="w-full h-auto" />
+								</div><div class="text-left flex flex-col justify-center">
+									<h3>Nez</h3><p>
+										La rhinoplastie médicale est une technique alternative à la
+										chirurgie pour corriger certains défauts esthétiques du nez
+										: creux, bosses, pointe du nez tombante.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="elemcontainer">
+								<div>
+									<Image
+										src={ZoneMains}
+										alt="Zone Mains"
+										class="w-full h-auto"
+									/>
+								</div><div class="text-left flex flex-col justify-center">
+									<h3>Rajeunir les mains</h3><p>
+										Avec l’âge, le dos des mains se « squelettisent » suite à la
+										fonte des graisses sous la peau.
+									</p>
+									<p>
+										L’injection d’acide hyaluronique au niveau des mains a pour
+										effet de masquer les tendons et les veines devenus
+										apparents.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section
+			class="bigtopo text-justify py-24 px-8 bg-grey-400 text-white bg-[url('/img/bg-zone-traitable-laser.jpg')]">
+			<h2 class="section-title dark text-center">
+				Zones traitables et indications
+			</h2>
+			<div class="max-w-3xl mx-auto">
+				<p class="mb-3 text-base">
+					Toutes les couleurs de peaux peuvent être traitées par l’épilation
+					définitive au laser. Cependant, seuls les patients ayant des poils
+					bruns peuvent en bénéficier. Les poils roux, blonds ou trop fins comme
+					les duvets ne sont pas accessibles au traitement laser car ils sont
+					pauvres en mélanine (pigment noir de la peau et des poils).
+				</p>
+				<p class="mb-3 text-base">
+					L’utilisation du laser Nd Yag avec une longueur d’onde adaptée permet
+					d’épiler les peaux noires avec des résultats équivalents à ceux
+					obtenus sur peaux blanches.
+				</p>
+				<h2 class="text-center mt-10 mb-6">Poil incarné</h2>
+				<p class="mb-3 text-base">
+					L’épilation définitive au laser est le seul traitement efficace pour
+					les patients sujets aux poils incarnés. Le poil incarné est un
+					follicule pileux repoussant sous la peau. Cette affection est
+					secondaire à l’épilation à la cire ou électrique et au rasage d’une
+					zone du corps avec des poils drus (maillot, jambes, barbe). Le poil
+					incarné peut être douloureux et se complique souvent de furoncles
+					(bouton blanc inflammatoire centré par un poil) laissant des tâches
+					foncées sur la peau.
+				</p>
+				<h2 class="text-center mt-10 mb-6">Hirsutisme</h2>
+				<p class="mb-6 text-base">
+					L’épilation définitive au laser a également une place importante dans
+					la prise en charge thérapeutique de l’hirustisme. Cet état
+					pathologique est défini par le développement d’une pilosité importante
+					dans les régions du corps où elle est normalement absente chez la
+					femme : visage , poitrine, ventre, dos, fesses. On différencie
+					l’hirsutisme de l’hypertrichose, définie comme le développement
+					excessif de la pilosité dans des zones qui sont normalement pourvues
+					chez la femme ( jambes, aisselles ..)
+				</p>
+			</div>
+		</section>
+
+		<section class="container gauche-droite pt-24 pb-24 px-8">
+			<h2 class="semi-section-title">Déroulement d’une séance</h2>
+			<div class="lg:flex lg:flex-row gap-8 mb-24">
+				<div class="col lg:w-1/2 flex flex-col justify-center">
+					<div class="rounded-ss-lg rounded-se-lg overflow-hidden shadow-md">
+						<Accordion
+							items={[
+								{
+									title: "Consultation initiale",
+									answer:
+										"<p>Une première consultation par un médecin est réalisée de façon systématique. Elle permet l’examen de votre peau, vérifier l’absence de contre indications et d’établir les paramètres qui seront ensuite utilisés pour un traitement optimal.</p>",
+									isopen: true,
+								},
+								{
+									title: "Avant votre séance d’épilation",
+									answer:
+										"<p>Une première consultation par un médecin est réalisée de façon systématique. Elle permet l’examen de votre peau, vérifier l’absence de contre indications et d’établir les paramètres qui seront ensuite utilisés pour un traitement optimal.</p>",
+								},
+								{
+									title: "La séance d’épilation définite au laser",
+									answer:
+										"<p>Une première consultation par un médecin est réalisée de façon systématique. Elle permet l’examen de votre peau, vérifier l’absence de contre indications et d’établir les paramètres qui seront ensuite utilisés pour un traitement optimal.</p>",
+								},
+								{
+									title: "Entre deux séances d’épilation laser",
+									answer:
+										"<p>Une première consultation par un médecin est réalisée de façon systématique. Elle permet l’examen de votre peau, vérifier l’absence de contre indications et d’établir les paramètres qui seront ensuite utilisés pour un traitement optimal.</p>",
+								},
+							]}
+							extraClass="clearaccordion"
+						/>
+					</div>
+				</div>
+				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
+					<Image
+						src={VideoLaser1}
+						alt="Video Laser"
+						class="rounded-lg w-full"
+					/>
+				</div>
+			</div>
+			<div class="lg:flex lg:flex-row-reverse gap-8 mb-6">
+				<div class="col lg:w-1/2 flex flex-col justify-center">
+					<h3 class="text-lg md:text-xl lg:text-xxl mb-6">
+						Résultats de l’épilation définitive au laser
+					</h3>
+					<p class="text-base mb-3">
+						Après chaque séance d’épilation définitive, vos poils se raréfient,
+						sont plus fins et plus petits.
+					</p>
+					<p class="text-base mb-3">
+						Les publications d’études médicales sur l’efficacité et les
+						résultats de l’épilation laser sont très nombreuses. Elles montrent
+						que dans la plupart des cas, <strong
+							>les 6 premières séances d’épilation laser permettent une
+							élimination définitive de 90 à 100% des poils</strong
+						>.
+					</p>
+					<p class="text-base mb-3">
+						Exceptionnellement, la réduction des poils peut être faible à modéré
+						et ceci sans explication connue.
+					</p>
+					<p class="text-base mb-3">
+						Afin de vous garantir un résultat optimal, <strong
+							>il est important de suivre les recommandations de votre médecin</strong
+						>.
+					</p>
+					<p class="text-base">
+						Celles- ci favoriseront le bon déroulement des séances d’épilation,
+						et amélioreront votre confort une fois le traitement terminé.
+					</p>
+				</div>
+				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
+					<Image
+						src={ResultatsLaser1}
+						alt="Résultats de l'épilation au laser"
+						class="rounded-lg w-full"
+					/>
+				</div>
+			</div>
+		</section>
+
+		<section
+			class="bigtopo text-justify px-8 py-24 bg-grey-400 text-white bg-[url('/img/bg-zone-traitable-laser.jpg')]">
+			<h2 class="section-title dark text-center">Questions / Réponses</h2>
+			<div class="max-w-3xl mx-auto">
+				<Accordion
+					items={[
+						{
+							title: "Est-ce que c’est douloureux ?",
+							answer:
+								"<p>Nos plate-formes laser de dernière génération sont équipées d’un <strong>système de refroidissement externe</strong> atténuant significativement la douleur lors de la séance.</p><p><strong>La douleur ressentie</strong> pendant une séance d’épilation laser est très variable en fonction des patients. Elle est souvent décrite comme un simple picotement ou la sensation d’un coup d’élastique sur la peau.</p><p>Si le patient ressent une douleur lors du traitement, le médecin pourra alors prescrire une <strong>crème anesthésiante</strong> à appliquer pendant une durée d’une à deux heures avant la séance (afin de rendre le traitement plus confortable).</p>",
+							isopen: true,
+						},
+						{
+							title:
+								"Combien de séances sont nécessaires et à quelle fréquence ?",
+							answer:
+								"<p>Un traitement d’<strong>épilation définitive </strong>au laser nécessite <strong>en général 4 à 8 séances par zone</strong>. Le délai entre les séances varie avec l’avancée du traitement. Il est d’environ 4 à 8 semaines entre la première et la seconde séance, de 2 mois entre la seconde et la troisième séance, et de 2 à 3 mois entre les séances ultérieures. La durée d’un traitement complet d’épilation définitive au laser est donc de 8 à 16 mois.</p><p><strong>Plusieurs facteurs rentrent en jeu dans le résultat du traitement</strong> d’épilation laser et donc dans le nombre de séances nécessaires afin d’atteindre l’objectif fixé :</p><p><strong>Pilosité de la zone à traiter</strong></p><p><strong>Couleur et diamètre du poil</strong> (meilleure cible si poil noir et épais).</p><p><strong>Zone traitée</strong> : il faut moins de séances pour les aisselles, le maillot, les jambes, et plus de séances pour le visage, les cuisses, le dos.</p><p><strong>L’expérience du médecin laseriste</strong> et la bonne connaissance des pratiques de laser épilatoire : protocole de traitement adapté à la peau et à la pilosité du patient.</p>",
+						},
+						{
+							title: "Quels sont les risques ?",
+							answer:
+								"<p><strong>Les effets indésirables sont exceptionnels</strong> et sont représentés principalement par les brûlures supérficielles. <strong>L’utilisation d’un laser adapté à votre couleur de peau</strong> et le respect des contres indications au traitement laser <strong>permettent de totalement les éviter.</strong></p><p>Les brûlures superficielles se traduisent par une rougeur et l’apparition de quelques petites croûtes qui évoluent avec une guérison complète en 2 à 3 semaines.</p>",
+						},
+						{
+							title: "Peut-on se raser entre les séances ?",
+							answer:
+								"<p>Oui, il est autorisé de se raser entre 2 séances d’épilation laser.</p>",
+						},
+						{
+							title: "Quelle différence entre laser et lumière pulsée ?",
+							answer:
+								"<p>L’épilation laser est un traitement sûr et efficace s’il est pratiqué par un médecin formé à ces appareils.</p><p>Pour les patients, il est souvent difficile de différencier les lasers des appareils de lumière pulsée (appelée également IPL ou lampe flash). Même si leur principe de fonctionnement est proche, <strong>l’efficacité des lampes flash (ou lumière pulsée) est non comparable.</strong></p><p>En effet, <strong>l’énergie délivrée par la lumière pulsée est largement inférieure à celle du laser</strong>, insuffisante pour détruire le poil. Avec la lumière pulsée, on parlera plutôt d’épilation « temporaire », car la plupart des poils traités repousseront dans les années suivant les séances. Elles peuvent également représenter un risque de brûlure plus important si elles ne sont pas manipulées par des mains expertes.</p><p>La réglementation encadrant l’utilisation de lasers médicaux ainsi que la lumière intense pulsée est relativement stricte. Il ressort sans ambiguïté des différents textes de loi l’interdiction d’utilisation d’un laser médical ainsi que de la lumière pulsée par un professionnel non-médecin. Seuls les médecins sont autorisés à pratiquer des épilations définitives et privilégient l’utilisation des lasers dont la puissance garantit de bien meilleurs résultats que la lumière pulsée.</p>",
+						},
+					]}
+				/>
+			</div>
+		</section>
+	</main>
+
+	<!-- FIN DE GAUCHE DROITE -->
+
+	<section class="tarifs pt-24 text-center pb-24 px-8">
+		<h2 class="section-title">Tarifs</h2>
+		<TarifsEpilationLaser />
+		<a href="/demander-un-rdv/" class="cta rounded brown">Prendre RDV</a>
+		<TarifAvantage />
+	</section>
+</Layout>
+
+<Footer />
+
+<script>
+	import Swiper from "swiper/bundle";
+	import "swiper/css/bundle";
+
+	function initializeZoneSlider() {
+		//@ts-ignore
+		if (!document.querySelector(".mySwiper").swiper) {
+			var swiperThumbs = new Swiper(".mySwiperThumbsZone", {
+				slidesPerView: 6, 
+				freeMode: true,
+				loop: true,
+				spaceBetween: 30,
+				watchSlidesProgress: true,
+				slideToClickedSlide: true,
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+				breakpoints: {
+					// when window width is >= 320px
+					320: {
+						slidesPerView: 3,
+						spaceBetween: 10,
+					},
+					// when window width is >= 480px
+					480: {
+						slidesPerView:3,
+						spaceBetween: 20,
+					},
+					// when window width is >= 640px
+					640: {
+						slidesPerView: 3,
+						spaceBetween: 30,
+					},
+					// when window width is >= 992px
+					992: {
+						slidesPerView: 4,
+						spaceBetween: 40,
+					},
+					// when window width is >= 1200px
+					1200: {
+						slidesPerView: 6,
+						spaceBetween: 50,
+					},
+				},
+			});
+			var swiper = new Swiper(".mySwiper", {
+				slideActiveClass: "swiper-slide-active",
+				effect: "fade",
+				fadeEffect: {
+					crossFade: true,
+				},
+				spaceBetween: 10,
+
+				freeMode: false,
+				slidesPerView: 1,
+				watchSlidesProgress: false,
+				thumbs: {
+					swiper: swiperThumbs,
+				},
+			});
+		}
+	}
+
+	// Initialisation du Swiper au chargement de la page
+	document.addEventListener("DOMContentLoaded", initializeZoneSlider);
+
+	// Réinitialisation du Swiper lors du chargement d'une nouvelle page avec Astro
+	document.addEventListener("astro:page-load", initializeZoneSlider);
+</script>
+
+<style lang="scss">
+	main {
+		margin: auto;
+	}
+
+	.swiper-fade .mySwiperThumbs .swiper-slide,
+	.swiper-fade .mySwiperThumbsZone .swiper-slide {
+		pointer-events: auto !important;
+		transition-property: opacity;
+		transition: 300ms ease all;
+	}
+
+	.mySwiperThumbs,
+	.mySwiperThumbsZone {
+		.swiper-wrapper {
+			/*@apply mx-auto text-center flex flex-wrap justify-center gap-4 sm:gap-6;*/
+		}
+		.swiper-slide {
+			@apply cursor-pointer h-36 rounded-lg overflow-hidden relative text-center text-white text-base flex flex-col justify-end items-center leading-6 pb-0 filter grayscale transition-all duration-300 ease-in-out bg-cover bg-center bg-no-repeat hover:grayscale-0 max-w-[200px];
+			h4 {
+				@apply text-[18px] z-20 relative mb-4;
+			}
+			&.swiper-slide-thumb-active {
+				@apply filter grayscale-0;
+			}
+			.overlay {
+				@apply bg-black bg-opacity-10 absolute top-0 left-0 right-0 bottom-0 z-10;
+			}
+		}
+		.swiper-slide-thumb-active {
+			@apply font-bold;
+		}
+	}
+
+	.mainswiper {
+		@apply text-center;
+		.swiper-slide {
+			@apply text-left text-base bg-white h-0 mx-auto;
+			.elemcontainer {
+				@apply grid grid-cols-1 sm:grid-cols-2 gap-6 sm:text-base text-sm max-w-[850px] text-center px-6 sm:px-0 py-8 mx-auto;
+			}
+			h3 {
+				@apply text-[22px] leading-7 mb-3;
+			}
+			p {
+				@apply text-[18px] mb-2;
+			}
+			&.swiper-slide-active {
+				@apply h-auto  mx-auto;
+			}
+		}
+	}
+
+	.hero-element {
+		background: url("/img/hero-acide-hyaluronique.webp") no-repeat center center;
+		@apply relative bg-cover bg-center;
+	}
+	.overlay {
+		@apply absolute top-0 bottom-0 left-0 right-0  bg-black bg-opacity-50 pointer-events-none  transition-all duration-500;
+	}
+</style>

@@ -5,7 +5,7 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
-
+import { ViewTransitions } from "astro:transitions";
 import Repere from "../components/Repere.astro";
 const url = new URL(Astro.request.url);
 let slug =
@@ -24,6 +24,7 @@ let slug =
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<ViewTransitions />
 		<title>{title}</title>
 	</head>
 	<body class={slug}>
@@ -229,21 +230,21 @@ let slug =
 	@keyframes fadeIn {
 		0% {
 			opacity: 0;
-			transform: translateX(60px);
+			transform: translateY(60px);
 		}
 		100% {
 			opacity: 1;
-			transform: translateX(0);
+			transform: translateY(0);
 		}
 	}
 	@keyframes fadeOut {
 		0% {
 			opacity: 1;
-			transform: translateX(0);
+			transform: translateY(0);
 		}
 		100% {
 			opacity: 0;
-			transform: translateX(-200px);
+			transform: translateY(-200px);
 		}
 	}
 

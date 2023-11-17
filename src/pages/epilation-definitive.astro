@@ -6,29 +6,20 @@ import Accordion from "../components/Accordion.astro";
 import TarifsEpilationLaser from "../components/TarifsEpilationLaser.astro";
 import TarifAvantage from "../components/TarifAvantage.astro";
 import { Image } from "astro:assets";
-import EsraImage from "../assets/img/esra-chami.png";
-import JulienImage from "../assets/img/julien-lefevre.png";
-import MagaliImage from "../assets/img/magali.png";
-import FionaImage from "../assets/img/fiona.png";
-import EmelyneImage from "../assets/img/emelyne.png";
-import SophieImage from "../assets/img/sophie.png";
-import CarteStDenis from "../assets/img/carte-saint-denis.png";
-import CarteStLeu from "../assets/img/carte-saint-leu.png";
 import Footer from "../components/Footer.astro";
-import GoogleMaps from "../components/GoogleMaps.astro";
-import HomeBlogSlider from "../components/HomeBlogSlider.astro";
 import EpilationLaser from "../assets/img/epilation-laser.png";
 import PeauMate from "../assets/img/peau-mate.png";
 import VideoLaser1 from "../assets/img/video-laser-1.png";
 import ResultatsLaser1 from "../assets/img/resultats-laser-1.png";
-//<Image src={HeroEpilationLaserImage} alt="Dr Esra Chami" />
 ---
 
 <Layout title="Page des composants" description="Ceci est la meta description">
 	<div class="hero-element">
 		<div class="overlay"></div>
 		<Header />
-		<HeroBox />
+		<HeroBox 
+		title="Epilation Laser" 
+		body="L’épilation définitive au laser est devenue l’un des traitements esthétiques les plus répandus dans le monde. Tous les phototypes de peau (peau blanche, mate et noire) peuvent en bénéficier de l’épilation laser en toute sécurité et avec d’excellents résultats."/>
 	</div>
 	<main>
 		<section class="container gauche-droite pt-24 pb-24">

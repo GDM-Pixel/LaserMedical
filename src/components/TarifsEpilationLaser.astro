@@ -1,81 +1,144 @@
 ---
 import Layout from "../layouts/Layout.astro";
-const allTarifs = await Astro.glob(
+const allTarifsFemme = await Astro.glob(
 	`../content/tarifs/epilationlaser/femme/*.md`,
 );
-const nosTarifs = allTarifs.map((n) => ({
+const allTarifsHomme = await Astro.glob(
+	`../content/tarifs/epilationlaser/homme/*.md`,
+);
+const nosTarifsFemme = allTarifsFemme.map((n) => ({
+	title: n.frontmatter.name,
+	image: n.frontmatter.image,
+	Content: n.Content,
+}));
+const nosTarifsHomme = allTarifsHomme.map((n) => ({
 	title: n.frontmatter.name,
 	image: n.frontmatter.image,
 	Content: n.Content,
 }));
 ---
 
-<div class="relative mt-12 mb-12">
-	<div class="mySwiper">
-		<div class="swiper mySwiperThumbs">
-			<div class="swiper-wrapper">
+<div class="tabnav text-left mx-auto px-8">
+	<span
+		class="tab femmenav active md:text-md sm:text-base text-[16px] px-4 py-2 font-semibold"
+		>Tarifs femme</span
+	>
+	<span
+		class="tab hommenav md:text-md sm:text-base text-[16px] px-4 py-2 font-semibold"
+		>Tarifs homme</span
+	>
+</div>
+<div class="tab-content mx-auto px-0 relative h-auto">
+	<div class="relative mt-12 mb-12 femmecontent">
+		<div class="mySwiperFemme">
+			<div class="swiper mySwiperThumbsFemme">
+				<div class="swiper-wrapper">
+					{
+						nosTarifsFemme.slice(0, 5).map(({ title, image }) => (
+							<div
+								class="swiper-slide"
+								style={`background-image:url("/thumbs/${image}")`}>
+								<h4>{title}</h4>
+								<div class="overlay" />
+							</div>
+						))
+					}
+				</div>
+			</div>
+			<div class="swiper-wrapper mt-8 mainswiper">
 				{
-					nosTarifs.slice(0, 5).map(({ title, image }) => (
-						<div
-							class="swiper-slide"
-							style={`background-image:url("/thumbs/${image}")`}>
-							<h4>{title}</h4>
-							<div class="overlay" />
+					nosTarifsFemme.slice(0, 5).map(({ title, Content }) => (
+						<div class="swiper-slide">
+							<Content />
 						</div>
 					))
 				}
 			</div>
 		</div>
-		<div class="swiper-wrapper mt-8 mainswiper">
-			{
-				nosTarifs.slice(0, 5).map(({ title, Content }) => (
-					<div class="swiper-slide">
-						<Content />
-					</div>
-				))
-			}
+	</div>
+	<div class="relative mt-12 mb-12 hommecontent">
+		<div class="mySwiperHomme">
+			<div class="swiper mySwiperThumbsHomme">
+				<div class="swiper-wrapper">
+					{
+						nosTarifsHomme.slice(0, 5).map(({ title, image }) => (
+							<div
+								class="swiper-slide"
+								style={`background-image:url("/thumbs/${image}")`}>
+								<h4>{title}</h4>
+								<div class="overlay" />
+							</div>
+						))
+					}
+				</div>
+			</div>
+			<div class="swiper-wrapper mt-8 mainswiper">
+				{
+					nosTarifsHomme.slice(0, 5).map(({ title, Content }) => (
+						<div class="swiper-slide">
+							<Content />
+						</div>
+					))
+				}
+			</div>
 		</div>
 	</div>
 </div>
 
 <script>
-	import Swiper from "swiper/bundle";
-	import "swiper/css/bundle";
+  import Swiper from "swiper/bundle";
+  import "swiper/css/bundle";
 
-	function initializeTarifsLaser() {
-		var swiperThumbs = new Swiper(".mySwiperThumbs", {
-			slidesPerView: 'auto',
-			freeMode: false, // Assurez-vous que le freeMode est false
-			watchSlidesProgress: true,
-			slideToClickedSlide: true,
-		});
-		var swiper = new Swiper(".mySwiper", {
-			slideActiveClass: "swiper-slide-active",
-			effect: "fade",
-			fadeEffect: {
-				crossFade: true,
-			},
-			spaceBetween: 10,
-			freeMode: false,
-			slidesPerView: 1,
-			watchSlidesProgress: false,
-			thumbs: {
-				swiper: swiperThumbs,
-			},
-		});
-	}
-	initializeTarifsLaser();
-	document.addEventListener("astro:page-load", initializeTarifsLaser);
+  //@ts-ignore
+  function initializeSwiper(selectorThumbs, selectorMain) {
+    // Vérifier si le Swiper existe déjà
+    if (!document.querySelector(selectorMain).swiper) {
+      var swiperThumbs = new Swiper(selectorThumbs, {
+        slidesPerView: "auto",
+        freeMode: false,
+        watchSlidesProgress: true,
+        slideToClickedSlide: true,
+      });
+      var swiper = new Swiper(selectorMain, {
+        slideActiveClass: "swiper-slide-active",
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true,
+        },
+        spaceBetween: 10,
+        freeMode: false,
+        slidesPerView: 1,
+        watchSlidesProgress: false,
+        thumbs: {
+          swiper: swiperThumbs,
+        },
+      });
+    }
+  }
+
+  // Initialisation des instances Swiper au chargement de la page
+  document.addEventListener("DOMContentLoaded", () => {
+    initializeSwiper(".mySwiperThumbsFemme", ".mySwiperFemme");
+    initializeSwiper(".mySwiperThumbsHomme", ".mySwiperHomme");
+  });
+
+  // Réinitialisation des instances Swiper lors du chargement d'une nouvelle page avec Astro
+  document.addEventListener("astro:page-load", () => {
+    initializeSwiper(".mySwiperThumbsFemme", ".mySwiperFemme");
+    initializeSwiper(".mySwiperThumbsHomme", ".mySwiperHomme");
+  });
 </script>
 
 <style lang="scss">
-	.swiper-fade .mySwiperThumbs .swiper-slide {
+	.swiper-fade .mySwiperThumbsFemme .swiper-slide,
+	.swiper-fade .mySwiperThumbsHomme .swiper-slide {
 		pointer-events: auto !important;
 		transition-property: opacity;
-		transition:300ms ease all;
+		transition: 300ms ease all;
 	}
 
-	.mySwiperThumbs {
+	.mySwiperThumbsFemme,
+	.mySwiperThumbsHomme {
 		.swiper-wrapper {
 			@apply mx-auto text-center flex flex-wrap justify-center gap-4 sm:gap-6;
 		}
@@ -96,7 +159,8 @@ const nosTarifs = allTarifs.map((n) => ({
 		}
 	}
 
-	.mainswiper {@apply text-center;
+	.mainswiper {
+		@apply text-center;
 		.swiper-slide {
 			@apply text-left text-base bg-white h-0 mx-auto;
 			&.swiper-slide-active {
