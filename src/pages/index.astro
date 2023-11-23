@@ -263,7 +263,7 @@ import HomeBlogSlider from "../components/HomeBlogSlider.astro";
 					</ul>
 				</div>
 				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
-					<Image src={EsraImage} alt="Dr Esra Chami" />
+					<Image src={EsraImage} alt="Dr Esra Chami" loading="lazy" />
 				</div>
 			</div>
 			<div class="lg:flex lg:flex-row gap-8">
@@ -343,7 +343,7 @@ import HomeBlogSlider from "../components/HomeBlogSlider.astro";
 					</ul>
 				</div>
 				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
-					<Image src={JulienImage} alt="Dr Julien Lefèvre" />
+					<Image src={JulienImage} alt="Dr Julien Lefèvre" loading="lazy" />
 				</div>
 			</div>
 		</div>
@@ -364,6 +364,7 @@ import HomeBlogSlider from "../components/HomeBlogSlider.astro";
 						src={MagaliImage}
 						alt="Magali"
 						class="mb-4 sm:w-full mx-auto"
+						loading="lazy" 
 					/><span class="assistante_name">Magali</span>
 				</div>
 				<div class="text-center mb-6">
@@ -371,6 +372,7 @@ import HomeBlogSlider from "../components/HomeBlogSlider.astro";
 						src={FionaImage}
 						alt="Fiona"
 						class="mb-4 sm:w-full mx-auto"
+						loading="lazy" 
 					/><span class="assistante_name">Fiona</span>
 				</div>
 				<div class="text-center mb-6">
@@ -378,6 +380,7 @@ import HomeBlogSlider from "../components/HomeBlogSlider.astro";
 						src={EmelyneImage}
 						alt="Emelyne"
 						class="mb-4 sm:w-full mx-auto"
+						loading="lazy" 
 					/><span class="assistante_name">Emelyne</span>
 				</div>
 				<div class="text-center mb-6">
@@ -385,6 +388,7 @@ import HomeBlogSlider from "../components/HomeBlogSlider.astro";
 						src={SophieImage}
 						alt="Sophie"
 						class="mb-4 sm:w-full mx-auto"
+						loading="lazy" 
 					/><span class="assistante_name">Sophie</span>
 				</div>
 			</div>
@@ -401,10 +405,12 @@ import HomeBlogSlider from "../components/HomeBlogSlider.astro";
 			</p>
 			<div class="xl:container">
 				<div class="tabnav text-left mx-auto px-8">
-					<span class="tab saint-denis active md:text-md sm:text-base text-[16px] px-4 py-2 font-semibold"
+					<span data-target="saint-denis"
+						class="tab saint-denis active md:text-md sm:text-base text-[16px] px-4 py-2 font-semibold"
 						>Cabinet de Saint-Denis</span
 					>
-					<span class="tab saint-leu md:text-md sm:text-base text-[16px] px-4 py-2 font-semibold"
+					<span data-target="saint-leu"
+						class="tab saint-leu md:text-md sm:text-base text-[16px] px-4 py-2 font-semibold"
 						>Cabinet de Saint-Leu</span
 					>
 				</div>
@@ -416,16 +422,16 @@ import HomeBlogSlider from "../components/HomeBlogSlider.astro";
 							<div class="swiper-container">
 								<div class="swiper-wrapper">
 									<div class="swiper-slide">
-										<img src="/img/img1.jpg" alt="" />
+										<img src="/img/img1.jpg" alt="" loading="lazy"/>
 									</div>
 									<div class="swiper-slide">
-										<img src="/img/img2.jpg" alt="" />
+										<img src="/img/img2.jpg" alt="" loading="lazy"/>
 									</div>
 									<div class="swiper-slide">
-										<img src="/img/img3.jpg" alt="" />
+										<img src="/img/img3.jpg" alt="" loading="lazy"/>
 									</div>
 									<div class="swiper-slide">
-										<img src="/img/img4.jpg" alt="" />
+										<img src="/img/img4.jpg" alt="" loading="lazy"/>
 									</div>
 								</div>
 								<div class="swiper-pagination"></div>
@@ -436,10 +442,13 @@ import HomeBlogSlider from "../components/HomeBlogSlider.astro";
 								src={CarteStDenis}
 								alt="Cabinet de Saint-Denis"
 								class="mb-4 rounded-lg w-full"
+								loading="lazy" 
 							/>
-							<div class="adress-container flex flex-col sm:flex-rowtext-left gap-4 z-30">
-								<button class="cta sktn black sm:inline-block block" onclick="openGmaps('map1');"
-									>Voir la Carte</button
+							<div
+								class="adress-container flex flex-col sm:flex-rowtext-left gap-4 z-30">
+								<button
+									class="cta sktn black sm:inline-block block"
+									onclick="openGmaps('map1');">Voir la Carte</button
 								>
 								<p class="font-bold text-[18px]">
 									45 rue Montseigneur de Beaumont<br />97400 Saint-Denis
@@ -455,16 +464,16 @@ import HomeBlogSlider from "../components/HomeBlogSlider.astro";
 							<div class="swiper-container">
 								<div class="swiper-wrapper">
 									<div class="swiper-slide">
-										<img src="/img/img1.jpg" alt="" />
+										<img src="/img/img1.jpg" alt="" loading="lazy" />
 									</div>
 									<div class="swiper-slide">
-										<img src="/img/img2.jpg" alt="" />
+										<img src="/img/img2.jpg" alt="" loading="lazy"/>
 									</div>
 									<div class="swiper-slide">
-										<img src="/img/img3.jpg" alt="" />
+										<img src="/img/img3.jpg" alt="" loading="lazy"/>
 									</div>
 									<div class="swiper-slide">
-										<img src="/img/img4.jpg" alt="" />
+										<img src="/img/img4.jpg" alt="" loading="lazy"/>
 									</div>
 								</div>
 								<div class="swiper-pagination"></div>
@@ -476,8 +485,10 @@ import HomeBlogSlider from "../components/HomeBlogSlider.astro";
 								src={CarteStLeu}
 								alt="Cabinet de Saint-Denis"
 								class="mb-4 rounded-lg w-full"
+								loading="lazy" 
 							/>
-							<div class="adress-container flex flex-col sm:flex-rowtext-left gap-4 z-30">
+							<div
+								class="adress-container flex flex-col sm:flex-rowtext-left gap-4 z-30">
 								<button class="cta sktn black" onclick="openGmaps('map2');"
 									>Voir la Carte</button
 								>
@@ -494,20 +505,20 @@ import HomeBlogSlider from "../components/HomeBlogSlider.astro";
 		<section class="blogpost bg-grey-100 pt-20 pb-24">
 			<div class="row text-center">
 				<div class="container">
-				
-						<h2 class="section-title">Nos actualités</h2>
-						<p
-							class="text-center max-w-3xl mx-auto mb-6 text-[18px] md:text-base font-normal">
-							Retrouvez ici nos dernières publications et toutes les actualités
-							des traitements de médecine esthétique.
-						</p>
-			
-          <HomeBlogSlider /> 
+					<h2 class="section-title">Nos actualités</h2>
+					<p
+						class="text-center max-w-3xl mx-auto mb-6 text-[18px] md:text-base font-normal">
+						Retrouvez ici nos dernières publications et toutes les actualités
+						des traitements de médecine esthétique.
+					</p>
+					<HomeBlogSlider />
 				</div>
 			</div>
 		</section>
 		<section class="contact bg-white pt-20 pb-24 text-center py-6 px-6">
-			<h2 class="section-title">Nos soins de médecine esthétique vous intéressent ?</h2>
+			<h2 class="section-title">
+				Nos soins de médecine esthétique vous intéressent ?
+			</h2>
 			<a href="/demander-un-rdv/" class="cta rounded brown">Prendre RDV</a>
 		</section>
 	</main>
@@ -519,6 +530,18 @@ import HomeBlogSlider from "../components/HomeBlogSlider.astro";
 	import "swiper/css/bundle";
 
 	function initializeSwiper() {
+		const swiperContainer = document.querySelector(".swiper-container");
+		if (!swiperContainer) {
+			// Si le conteneur n'existe pas, sortir de la fonction
+			return;
+		}
+		// Optionnel : nettoyer l'instance Swiper si elle existe déjà
+		//@ts-ignore
+		if (swiperContainer.swiper) {
+			//@ts-ignore
+			swiperContainer.swiper.destroy();
+		}
+
 		var swiper = new Swiper(".swiper-container", {
 			pagination: {
 				el: ".swiper-pagination",
@@ -561,28 +584,51 @@ import HomeBlogSlider from "../components/HomeBlogSlider.astro";
 			},
 		});
 	}
-	initializeSwiper();
+
+	// Attacher l'initialisation de Swiper à l'événement de chargement de page
 	document.addEventListener("astro:page-load", initializeSwiper);
-</script>
-<script>
-	document.addEventListener("DOMContentLoaded", () => {
-		const tabs = document.querySelectorAll(".tab");
-		const tabContents = document.querySelectorAll(".tabcontentEl");
-		tabs.forEach((tab) => {
-			tab.addEventListener("click", () => {
-				tabs.forEach((item) => item.classList.remove("active"));
-				tab.classList.add("active");
-				const targetId = tab.classList[1];
-				tabContents.forEach((tc) => {
-					if (tc.id === targetId) {
-						tc.classList.add("active");
-					} else {
-						tc.classList.remove("active");
-					}
-				});
-			});
-		});
-	});
+	// Initialiser Swiper immédiatement si le DOM est déjà chargé
+	if (
+		document.readyState === "complete" ||
+		document.readyState === "interactive"
+	) {
+		initializeSwiper();
+	} else {
+		document.addEventListener("DOMContentLoaded", initializeSwiper);
+	}
+
+//FIN DE SWIPER JS
+
+
+
+function attachTabClickHandlers() {
+    const tabs = document.querySelectorAll(".tab");
+    tabs.forEach(tab => {
+        tab.removeEventListener("click", handleTabClick); // Nettoyez d'abord
+        tab.addEventListener("click", handleTabClick); // Attachez ensuite
+    });
+}
+
+function handleTabClick() {
+    const tabs = document.querySelectorAll(".tab");
+    const tabContents = document.querySelectorAll(".tabcontentEl");
+	//@ts-ignore
+    const targetId = this.getAttribute('data-target'); // Utilisez un attribut de données pour la cible
+
+    tabs.forEach(tab => tab.classList.remove("active"));
+	//@ts-ignore
+    this.classList.add("active");
+
+    tabContents.forEach(tabContent => {
+        tabContent.classList.toggle("active", tabContent.id === targetId);
+    });
+}
+
+// Attachez les gestionnaires d'onglets lorsque le DOM est prêt
+document.addEventListener("DOMContentLoaded", attachTabClickHandlers);
+// Réattachez les gestionnaires d'onglets sur les événements de navigation d'Astro
+document.addEventListener("astro:page-load", attachTabClickHandlers);
+
 </script>
 
 <style lang="scss">
@@ -702,7 +748,7 @@ import HomeBlogSlider from "../components/HomeBlogSlider.astro";
 	}
 
 	:root {
-		--swiper-theme-color: #C58744 !important;
+		--swiper-theme-color: #c58744 !important;
 		--swiper-pagination-bullet-size: 10px !important;
 		--swiper-pagination-bullet-width: 10px !important;
 		--swiper-pagination-bullet-horizontal-gap: 6px;

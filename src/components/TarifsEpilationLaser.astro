@@ -17,19 +17,22 @@ const nosTarifsHomme = allTarifsHomme.map((n) => ({
 	Content: n.Content,
 }));
 ---
-
-<div class="tabnav text-left mx-auto px-8">
+<div class="text-center flex justify-center items-center">
+<div class="tabnav">
 	<span
-		class="tab femmenav active md:text-md sm:text-base text-[16px] px-4 py-2 font-semibold"
+		data-target="tariffemme"
+		class="tab tariffemme active md:text-md sm:text-base text-[16px] px-4 py-2 font-semibold"
 		>Tarifs femme</span
 	>
 	<span
-		class="tab hommenav md:text-md sm:text-base text-[16px] px-4 py-2 font-semibold"
+		data-target="tarifhomme"
+		class="tab tarifhomme md:text-md sm:text-base text-[16px] px-4 py-2 font-semibold"
 		>Tarifs homme</span
 	>
-</div>
+</div></div>
+
 <div class="tab-content mx-auto px-0 relative h-auto">
-	<div class="relative mt-12 mb-12 femmecontent">
+	<div id="tariffemme" class="mt-8 mb-12 tabcontentEl active">
 		<div class="mySwiperFemme">
 			<div class="swiper mySwiperThumbsFemme">
 				<div class="swiper-wrapper">
@@ -56,7 +59,7 @@ const nosTarifsHomme = allTarifsHomme.map((n) => ({
 			</div>
 		</div>
 	</div>
-	<div class="relative mt-12 mb-12 hommecontent">
+	<div id="tarifhomme" class="mt-8 mb-12 tabcontentEl">
 		<div class="mySwiperHomme">
 			<div class="swiper mySwiperThumbsHomme">
 				<div class="swiper-wrapper">
@@ -86,54 +89,112 @@ const nosTarifsHomme = allTarifsHomme.map((n) => ({
 </div>
 
 <script>
-  import Swiper from "swiper/bundle";
-  import "swiper/css/bundle";
+	import Swiper from "swiper/bundle";
+	import "swiper/css/bundle";
 
+	//@ts-ignore
+	function initializeSwiper(selectorThumbs, selectorMain) {
+		const swiperMainElement = document.querySelector(selectorMain);
+		// Vérifier si le Swiper existe déjà
+		if (swiperMainElement && !swiperMainElement.swiper) {
+			const swiperThumbs = new Swiper(selectorThumbs, {
+				slidesPerView: "auto",
+				freeMode: false,
+				watchSlidesProgress: true,
+				slideToClickedSlide: true,
+			});
+			new Swiper(selectorMain, {
+				slideActiveClass: "swiper-slide-active",
+				effect: "fade",
+				fadeEffect: {
+					crossFade: true,
+				},
+				spaceBetween: 10,
+				freeMode: false,
+				slidesPerView: 1,
+				watchSlidesProgress: false,
+				thumbs: {
+					swiper: swiperThumbs,
+				},
+			});
+		}
+	}
+
+	// Initialisation des instances Swiper au chargement de la page
+	document.addEventListener("DOMContentLoaded", () => {
+		initializeSwiper(".mySwiperThumbsFemme", ".mySwiperFemme");
+		initializeSwiper(".mySwiperThumbsHomme", ".mySwiperHomme");
+	});
+
+	// Réinitialisation des instances Swiper lors du chargement d'une nouvelle page avec Astro
+	document.addEventListener("astro:page-load", () => {
+		initializeSwiper(".mySwiperThumbsFemme", ".mySwiperFemme");
+		initializeSwiper(".mySwiperThumbsHomme", ".mySwiperHomme");
+	});
+</script>
+<script>
+	//FONCTION QUI GERE LES TABS ET LEURS CONTENUS
+function attachTabClickHandlers() {
+  const tabs = document.querySelectorAll(".tab");
+  tabs.forEach((tab) => {
+    tab.removeEventListener("click", handleTabClick); // Nettoyez d'abord
+    tab.addEventListener("click", handleTabClick); // Attachez ensuite
+  });
+}
+
+function handleTabClick() {
+  const tabs = document.querySelectorAll(".tab");
+  const tabContents = document.querySelectorAll(".tabcontentEl");
   //@ts-ignore
-  function initializeSwiper(selectorThumbs, selectorMain) {
-    // Vérifier si le Swiper existe déjà
-    if (!document.querySelector(selectorMain).swiper) {
-      var swiperThumbs = new Swiper(selectorThumbs, {
-        slidesPerView: "auto",
-        freeMode: false,
-        watchSlidesProgress: true,
-        slideToClickedSlide: true,
-      });
-      var swiper = new Swiper(selectorMain, {
-        slideActiveClass: "swiper-slide-active",
-        effect: "fade",
-        fadeEffect: {
-          crossFade: true,
-        },
-        spaceBetween: 10,
-        freeMode: false,
-        slidesPerView: 1,
-        watchSlidesProgress: false,
-        thumbs: {
-          swiper: swiperThumbs,
-        },
-      });
-    }
+  const targetId = this.getAttribute("data-target");
+  const newActiveTabContent = document.getElementById(targetId);
+  const currentActiveTabContent = document.querySelector(".tabcontentEl.active");
+
+  tabs.forEach((tab) => tab.classList.remove("active"));
+  //@ts-ignore
+  this.classList.add("active");
+
+  if (currentActiveTabContent) {
+    currentActiveTabContent.classList.remove("active");
+    currentActiveTabContent.classList.add("inactive");
+	resetSwipers();
   }
+//@ts-ignore
+  newActiveTabContent.classList.add("active");
+  //@ts-ignore
+  newActiveTabContent.classList.remove("inactive");
 
-  // Initialisation des instances Swiper au chargement de la page
-  document.addEventListener("DOMContentLoaded", () => {
-    initializeSwiper(".mySwiperThumbsFemme", ".mySwiperFemme");
-    initializeSwiper(".mySwiperThumbsHomme", ".mySwiperHomme");
-  });
+  tabContents.forEach((tabContent) => {
+    if (tabContent !== newActiveTabContent) {
+      tabContent.classList.remove("active");
+      tabContent.classList.add("inactive");
+    }
+  }); 
+}
 
-  // Réinitialisation des instances Swiper lors du chargement d'une nouvelle page avec Astro
-  document.addEventListener("astro:page-load", () => {
-    initializeSwiper(".mySwiperThumbsFemme", ".mySwiperFemme");
-    initializeSwiper(".mySwiperThumbsHomme", ".mySwiperHomme");
-  });
+function resetSwipers() {
+	//@ts-ignore
+  const swiperFemme = document.querySelector('.mySwiperFemme').swiper;
+  //@ts-ignore
+  const swiperHomme = document.querySelector('.mySwiperHomme').swiper;
+  
+  if (swiperFemme) {
+    swiperFemme.slideTo(0);
+  }
+  if (swiperHomme) {
+    swiperHomme.slideTo(0);
+  }
+}
+
+document.querySelectorAll(".tab").forEach((tab) => {
+  tab.addEventListener("click", handleTabClick);
+});
+
+document.addEventListener("DOMContentLoaded", attachTabClickHandlers);
+document.addEventListener("astro:page-load", attachTabClickHandlers);
 </script>
 
 <style lang="scss">
-
-
-
-
 	.swiper-fade .mySwiperThumbsFemme .swiper-slide,
 	.swiper-fade .mySwiperThumbsHomme .swiper-slide {
 		pointer-events: auto !important;
@@ -169,7 +230,80 @@ const nosTarifsHomme = allTarifsHomme.map((n) => ({
 			@apply text-left text-base bg-white h-0 mx-auto;
 			&.swiper-slide-active {
 				@apply h-auto  mx-auto;
+
 			}
 		}
+		
+	}
+
+	.tabnav {
+		@apply flex text-center mx-auto px-8 ;
+	}
+	.tab {
+		@apply text-grey-400 bg-grey-100 transition-all duration-300 rounded-ss-lg rounded-se-lg ;
+		&:hover {
+			@apply cursor-pointer bg-grey-200 transition-all duration-200 text-white;
+		}
+	}
+	.tab.active {
+		@apply text-white bg-black;
+	}
+	#tariffemme,
+	#tarifhomme {
+		position: relative;
+	}
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes fadeOut {
+		from {
+			opacity: 1;
+			transform: translateY(0);
+		}
+		to {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+	}
+
+	.is-leaving {
+		animation: slideAndFadeOut 500ms forwards !important;
+	}
+
+	@keyframes slideAndFadeOut {
+		0% {
+			opacity: 1;
+			transform: translateY(0);
+		}
+		100% {
+			opacity: 0;
+			transform: translateY(-20px);
+		}
+	}
+	#tariffemme,
+	#tarifhomme {
+		opacity: 0;
+		transition:
+			opacity 500ms ease,
+			transform 500ms ease;
+		position: absolute;
+		pointer-events: none; // Assurez-vous que l'élément non actif ne bloque pas les clics
+		animation-fill-mode: forwards; // Gardez l'état final après l'animation
+	}
+
+	#tariffemme.active,
+	#tarifhomme.active {
+		opacity: 1;
+		position: relative;
+		pointer-events: auto; // Activez les clics lorsque l'onglet est actif
+		animation: fadeIn 800ms ease forwards; // Utilisez fadeIn lors de l'activation
 	}
 </style>

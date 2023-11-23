@@ -5,12 +5,9 @@ import HeroBox from "../components/HeroBox.astro";
 import Accordion from "../components/Accordion.astro";
 import TarifsEpilationLaser from "../components/TarifsEpilationLaser.astro";
 import TarifAvantage from "../components/TarifAvantage.astro";
+import ResultsGalleryInjections from "../components/Resultats/ResultsGalleryInjections.astro";
 import { Image } from "astro:assets";
 import Footer from "../components/Footer.astro";
-import EpilationLaser from "../assets/img/epilation-laser.png";
-import PeauMate from "../assets/img/peau-mate.png";
-import VideoLaser1 from "../assets/img/video-laser-1.png";
-import ResultatsLaser1 from "../assets/img/resultats-laser-1.png";
 import AcideHyal1 from "../assets/img/acide-hyal1.png";
 import AcideHyal2 from "../assets/img/acide-hyal2.png";
 import ZoneLevres from "../assets/img/zone-levre.png";
@@ -24,16 +21,10 @@ import ZoneNez from "../assets/img/zone-nez.png";
 import ZoneMains from "../assets/img/zone-mains.png";
 import Evaluation from "../assets/img/evaluation.png";
 import SeanceInjection from "../assets/img/seance-injection.png";
-import ResultAcide1 from "../assets/img/result-acide-1.png";
-import ResultAcide2 from "../assets/img/result-acide-2.png";
-import ResultAcide3 from "../assets/img/result-acide-3.png";
-import ResultAcide4 from "../assets/img/result-acide-4.png";
-import ResultAcide5 from "../assets/img/result-acide-5.png";
 import AutreLevre from "../assets/img/autre-levre.png";
-import AutreDoubleMenton from "../assets/img/autre-double-menton .png";
-import AutreSillonNG from "../assets/img/autre-sillon-nasogenien .png";
-import AutreCernes from "../assets/img/autre-cernes .png";
-//import HeroAcideHyaluronique from "../assets/img/hero-acide-hyaluronique.png";
+import AutreDoubleMenton from "../assets/img/autre-double-menton.png";
+import AutreSillonNG from "../assets/img/autre-sillon-nasogenien.png";
+import AutreCernes from "../assets/img/autre-cernes.png";
 ---
 
 <Layout title="Page des composants" description="Ceci est la meta description">
@@ -200,34 +191,35 @@ import AutreCernes from "../assets/img/autre-cernes .png";
 							</div>
 						</div>
 					</div>
-					<div class="nav-container relative top-48 z-30 mx-auto max-w-7xl h-12">
-							<button class="gdm-button-prev"
-								><svg
-									width="25"
-									height="25"
-									viewBox="0 0 25 25"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg">
-									<path
-										d="M25 12.5C25 9.18479 23.683 6.00537 21.3388 3.66116C18.9946 1.31696 15.8152 -8.0296e-07 12.5 -1.09278e-06C9.1848 -1.38261e-06 6.00537 1.31696 3.66117 3.66116C1.31696 6.00537 1.38261e-06 9.18479 1.09278e-06 12.5C8.0296e-07 15.8152 1.31696 18.9946 3.66117 21.3388C6.00537 23.683 9.18479 25 12.5 25C15.8152 25 18.9946 23.683 21.3388 21.3388C23.683 18.9946 25 15.8152 25 12.5ZM13.2324 6.5918C13.6914 6.13281 14.4336 6.13281 14.8877 6.5918C15.3418 7.05078 15.3467 7.79297 14.8877 8.24707L10.6396 12.4951L14.8877 16.7432C15.3467 17.2021 15.3467 17.9443 14.8877 18.3984C14.4287 18.8525 13.6865 18.8574 13.2324 18.3984L8.1543 13.3301C7.69531 12.8711 7.69531 12.1289 8.1543 11.6748L13.2324 6.5918Z"
-										fill="white"></path>
-								</svg>
-							</button>
-							<button class="gdm-button-next"
-								><svg
-									width="25"
-									height="25"
-									viewBox="0 0 25 25"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg">
-									<path
-										d="M0 12.5C0 15.8152 1.31696 18.9946 3.66117 21.3388C6.00537 23.683 9.18479 25 12.5 25C15.8152 25 18.9946 23.683 21.3388 21.3388C23.683 18.9946 25 15.8152 25 12.5C25 9.18479 23.683 6.00537 21.3388 3.66117C18.9946 1.31696 15.8152 0 12.5 0C9.18479 0 6.00537 1.31696 3.66117 3.66117C1.31696 6.00537 0 9.18479 0 12.5ZM11.7676 18.4082C11.3086 18.8672 10.5664 18.8672 10.1123 18.4082C9.6582 17.9492 9.65332 17.207 10.1123 16.7529L14.3604 12.5049L10.1123 8.25684C9.65332 7.79785 9.65332 7.05566 10.1123 6.60156C10.5713 6.14746 11.3135 6.14258 11.7676 6.60156L16.8457 11.6699C17.3047 12.1289 17.3047 12.8711 16.8457 13.3252L11.7676 18.4082Z"
-										fill="white"></path>
-								</svg>
-							</button>
+					<div
+						class="nav-container relative top-48 z-30 mx-auto max-w-7xl h-12">
+						<button class="gdm-button-prev"
+							><svg
+								width="25"
+								height="25"
+								viewBox="0 0 25 25"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M25 12.5C25 9.18479 23.683 6.00537 21.3388 3.66116C18.9946 1.31696 15.8152 -8.0296e-07 12.5 -1.09278e-06C9.1848 -1.38261e-06 6.00537 1.31696 3.66117 3.66116C1.31696 6.00537 1.38261e-06 9.18479 1.09278e-06 12.5C8.0296e-07 15.8152 1.31696 18.9946 3.66117 21.3388C6.00537 23.683 9.18479 25 12.5 25C15.8152 25 18.9946 23.683 21.3388 21.3388C23.683 18.9946 25 15.8152 25 12.5ZM13.2324 6.5918C13.6914 6.13281 14.4336 6.13281 14.8877 6.5918C15.3418 7.05078 15.3467 7.79297 14.8877 8.24707L10.6396 12.4951L14.8877 16.7432C15.3467 17.2021 15.3467 17.9443 14.8877 18.3984C14.4287 18.8525 13.6865 18.8574 13.2324 18.3984L8.1543 13.3301C7.69531 12.8711 7.69531 12.1289 8.1543 11.6748L13.2324 6.5918Z"
+									fill="white"></path>
+							</svg>
+						</button>
+						<button class="gdm-button-next"
+							><svg
+								width="25"
+								height="25"
+								viewBox="0 0 25 25"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M0 12.5C0 15.8152 1.31696 18.9946 3.66117 21.3388C6.00537 23.683 9.18479 25 12.5 25C15.8152 25 18.9946 23.683 21.3388 21.3388C23.683 18.9946 25 15.8152 25 12.5C25 9.18479 23.683 6.00537 21.3388 3.66117C18.9946 1.31696 15.8152 0 12.5 0C9.18479 0 6.00537 1.31696 3.66117 3.66117C1.31696 6.00537 0 9.18479 0 12.5ZM11.7676 18.4082C11.3086 18.8672 10.5664 18.8672 10.1123 18.4082C9.6582 17.9492 9.65332 17.207 10.1123 16.7529L14.3604 12.5049L10.1123 8.25684C9.65332 7.79785 9.65332 7.05566 10.1123 6.60156C10.5713 6.14746 11.3135 6.14258 11.7676 6.60156L16.8457 11.6699C17.3047 12.1289 17.3047 12.8711 16.8457 13.3252L11.7676 18.4082Z"
+									fill="white"></path>
+							</svg>
+						</button>
 					</div>
-					<div class="swiper-wrapper mt-8 mainswiper mb-12 pb-8 max-w-[800px] flex">
-	
+					<div
+						class="swiper-wrapper mt-8 mainswiper mb-12 pb-8 max-w-[800px] flex">
 						<div class="swiper-slide">
 							<div class="elemcontainer">
 								<div>
@@ -417,178 +409,155 @@ import AutreCernes from "../assets/img/autre-cernes .png";
 			</div>
 		</section>
 
-		<section
-			class="bigtopo text-justify py-24 px-8 bg-grey-400 text-white bg-[url('/img/bg-zone-traitable-laser.jpg')]">
-			<h2 class="section-title dark text-center">
-				Zones traitables et indications
-			</h2>
-			<div class="max-w-3xl mx-auto">
-				<p class="mb-3 text-base">
-					Toutes les couleurs de peaux peuvent être traitées par l’épilation
-					définitive au laser. Cependant, seuls les patients ayant des poils
-					bruns peuvent en bénéficier. Les poils roux, blonds ou trop fins comme
-					les duvets ne sont pas accessibles au traitement laser car ils sont
-					pauvres en mélanine (pigment noir de la peau et des poils).
-				</p>
-				<p class="mb-3 text-base">
-					L’utilisation du laser Nd Yag avec une longueur d’onde adaptée permet
-					d’épiler les peaux noires avec des résultats équivalents à ceux
-					obtenus sur peaux blanches.
-				</p>
-				<h2 class="text-center mt-10 mb-6">Poil incarné</h2>
-				<p class="mb-3 text-base">
-					L’épilation définitive au laser est le seul traitement efficace pour
-					les patients sujets aux poils incarnés. Le poil incarné est un
-					follicule pileux repoussant sous la peau. Cette affection est
-					secondaire à l’épilation à la cire ou électrique et au rasage d’une
-					zone du corps avec des poils drus (maillot, jambes, barbe). Le poil
-					incarné peut être douloureux et se complique souvent de furoncles
-					(bouton blanc inflammatoire centré par un poil) laissant des tâches
-					foncées sur la peau.
-				</p>
-				<h2 class="text-center mt-10 mb-6">Hirsutisme</h2>
-				<p class="mb-6 text-base">
-					L’épilation définitive au laser a également une place importante dans
-					la prise en charge thérapeutique de l’hirustisme. Cet état
-					pathologique est défini par le développement d’une pilosité importante
-					dans les régions du corps où elle est normalement absente chez la
-					femme : visage , poitrine, ventre, dos, fesses. On différencie
-					l’hirsutisme de l’hypertrichose, définie comme le développement
-					excessif de la pilosité dans des zones qui sont normalement pourvues
-					chez la femme ( jambes, aisselles ..)
-				</p>
-			</div>
-		</section>
-
 		<section class="container gauche-droite pt-24 pb-24 px-8">
 			<h2 class="semi-section-title">Déroulement d’une séance</h2>
-			<div class="lg:flex lg:flex-row gap-8 mb-24">
+			<div class="lg:flex lg:flex-row-reverse gap-8 mb-24">
 				<div class="col lg:w-1/2 flex flex-col justify-center">
-					<div class="rounded-ss-lg rounded-se-lg overflow-hidden shadow-md">
-						<Accordion
-							items={[
-								{
-									title: "Consultation initiale",
-									answer:
-										"<p>Une première consultation par un médecin est réalisée de façon systématique. Elle permet l’examen de votre peau, vérifier l’absence de contre indications et d’établir les paramètres qui seront ensuite utilisés pour un traitement optimal.</p>",
-									isopen: true,
-								},
-								{
-									title: "Avant votre séance d’épilation",
-									answer:
-										"<p>Une première consultation par un médecin est réalisée de façon systématique. Elle permet l’examen de votre peau, vérifier l’absence de contre indications et d’établir les paramètres qui seront ensuite utilisés pour un traitement optimal.</p>",
-								},
-								{
-									title: "La séance d’épilation définite au laser",
-									answer:
-										"<p>Une première consultation par un médecin est réalisée de façon systématique. Elle permet l’examen de votre peau, vérifier l’absence de contre indications et d’établir les paramètres qui seront ensuite utilisés pour un traitement optimal.</p>",
-								},
-								{
-									title: "Entre deux séances d’épilation laser",
-									answer:
-										"<p>Une première consultation par un médecin est réalisée de façon systématique. Elle permet l’examen de votre peau, vérifier l’absence de contre indications et d’établir les paramètres qui seront ensuite utilisés pour un traitement optimal.</p>",
-								},
-							]}
-							extraClass="clearaccordion"
-						/>
+					<div class="rounded-ss-lg rounded-se-lg overflow-hidden">
+						<h3 class="text-lg md:text-xl lg:text-xxl mb-6">
+							Evaluation personnalisée
+						</h3>
+						<p class="mb-3 text-base">
+							Le praticien réalise une consultation de façon systématique avant
+							toute séance d’injections d’acide hyaluronique.
+						</p>
+						<p class="mb-3 text-base">
+							L’analyse des signes du vieillissement sur votre visage par un
+							médecin esthétique expert est une étape essentielle. Elle permet
+							d’établir un protocole de traitement adapté qui répondra au mieux
+							à vos attentes.
+						</p>
+						<p class="text-base">
+							La quantité de produit (nombre de seringues) varie en fonction de
+							chaque patient. Elle est évaluée le plus précisément possible lors
+							de cette première consultation.
+						</p>
 					</div>
 				</div>
 				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
 					<Image
-						src={VideoLaser1}
-						alt="Video Laser"
+						src={Evaluation}
+						alt="Evaluation personnalisée"
 						class="rounded-lg w-full"
 					/>
 				</div>
 			</div>
-			<div class="lg:flex lg:flex-row-reverse gap-8 mb-6">
+			<div class="lg:flex lg:flex-row gap-8 mb-6">
 				<div class="col lg:w-1/2 flex flex-col justify-center">
 					<h3 class="text-lg md:text-xl lg:text-xxl mb-6">
-						Résultats de l’épilation définitive au laser
+						La séance d'injections d'acide hyaluronique
 					</h3>
-					<p class="text-base mb-3">
-						Après chaque séance d’épilation définitive, vos poils se raréfient,
-						sont plus fins et plus petits.
+					<p class="mb-3 text-base">
+						Le médecin esthétique peut réaliser une anesthésie locale avant
+						injection afin de rendre le traitement plus confortable. Le
+						traitement dure de 20 à 60 minutes en fonction du nombre de zone
+						traitée. Les résultats sont visibles immédiatement avec une
+						amélioration les jours suivant les injections.
 					</p>
-					<p class="text-base mb-3">
-						Les publications d’études médicales sur l’efficacité et les
-						résultats de l’épilation laser sont très nombreuses. Elles montrent
-						que dans la plupart des cas, <strong
-							>les 6 premières séances d’épilation laser permettent une
-							élimination définitive de 90 à 100% des poils</strong
-						>.
-					</p>
-					<p class="text-base mb-3">
-						Exceptionnellement, la réduction des poils peut être faible à modéré
-						et ceci sans explication connue.
-					</p>
-					<p class="text-base mb-3">
-						Afin de vous garantir un résultat optimal, <strong
-							>il est important de suivre les recommandations de votre médecin</strong
-						>.
+					<p class="mb-3 text-base">
+						Dans les suites de la séance, un léger œdème et des rougeurs peuvent
+						apparaitre pendant quelque heures. Des ecchymoses, qui se masqueront
+						facilement avec un maquillage couvrant peuvent durer environ 1
+						semaine.
 					</p>
 					<p class="text-base">
-						Celles- ci favoriseront le bon déroulement des séances d’épilation,
-						et amélioreront votre confort une fois le traitement terminé.
+						Une consultation de contrôle peut être réalisée 15 jours après la
+						séance afin d’observer les résultats et apporter une éventuelle
+						retouche.
 					</p>
 				</div>
 				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
 					<Image
-						src={ResultatsLaser1}
-						alt="Résultats de l'épilation au laser"
+						src={SeanceInjection}
+						alt="La séance d'injection"
 						class="rounded-lg w-full"
 					/>
 				</div>
 			</div>
 		</section>
 
-		<section
-			class="bigtopo text-justify px-8 py-24 bg-grey-400 text-white bg-[url('/img/bg-zone-traitable-laser.jpg')]">
-			<h2 class="section-title dark text-center">Questions / Réponses</h2>
+		<section class="bigtopo text-justify px-8 py-24 bg-grey-400 text-white">
+			<h2 class="section-title dark text-center">
+				Résultats injections acide hyaluronique
+			</h2>
 			<div class="max-w-3xl mx-auto">
+				<ResultsGalleryInjections />
+			</div>
+		</section>
+
+		<section class="text-justify px-8 py-24 bg-white text-black bg-white">
+			<h2 class="section-title text-center">Questions / Réponses</h2>
+			<div class="max-w-3xl mx-auto shadow-xl">
 				<Accordion
 					items={[
 						{
-							title: "Est-ce que c’est douloureux ?",
+							title: "Est-ce douloureux ?",
 							answer:
-								"<p>Nos plate-formes laser de dernière génération sont équipées d’un <strong>système de refroidissement externe</strong> atténuant significativement la douleur lors de la séance.</p><p><strong>La douleur ressentie</strong> pendant une séance d’épilation laser est très variable en fonction des patients. Elle est souvent décrite comme un simple picotement ou la sensation d’un coup d’élastique sur la peau.</p><p>Si le patient ressent une douleur lors du traitement, le médecin pourra alors prescrire une <strong>crème anesthésiante</strong> à appliquer pendant une durée d’une à deux heures avant la séance (afin de rendre le traitement plus confortable).</p>",
+								"<p>Les injections sont peu douloureuses, et donc souvent pratiquées sans anesthésie.</p><p>Pour les patients sensibles, le médecin peut réaliser une anesthésie des zones à traiter par la pose de la crème anesthésiante une heure avant le traitement.</p>",
 							isopen: true,
 						},
 						{
+							title: "Combien de temps dure une séance d’injections ?",
+							answer:
+								"<p>Elle dure de 15 min à 1h30.</p><p><strong>Plusieurs facteurs rentrent en jeu dans le résultat du traitement</strong> d’épilation laser et donc dans le nombre de séances nécessaires afin d’atteindre l’objectif fixé :</p><p>Plusieurs facteurs déterminent la durée d’une séance d’injections d’acide hyaluronique : nombre de zones à traiter, nombre de seringues utilisées.</p>",
+						},
+						{
 							title:
-								"Combien de séances sont nécessaires et à quelle fréquence ?",
+								"Quels sont les effets secondaires des injections d'acide hyaluronique ?",
 							answer:
-								"<p>Un traitement d’<strong>épilation définitive </strong>au laser nécessite <strong>en général 4 à 8 séances par zone</strong>. Le délai entre les séances varie avec l’avancée du traitement. Il est d’environ 4 à 8 semaines entre la première et la seconde séance, de 2 mois entre la seconde et la troisième séance, et de 2 à 3 mois entre les séances ultérieures. La durée d’un traitement complet d’épilation définitive au laser est donc de 8 à 16 mois.</p><p><strong>Plusieurs facteurs rentrent en jeu dans le résultat du traitement</strong> d’épilation laser et donc dans le nombre de séances nécessaires afin d’atteindre l’objectif fixé :</p><p><strong>Pilosité de la zone à traiter</strong></p><p><strong>Couleur et diamètre du poil</strong> (meilleure cible si poil noir et épais).</p><p><strong>Zone traitée</strong> : il faut moins de séances pour les aisselles, le maillot, les jambes, et plus de séances pour le visage, les cuisses, le dos.</p><p><strong>L’expérience du médecin laseriste</strong> et la bonne connaissance des pratiques de laser épilatoire : protocole de traitement adapté à la peau et à la pilosité du patient.</p>",
+								"<p>Après les injections, on observe souvent un léger gonflement associé à une rougeur disparaissant au bout de quelques heures.</p><p>Plus rarement, de petites ecchymoses aux points d’injections peuvent se former le lendemain et disparaissent au bout de 7 à 10 jours.</p>",
 						},
 						{
-							title: "Quels sont les risques ?",
+							title:
+								"Recommandations avant et après les injections d'acide hyaluronique ?",
 							answer:
-								"<p><strong>Les effets indésirables sont exceptionnels</strong> et sont représentés principalement par les brûlures supérficielles. <strong>L’utilisation d’un laser adapté à votre couleur de peau</strong> et le respect des contres indications au traitement laser <strong>permettent de totalement les éviter.</strong></p><p>Les brûlures superficielles se traduisent par une rougeur et l’apparition de quelques petites croûtes qui évoluent avec une guérison complète en 2 à 3 semaines.</p>",
+								"<p>La prise d’aspirine est à éviter la semaine précédant l’injection. Il est préférable d’éviter l’exposition prolongée au soleil, aux UV ainsi que la pratique de sauna et hammam les 2 jours suivant l’injection.</p><p>On recommande également de masser la zone traitée les 5 jours suivant le traitement.</p>",
 						},
 						{
-							title: "Peut-on se raser entre les séances ?",
+							title: "Quel est le prix des injections d'acide hyaluronique ?",
 							answer:
-								"<p>Oui, il est autorisé de se raser entre 2 séances d’épilation laser.</p>",
-						},
-						{
-							title: "Quelle différence entre laser et lumière pulsée ?",
-							answer:
-								"<p>L’épilation laser est un traitement sûr et efficace s’il est pratiqué par un médecin formé à ces appareils.</p><p>Pour les patients, il est souvent difficile de différencier les lasers des appareils de lumière pulsée (appelée également IPL ou lampe flash). Même si leur principe de fonctionnement est proche, <strong>l’efficacité des lampes flash (ou lumière pulsée) est non comparable.</strong></p><p>En effet, <strong>l’énergie délivrée par la lumière pulsée est largement inférieure à celle du laser</strong>, insuffisante pour détruire le poil. Avec la lumière pulsée, on parlera plutôt d’épilation « temporaire », car la plupart des poils traités repousseront dans les années suivant les séances. Elles peuvent également représenter un risque de brûlure plus important si elles ne sont pas manipulées par des mains expertes.</p><p>La réglementation encadrant l’utilisation de lasers médicaux ainsi que la lumière intense pulsée est relativement stricte. Il ressort sans ambiguïté des différents textes de loi l’interdiction d’utilisation d’un laser médical ainsi que de la lumière pulsée par un professionnel non-médecin. Seuls les médecins sont autorisés à pratiquer des épilations définitives et privilégient l’utilisation des lasers dont la puissance garantit de bien meilleurs résultats que la lumière pulsée.</p>",
+								"<p>Votre praticien en médecine esthétique utilise les produits d’acide hyaluronique de la gamme Juvederm du laboratoire Allergan.</p><p>Le tarif varie selon la quantité de produit utilisée et donc du nombre de zones injectées. En général, l’injection d’une zone comme les lèvres, les sillons naso géniens ou la vallée des larmes requiert 1 seule seringue d’acide hyaluronique.</p><p>Prix de la seringue d’acide hyaluronique : 290 euros TTC</p>",
 						},
 					]}
 				/>
 			</div>
 		</section>
+
+		<section class="autresoins bg-grey-400 py-12 text-center">
+			<h2 class="text-white section-title dark">Autres soins</h2>
+			<div class="flex justify-center gap-6">
+				<div>
+					<Image src={AutreLevre} alt="Lèvres" /><h4 class="text-white mt-2">
+						Lèvres
+					</h4>
+				</div>
+				<div>
+					<Image src={AutreDoubleMenton} alt="Double menton" /><h4
+						class="text-white mt-2">
+						Double menton
+					</h4>
+				</div>
+				<div>
+					<Image src={AutreSillonNG} alt="Sillons nasogéniens" /><h4
+						class="text-white mt-2">
+						Sillons nasogéniens
+					</h4>
+				</div>
+				<div>
+					<Image src={AutreCernes} alt="Cernes" /><h4 class="text-white mt-2">
+						Cernes
+					</h4>
+				</div>
+			</div>
+		</section>
+		<section class="tarifs pt-24 text-center pb-24 px-8">
+			<h2 class="section-title">Tarifs</h2>
+			<TarifsEpilationLaser />
+			<a href="/demander-un-rdv/" class="cta rounded brown">Prendre RDV</a>
+			<TarifAvantage />
+		</section>
 	</main>
-
 	<!-- FIN DE GAUCHE DROITE -->
-
-	<section class="tarifs pt-24 text-center pb-24 px-8">
-		<h2 class="section-title">Tarifs</h2>
-		<TarifsEpilationLaser />
-		<a href="/demander-un-rdv/" class="cta rounded brown">Prendre RDV</a>
-		<TarifAvantage />
-	</section>
 </Layout>
 
 <Footer />
@@ -598,8 +567,11 @@ import AutreCernes from "../assets/img/autre-cernes .png";
 	import "swiper/css/bundle";
 
 	function initializeZoneSlider() {
+		const swiperElement = document.querySelector(".mySwiper");
+		const swiperThumbsElement = document.querySelector(".mySwiperThumbsZone");
+
 		//@ts-ignore
-		if (!document.querySelector(".mySwiper").swiper) {
+		if (swiperElement && swiperThumbsElement && !swiperElement.swiper) {
 			var swiperThumbs = new Swiper(".mySwiperThumbsZone", {
 				slidesPerView: 6,
 				freeMode: false,
@@ -652,7 +624,7 @@ import AutreCernes from "../assets/img/autre-cernes .png";
 				},
 				pagination: {
 					el: ".swiper-pagination",
-					clickable: true, // Permet de cliquer sur les bullets pour naviguer
+					clickable: true, 
 				},
 				freeMode: false,
 				slidesPerView: 1,
@@ -664,10 +636,9 @@ import AutreCernes from "../assets/img/autre-cernes .png";
 		}
 	}
 
-	// Initialisation du Swiper au chargement de la page
+
 	document.addEventListener("DOMContentLoaded", initializeZoneSlider);
 
-	// Réinitialisation du Swiper lors du chargement d'une nouvelle page avec Astro
 	document.addEventListener("astro:page-load", initializeZoneSlider);
 </script>
 
@@ -743,7 +714,6 @@ import AutreCernes from "../assets/img/autre-cernes .png";
 			}
 		}
 	}
-
 	.hero-element {
 		background: url("/img/hero-acide-hyaluronique.webp") no-repeat center center;
 		@apply relative bg-cover bg-center;
