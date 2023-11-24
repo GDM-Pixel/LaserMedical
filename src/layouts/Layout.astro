@@ -94,7 +94,7 @@ let slug =
 				@apply text-white;
 				&:before,
 				&:after {
-					@apply absolute w-32 h-[1px] block top-7;
+					@apply absolute w-32 h-[1px] top-7 hidden lg:block;
 				}
 				&:before {
 					@apply -left-40 bg-white content-[""];
@@ -111,10 +111,10 @@ let slug =
 			}
 
 			&.dark {
-				@apply text-white;
+				@apply text-white ;
 
 				&:after {
-					@apply absolute w-64 h-[2px] block top-7 -right-80 bg-white content-[""];
+					@apply absolute w-64 h-[2px] hidden lg:block top-7 -right-80 bg-white content-[""];
 				}
 			}
 		}
