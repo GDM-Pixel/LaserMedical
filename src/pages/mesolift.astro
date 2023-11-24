@@ -1,1 +1,332 @@
-COUCOU
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import HeroBox from "../components/HeroBox.astro";
+import Accordion from "../components/Accordion.astro";
+import TarifsMesolift from "../content/tarifs/mesolift.md";
+import { Image } from "astro:assets";
+import Footer from "../components/Footer.astro";
+import SeanceInjection from "../assets/img/seance-injection.png";
+---
+
+<Layout
+	title="MESOLIFT au Profhilo | Laser Médical | Saint-Denis et Saint-Leu Réunion"
+	description="Le mésolift par Profhilo, améliore la texture de la peau du visage et du cou en restaurant son hydratation, sa tonicité et son élasticité.">
+	<div class="hero-element">
+		<div class="overlay"></div>
+		<Header />
+		<HeroBox
+			title="Mesolift par Profhilo®"
+			body="Le mésolift par Profhilo® vise à combattre la diminution physiologique de la quantité d’acide hyaluronique dans la peau, restaurant ainsi son hydratation, son élasticité et sa tonicité."
+		/>
+	</div>
+	<main>
+		<section class="container gauche-droite pt-24 pb-18">
+			<div class="lg:flex lg:flex-row gap-8 mb-24">
+				<div class="col lg:w-1/2 flex flex-col justify-center">
+					<h3 class="text-lg md:text-xl lg:text-xxl mb-6">
+						Qu'est-ce que le mesolift par Profhilo®
+					</h3>
+					<p class="text-base mb-3">
+						Le Profhilo® est un produit des laboratoires IBSA, leader
+						pharmaceutique mondial dans la production d’acide hyaluronique. Le
+						Profhilo® a été lancé en janvier 2016 et grâce à ses qualités
+						exceptionnelles a remporté très rapidement plusieurs prix du
+						meilleur produit (Aesthetics Awards 2016, anti-aging and beauty
+						Trophy 2016…).
+					</p>
+					<p class="text-base mb-3">
+						Le Profhilo® est constitué uniquement d’acide hyaluronique
+						fortement concentré (64mg/2ml) de très faible viscosité (sans BDDE
+						ou autre agent chimique).
+					</p>
+				</div>
+				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
+					<img
+						src="/img/whatisbotox.jpg"
+						alt="La toxine botulique, c'est quoi ?"
+						class="w-full rounded-lg"
+					/>
+				</div>
+			</div>
+			<div class="lg:flex lg:flex-row-reverse gap-8 mb-24">
+				<div class="col lg:w-1/2 flex flex-col justify-center">
+					<h3 class="text-lg md:text-xl lg:text-xxl mb-6">
+						Principe d'action du mesolift par Profhilo®
+					</h3>
+
+					<p class="text-base mb-3">
+						Grace à ses caractéristiques uniques, le profhilo® va se répartir
+						uniformément dans l’ensemble des unités anatomiques du visage ou du
+						cou après injection.
+					</p>
+					<p class="text-base">
+						Le Profhilo® induit un bio-remodelage tissulaire par son action sur
+						les fibroblastes dermiques et la stimulation des adipocytes
+						hypodermiques. Il agit sur les différentes couches de la peau en
+						stimulant la production des fibres de collagène et d’élastine et en
+						favorisant la viabilité des adipocytes.
+					</p>
+				</div>
+				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
+					<img
+						src="/img/whatisbotox.jpg"
+						alt="La toxine botulique, c'est quoi ?"
+						class="w-full rounded-lg"
+					/>
+				</div>
+			</div>
+		</section>
+
+		<section class="gauche-droite pt-24 pb-24 px-8 bg-grey-100">
+			<div class="container">
+				<h2 class="semi-section-title">Déroulement d’une séance de Mesolift</h2>
+				<div class="lg:flex lg:flex-row gap-8 mb-18">
+					<div class="col lg:w-1/2 flex flex-col justify-center">
+						<div class="rounded-ss-lg rounded-se-lg overflow-hidden">
+							<p class="mb-3 text-base">
+								Grace à ses caractéristiques uniques, le profhilo® va se
+								répartir uniformément dans l’ensemble des unités anatomiques du
+								visage ou du cou après injection.
+							</p>
+							<p class="mb-3 text-base">
+								Le protocole recommandé afin d’obtenir le bio-remodelage
+								tissulaire est 2 séances d’injections à 1 mois d’intervalle.
+							</p>
+							<p class="mb-3 text-base">
+								L’injection consiste à réaliser plusieurs bolus sous-cutanés
+								superficiels qui diffusent en quelques heures sur l’ensemble du
+								visage. Lors d’une séance, on injecte une seringue de 2ml en
+								pratiquant la technique Bio Aesthetic point (BAP) qui totalise 5
+								points de chaque côté du visage ou du cou.
+							</p>
+							<p class="mb-3 text-base">
+								Il est possible d’appliquer une crème anesthésiante afin de la
+								rendre plus confortable.
+							</p>
+							<p class="text-base">
+								Les résultats apparaissent dans les jours suivant la séance et
+								durent environ 6 à 8 mois.
+							</p>
+						</div>
+					</div>
+					<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
+						<img
+							src="/img/consulting1.jpg"
+							alt="Evaluation personnalisée"
+							class="rounded-lg w-full"
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="bigtopo text-justify py-24 bg-grey-400 text-white">
+			<h2 class="section-title dark text-center px-4">
+				Résultats du Mesolift par Profilho®
+			</h2>
+			<div class="container mt-20">
+				<div class="lg:flex lg:flex-row-reverse gap-8 mb-6">
+					<div class="col lg:w-1/2 flex flex-col justify-center">
+						<p class="mb-3 text-base">
+							On porte un intérêt particulier au Profhilo® car il est capable
+							de diffuser de façon homogène sur des zones de peaux très fines
+							comme le cou. (difficilement traitables avec un filler classique).
+						</p>
+						<p class="mb-3 text-base">
+							L’action du profhilo® est multiple, on observe quelques semaines
+							après une séance :
+							<ul class="pl-8 mb-6">
+								<li class="text-base list-disc">
+									Une amélioration de l’élasticité et la tonicité de la peau
+									grâce au bio-remodelage de la matrice extracellulaire.
+								</li>
+								<li class="text-base list-disc">
+									Une amélioration de la texture et de l’éclat cutané grâce à
+									son action sur les adipocytes.
+								</li>
+							</ul>
+						</p>
+						<p class="text-base">
+							Les résultats apparaissent dans les jours suivant la séance et
+							durent environ 6 à 8 mois (on recommande d’effectuer une séance tous les 6 mois afin de maintenir les résultats.).
+						</p>
+					</div>
+					<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
+						<img src="/img/botox1.jpg" alt="Botox" class="rounded-lg w-full" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="px-8 py-24 bg-white text-black text-center">
+			<h2 class="section-title">Tarifs</h2>
+
+			<TarifsMesolift />
+
+			<a href="/demander-un-rdv/" class="cta rounded brown">Prendre RDV</a>
+		</section>
+	</main>
+	<!-- FIN DE GAUCHE DROITE -->
+</Layout>
+
+<Footer />
+
+<script>
+	import Swiper from "swiper/bundle";
+	import "swiper/css/bundle";
+
+	function initializeZoneSlider() {
+		const swiperElement = document.querySelector(".mySwiper");
+		const swiperThumbsElement = document.querySelector(".mySwiperThumbsZone");
+
+		//@ts-ignore
+		if (swiperElement && swiperThumbsElement && !swiperElement.swiper) {
+			var swiperThumbs = new Swiper(".mySwiperThumbsZone", {
+				slidesPerView: "auto",
+				freeMode: false,
+				loop: false,
+				grabCursor: true,
+				spaceBetween: 30,
+				watchSlidesProgress: true,
+				slideToClickedSlide: true,
+
+				breakpoints: {
+					// when window width is >= 320px
+					320: {
+						slidesPerView: 3,
+						spaceBetween: 10,
+					},
+					// when window width is >= 480px
+					480: {
+						slidesPerView: 3,
+						spaceBetween: 20,
+					},
+					// when window width is >= 640px
+					640: {
+						slidesPerView: 3,
+						spaceBetween: 30,
+					},
+					// when window width is >= 992px
+					992: {
+						slidesPerView: 5,
+						spaceBetween: 30,
+					},
+					// when window width is >= 1200px
+					1200: {
+						slidesPerView: 6,
+						spaceBetween: 50,
+					},
+				},
+			});
+			var swiper = new Swiper(".mySwiper", {
+				slideActiveClass: "swiper-slide-active",
+				effect: "fade",
+				fadeEffect: {
+					crossFade: true,
+				},
+				loop: true,
+				spaceBetween: 0,
+				grabCursor: true,
+				navigation: {
+					nextEl: ".gdm-button-next",
+					prevEl: ".gdm-button-prev",
+				},
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+				freeMode: false,
+				slidesPerView: 1,
+				watchSlidesProgress: false,
+				thumbs: {
+					swiper: swiperThumbs,
+				},
+			});
+		}
+	}
+
+	document.addEventListener("DOMContentLoaded", initializeZoneSlider);
+
+	document.addEventListener("astro:page-load", initializeZoneSlider);
+</script>
+
+<style lang="scss">
+	:root {
+		--swiper-theme-color: #d19f6b !important;
+		--swiper-pagination-bullet-size: 10px !important;
+		--swiper-pagination-bullet-width: 10px !important;
+		--swiper-pagination-bullet-horizontal-gap: 6px;
+		--swiper-pagination-bullet-width: 26px;
+		--swiper-pagination-bullet-height: 5px;
+		--swiper-pagination-bullet-border-radius: 99px;
+		--swiper-pagination-bullet-inactive-color: #dddddd;
+		--swiper-pagination-bullet-inactive-opacity: 1;
+	}
+	main {
+		margin: auto;
+	}
+	.gdm-button-prev,
+	.gdm-button-next {
+		@apply absolute;
+	}
+	.gdm-button-prev {
+		@apply left-6;
+	}
+	.gdm-button-next {
+		@apply right-6;
+	}
+	.swiper-fade .mySwiperThumbs .swiper-slide,
+	.swiper-fade .mySwiperThumbsZone .swiper-slide {
+		pointer-events: auto !important;
+		transition-property: opacity;
+		transition: 300ms ease all;
+	}
+
+	.mySwiperThumbs,
+	.mySwiperThumbsZone {
+		.swiper-wrapper {
+			/*@apply mx-auto text-center flex flex-wrap justify-center gap-4 sm:gap-6;*/
+		}
+		.swiper-slide {
+			@apply cursor-pointer h-36 border-2 border-transparent rounded-lg overflow-hidden relative text-center text-white text-base flex flex-col justify-end items-center leading-6 pb-0 filter grayscale transition-all duration-300 ease-in-out bg-cover bg-center bg-no-repeat hover:grayscale-0 max-w-[200px];
+			h4 {
+				@apply text-[18px] z-20 relative mb-4;
+			}
+			&.swiper-slide-thumb-active {
+				@apply filter grayscale-0 border-2 border-white;
+			}
+			.overlay {
+				@apply bg-black bg-opacity-10 absolute top-0 left-0 right-0 bottom-0 z-10;
+			}
+		}
+		.swiper-slide-thumb-active {
+			@apply font-bold;
+		}
+	}
+
+	.mainswiper {
+		@apply text-center;
+		.swiper-slide {
+			@apply text-left text-base bg-grey-600 h-0 mx-auto text-white;
+			.elemcontainer {
+				@apply grid grid-cols-1 sm:grid-cols-2 gap-6 sm:text-base text-sm max-w-[850px] text-center px-6 sm:px-0 py-8 mx-auto;
+			}
+			h3 {
+				@apply text-[22px] leading-7 mb-3;
+			}
+			p {
+				@apply text-[18px] mb-2;
+			}
+			&.swiper-slide-active {
+				@apply h-auto  mx-auto;
+			}
+		}
+	}
+	.hero-element {
+		background: url("/img/hero-mesolift.jpg") no-repeat center center;
+		@apply relative bg-cover bg-center;
+	}
+	.overlay {
+		@apply absolute top-0 bottom-0 left-0 right-0  bg-black bg-opacity-50 pointer-events-none  transition-all duration-500;
+	}
+</style>

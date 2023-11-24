@@ -1,9 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import TarifsAcideHyaluronique from "../content/tarifs/acidehyaluronique.md";
 import Header from "../components/Header.astro";
 import HeroBox from "../components/HeroBox.astro";
 import Accordion from "../components/Accordion.astro";
-import TarifsEpilationLaser from "../components/TarifsEpilationLaser.astro";
 import TarifAvantage from "../components/TarifAvantage.astro";
 import ResultsGalleryInjections from "../components/Resultats/ResultsGalleryInjections.astro";
 import { Image } from "astro:assets";
@@ -21,10 +21,7 @@ import ZoneNez from "../assets/img/zone-nez.png";
 import ZoneMains from "../assets/img/zone-mains.png";
 import Evaluation from "../assets/img/evaluation.png";
 import SeanceInjection from "../assets/img/seance-injection.png";
-import AutreLevre from "../assets/img/autre-levre.png";
-import AutreDoubleMenton from "../assets/img/autre-double-menton.png";
-import AutreSillonNG from "../assets/img/autre-sillon-nasogenien.png";
-import AutreCernes from "../assets/img/autre-cernes.png";
+import AutresSoins from "../components/AutresSoins.astro";
 ---
 
 <Layout title="Page des composants" description="Ceci est la meta description">
@@ -475,7 +472,6 @@ import AutreCernes from "../assets/img/autre-cernes.png";
 				</div>
 			</div>
 		</section>
-
 		<section class="bigtopo text-justify px-8 py-24 bg-grey-400 text-white">
 			<h2 class="section-title dark text-center">
 				Résultats injections acide hyaluronique
@@ -485,7 +481,7 @@ import AutreCernes from "../assets/img/autre-cernes.png";
 			</div>
 		</section>
 
-		<section class="text-justify px-8 py-24 bg-white text-black bg-white">
+		<section class="text-justify px-8 py-24 bg-white text-black">
 			<h2 class="section-title text-center">Questions / Réponses</h2>
 			<div class="max-w-3xl mx-auto shadow-xl">
 				<Accordion
@@ -523,38 +519,15 @@ import AutreCernes from "../assets/img/autre-cernes.png";
 			</div>
 		</section>
 
-		<section class="autresoins bg-grey-400 py-12 text-center">
-			<h2 class="text-white section-title dark">Autres soins</h2>
-			<div class="flex justify-center gap-6">
-				<div>
-					<Image src={AutreLevre} alt="Lèvres" /><h4 class="text-white mt-2">
-						Lèvres
-					</h4>
-				</div>
-				<div>
-					<Image src={AutreDoubleMenton} alt="Double menton" /><h4
-						class="text-white mt-2">
-						Double menton
-					</h4>
-				</div>
-				<div>
-					<Image src={AutreSillonNG} alt="Sillons nasogéniens" /><h4
-						class="text-white mt-2">
-						Sillons nasogéniens
-					</h4>
-				</div>
-				<div>
-					<Image src={AutreCernes} alt="Cernes" /><h4 class="text-white mt-2">
-						Cernes
-					</h4>
-				</div>
-			</div>
-		</section>
+		<AutresSoins />
 		<section class="tarifs pt-24 text-center pb-24 px-8">
 			<h2 class="section-title">Tarifs</h2>
-			<TarifsEpilationLaser />
+			
+<TarifsAcideHyaluronique />
+
+
 			<a href="/demander-un-rdv/" class="cta rounded brown">Prendre RDV</a>
-			<TarifAvantage />
+			
 		</section>
 	</main>
 	<!-- FIN DE GAUCHE DROITE -->

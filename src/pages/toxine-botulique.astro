@@ -1,1 +1,557 @@
-COUCOU
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import HeroBox from "../components/HeroBox.astro";
+import Accordion from "../components/Accordion.astro";
+import TarifAvantage from "../components/TarifAvantage.astro";
+import TarifsBotox from "../content/tarifs/botox.md";
+import { Image } from "astro:assets";
+import Footer from "../components/Footer.astro";
+import SeanceInjection from "../assets/img/seance-injection.png";
+---
+
+<Layout
+	title="Injection Botox | Laser Médical | Saint-Denis et Saint-Leu Réunion"
+	description="L’objectif des injections de toxine botulique en médecine esthétique est de traiter les rides d’expression tout en gardant la mobilité du visage. Les résultats sont visibles dans les jours qui suivent l'injection..">
+	<div class="hero-element">
+		<div class="overlay"></div>
+		<Header />
+		<HeroBox
+			title="TOXINE BOTULIQUE"
+			body="Atténuez vos rides d’expression grâce à la toxine botulique"
+		/>
+	</div>
+	<main>
+		<section class="container gauche-droite pt-24 pb-24">
+			<div class="lg:flex lg:flex-row gap-8 mb-24">
+				<div class="col lg:w-1/2 flex flex-col justify-center">
+					<h3 class="text-lg md:text-xl lg:text-xxl mb-6">
+						La toxine botulique, qu’est-ce que c’est ?
+					</h3>
+					<p class="text-base mb-3">
+						La <strong>toxine botulique</strong>, également connue sous le nom
+						de Botox, est un produit dérivé de la culture du Clostridium
+						Botulinum, une bactérie qui produit une neurotoxine purifiée de type
+						A. <strong
+							>Cette substance est extraite et utilisée depuis plus de 30 ans en
+							neurologie et en ophtalmologie à des fins médicales</strong
+						>, telles que le traitement de la dystonie cervicale, du strabisme
+						et du blépharospasme.
+					</p>
+					<p class="text-base">
+						La quantité de toxine botulique utilisée en médecine esthétique est
+						beaucoup plus faible que celle utilisée dans un contexte
+						thérapeutique. Il est important de souligner que <strong
+							>l'utilisation de la toxine botulique doit toujours être réalisée
+							par des professionnels de la santé qualifiés et formés</strong
+						>. Cela garantit une utilisation appropriée et sécuritaire de ce
+						produit pour obtenir les meilleurs résultats possibles.
+					</p>
+				</div>
+				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
+					<img
+						src="/img/whatisbotox.jpg"
+						alt="La toxine botulique, c'est quoi ?"
+						class="w-full rounded-lg"
+					/>
+				</div>
+			</div>
+			<div class="lg:flex lg:flex-row-reverse gap-8 mb-6">
+				<div class="col lg:w-1/2 flex flex-col justify-center">
+					<h3 class="text-lg md:text-xl lg:text-xxl mb-6">
+						Mécanisme d’action de la toxine botulique
+					</h3>
+					<p class="text-base mb-3">
+						Normalement, une peau jeune retrouve son aspect lisse après chaque
+						contraction musculaire. Malheureusement, avec le temps, la peau perd
+						de son élasticité et garde les marques des plis d'expression, <strong
+							>ce qui donne naissance à des rides dites "dynamiques"</strong
+						>. Au fil des années, ces rides dynamiques s'approfondissent et
+						entraînent l'apparition de rides permanentes, également connues sous
+						le nom de rides "statiques".
+					</p>
+					<p class="text-base">
+						Ces rides statiques deviennent plus visibles et marquées au fur et à
+						mesure que le temps passe. <strong
+							>Elles peuvent donner au visage une apparence fatiguée</strong
+						>, vieillie ou plus âgée qu'elle ne l'est en réalité. C'est là que
+						les injections de toxine botulique entrent en jeu : elles permettent
+						de <strong
+							>relâcher temporairement les muscles responsables de ces rides</strong
+						>, ce qui atténue leur apparence et laisse la peau paraître plus
+						lisse et plus jeune.
+					</p>
+				</div>
+				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
+					<img
+						src="/img/botox-action.jpg"
+						alt="Comment agit le botox ?"
+						class="w-full"
+					/>
+				</div>
+			</div>
+
+			<div class="mt-24 rounded-ss-lg rounded-se-lg overflow-hidden shadow-md">
+				<Accordion
+					items={[
+						{
+							title: "En savoir plus",
+							answer:
+								"<p>La toxine botulique provoque temporairement le relâchement des muscles peauciers en bloquant la libération de l’acétycholine au niveau de la jonction neuro-musculaire. La muscles se relaxent et les rides s’effacent.</p><p>L’acétylcholine est un neurotransmetteur qui permet de propager l’influx nerveux du nerf au muscle entrainant la contraction musculaire. Le mécanisme d’action de la toxine botulinique de type A sur les terminaisons nerveuses cholinergiques peut être décrit par un procédé séquentiel en quatre temps :</p><ul><li>Liaison : la chaîne lourde de la neurotoxine botulinique de type A se fixe avec une sélectivité et une affinité exceptionnellement fortes aux récepteurs cholinergiques.</li><li>Internalisation: invagination de la membrane nerveuse terminale et encapsulation de la toxine dans la terminaison nerveuse (endocytose).</li><li>Translocation : la fonction amine terminale de la chaîne lourde de la neurotoxine forme un pore dans la membrane de la vésicule ; le pont disulfure est rompu et la chaîne légère de la neurotoxine passe à travers ce pore dans le cytosol.</li><li>Inhibition : lorsque la chaîne légère est libérée, elle clive de façon très sélective la protéine cible (SNAP 25) qui est indispensable à la libération d’acétylcholine.</li></ul><p>Le rétablissement complet de la fonction motrice/conduction nerveuse après injection intramusculaire intervient normalement en l’espace de 3 à 4 mois, lorsque les terminaisons nerveuses se régénèrent et rétablissent leurs connexions avec la plaque motrice.</p>",
+						},
+					]}
+				/>
+			</div>
+		</section>
+		<section class="zone-slider bg-grey-600 pt-24 py-12">
+			<h2 class="section-title dark">Zones traitables</h2>
+			<div class="relative mt-12 mb-12">
+				<div class="mySwiper">
+					<div class="swiper mySwiperThumbsZone">
+						<div class="swiper-wrapper mx-auto flex md:justify-center">
+							<div class="swiper-slide">
+								<img
+									src="/img/ride-front.png"
+									alt="Zone Front"
+									class="absolute w-full h-full object-cover -z-10"
+								/>
+								<h4>Rides du front</h4>
+								<div class="overlay"></div>
+							</div>
+							<div class="swiper-slide">
+								<img
+									src="/img/ride-lion.jpg"
+									alt="Zone Cernes"
+									class="absolute w-full h-full object-cover -z-10"
+								/>
+								<h4>Rides du lion</h4>
+								<div class="overlay"></div>
+							</div>
+							<div class="swiper-slide">
+								<img
+									src="/img/ride-oie.png"
+									alt="Zone Rides"
+									class="absolute w-full h-full object-cover -z-10"
+								/>
+								<h4>Rides de la patte d’oie</h4>
+								<div class="overlay"></div>
+							</div>
+						</div>
+					</div>
+					<div
+						class="nav-container relative top-48 z-30 mx-auto max-w-7xl h-12">
+						<button class="gdm-button-prev"
+							><svg
+								width="25"
+								height="25"
+								viewBox="0 0 25 25"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M25 12.5C25 9.18479 23.683 6.00537 21.3388 3.66116C18.9946 1.31696 15.8152 -8.0296e-07 12.5 -1.09278e-06C9.1848 -1.38261e-06 6.00537 1.31696 3.66117 3.66116C1.31696 6.00537 1.38261e-06 9.18479 1.09278e-06 12.5C8.0296e-07 15.8152 1.31696 18.9946 3.66117 21.3388C6.00537 23.683 9.18479 25 12.5 25C15.8152 25 18.9946 23.683 21.3388 21.3388C23.683 18.9946 25 15.8152 25 12.5ZM13.2324 6.5918C13.6914 6.13281 14.4336 6.13281 14.8877 6.5918C15.3418 7.05078 15.3467 7.79297 14.8877 8.24707L10.6396 12.4951L14.8877 16.7432C15.3467 17.2021 15.3467 17.9443 14.8877 18.3984C14.4287 18.8525 13.6865 18.8574 13.2324 18.3984L8.1543 13.3301C7.69531 12.8711 7.69531 12.1289 8.1543 11.6748L13.2324 6.5918Z"
+									fill="white"></path>
+							</svg>
+						</button>
+						<button class="gdm-button-next"
+							><svg
+								width="25"
+								height="25"
+								viewBox="0 0 25 25"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M0 12.5C0 15.8152 1.31696 18.9946 3.66117 21.3388C6.00537 23.683 9.18479 25 12.5 25C15.8152 25 18.9946 23.683 21.3388 21.3388C23.683 18.9946 25 15.8152 25 12.5C25 9.18479 23.683 6.00537 21.3388 3.66117C18.9946 1.31696 15.8152 0 12.5 0C9.18479 0 6.00537 1.31696 3.66117 3.66117C1.31696 6.00537 0 9.18479 0 12.5ZM11.7676 18.4082C11.3086 18.8672 10.5664 18.8672 10.1123 18.4082C9.6582 17.9492 9.65332 17.207 10.1123 16.7529L14.3604 12.5049L10.1123 8.25684C9.65332 7.79785 9.65332 7.05566 10.1123 6.60156C10.5713 6.14746 11.3135 6.14258 11.7676 6.60156L16.8457 11.6699C17.3047 12.1289 17.3047 12.8711 16.8457 13.3252L11.7676 18.4082Z"
+									fill="white"></path>
+							</svg>
+						</button>
+					</div>
+					<div
+						class="swiper-wrapper mt-8 mainswiper mb-12 pb-8 max-w-[800px] flex">
+						<div class="swiper-slide">
+							<div class="elemcontainer">
+								<div>
+									<img
+										src="/img/ride-front.png"
+										alt="Zone Levres"
+										class="w-full h-auto"
+									/>
+								</div><div class="text-left flex flex-col justify-center">
+									<h3>Rides horizontales du front</h3><p>
+										Les rides horizontales du front sont des marques visibles
+										sur la peau qui sont liées à la contraction du muscle
+										frontal. Ce muscle, étant le seul responsable de l'élévation
+										des sourcils, se contracte lors des mouvements
+										d'écarquillement des yeux ou de surprise. Ces rides peuvent
+										apparaître plus profondes chez certaines personnes en
+										fonction de la fréquence de ces mouvements musculaires.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="elemcontainer">
+								<div>
+									<img
+										src="/img/ride-lion.jpg"
+										alt="Zone Cernes"
+										class="w-full h-auto"
+									/>
+								</div><div class="text-left flex flex-col justify-center">
+									<h3>Rides du lion</h3><p>
+										Ces rides se trouvent au niveau de la glabelle, cette zone
+										située entre les sourcils. Elles apparaissent lorsque le
+										muscle corrugator se contracte, ce qui se produit lorsque
+										nous fronçons les sourcils pour exprimer un mécontentement
+										ou une réflexion. Ces plis caractéristiques peuvent être le
+										signe d'une intense concentration et ils sont souvent
+										considérés comme un élément distinctif du visage.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="elemcontainer">
+								<div>
+									<img
+										src="/img/ride-oie.png"
+										alt="Zone Rides"
+										class="w-full h-auto"
+									/>
+								</div><div class="text-left flex flex-col justify-center">
+									<h3>Rides de la patte d'oie</h3><p>
+										Les rides de la patte d'oie apparaissent au coin externe des
+										yeux et sont souvent associées à l'action du muscle
+										orbiculaire des paupières lorsqu'on sourit ou qu'on rit. Ces
+										petites rides, également connues sous le nom de rides
+										d'expression, peuvent varier en profondeur et en visibilité
+										selon les individus. Elles sont souvent considérées comme un
+										signe de maturité.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination mt-8 px-6"></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="container gauche-droite pt-24 pb-24 px-8">
+			<h2 class="semi-section-title">Déroulement d’une séance</h2>
+			<div class="lg:flex lg:flex-row-reverse gap-8 mb-24">
+				<div class="col lg:w-1/2 flex flex-col justify-center">
+					<div class="rounded-ss-lg rounded-se-lg overflow-hidden">
+						<h3 class="text-lg md:text-xl lg:text-xxl mb-6">
+							Evaluation personnalisée
+						</h3>
+						<p class="mb-3 text-base">
+							Une première consultation avec l’un de nos médecins expert est
+							réalisée de façon systématique avant toute injection de toxine
+							botulique.
+						</p>
+						<p class="mb-3 text-base">
+							Le médecin élimine les contre-indications au traitement
+							(pathologies neuro-musculaires comme la myasthénie, grossesse et
+							allaitement, hypersensibilité à la toxine botulinique de type A)
+							et effectue un examen attentif du visage.
+						</p>
+						<p class="text-base">
+							Des photographies sont également prises au repos et en dynamique
+							afin de compléter l ‘analyse des expressions faciales qui sont
+							propres à chaque patient, tout comme les irrégularités et les
+							problèmes de symétrie du visage. Ces clichés permettront de
+							comparer l’évolution avant/après et serviront de référence dans le
+							temps.
+						</p>
+					</div>
+				</div>
+				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
+					<img
+						src="/img/consulting1.jpg"
+						alt="Evaluation personnalisée"
+						class="rounded-lg w-full"
+					/>
+				</div>
+			</div>
+			<div class="lg:flex lg:flex-row gap-8 mb-6">
+				<div class="col lg:w-1/2 flex flex-col justify-center">
+					<h3 class="text-lg md:text-xl lg:text-xxl mb-6">
+						La séance d'injection
+					</h3>
+					<p class="mb-3 text-base">
+						Après avoir démaquillé et désinfecté la peau du visage, le médecin
+						dessine les points d’injections au niveau des zones à traiter avec
+						un crayon dermographique.
+					</p>
+					<p class="mb-3 text-base">
+						Les injections sont ensuite réalisées à l’aide d’aiguilles très
+						fines, à quelques millimètres de profondeur (dans les muscles
+						peauciers). Elles sont habituellement peu douloureuses. Une pommade
+						anesthésiante peut être appliquée avant l’injection afin de rendre
+						le traitement plus confortable.
+					</p>
+					<p class="mb-3 text-base">
+						Chacune des injections est réalisée avec une quantité de produit
+						infime et adaptée à chaque patient, en fonction notamment de la
+						puissance musculaire, afin d’éviter l’aspect « figé ».
+					</p>
+					<p class="text-base">
+						Les suites sont simples et passagères (rougeurs et légers
+						gonflements pendant 20 à 30 min, rarement des ecchymoses). Les
+						patients peuvent reprendre une activité normale après la séance.
+					</p>
+				</div>
+				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
+					<Image
+						src={SeanceInjection}
+						alt="La séance d'injection"
+						class="rounded-lg w-full"
+					/>
+				</div>
+                
+			</div>
+            <p class="text-center max-w-2xl text-base mx-auto font-bold mt-20"> Il
+						est recommandé de ne pas faire de sport intensif ni de s’allonger
+						pendant les 2 heures qui suivent les injections.</p>
+		</section>
+		<section class="bigtopo text-justify py-24 bg-grey-400 text-white">
+			<h2 class="section-title dark text-center px-4">
+				Résultats injections acide hyaluronique
+			</h2>
+			<div class="container mt-20">
+				<div class="lg:flex lg:flex-row-reverse gap-8 mb-6">
+					<div class="col lg:w-1/2 flex flex-col justify-center">
+						<p class="mb-3 text-base">
+							Les premiers effets des injections de la toxine botulique sont
+							visibles au bout de quelques jours et sont optimaux quinze jours
+							après la séance. La peau est plus lisse et les rides s’estompent.
+							Le visage perd son caractère sévère et fatigué tout en gardant sa
+							mobilité naturelle.
+						</p>
+						<p class="mb-3 text-base">
+							Le résultat obtenu après la première séance dure en moyenne 3 à 6
+							mois (en fonction de la réaction des patients à la toxine).
+							L’effet sera plus long après plusieurs séances (6 à 8 mois voire
+							plus). En effet, le patient va progressivement perdre l’habitude
+							de contracter les muscles à l’origine de ses rides.
+						</p>
+                        <p class="text-base">
+							Il convient cependant de respecter un intervalle minimum de 3 mois
+							entre les séances afin d’éviter un effet d’accumulation de la
+							toxine botulique dans les zones traitées ou d’accoutumance.
+						</p>
+					</div>
+					<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
+						<img
+							src="/img/botox1.jpg"
+							alt="Botox"
+							class="rounded-lg w-full"
+						/>
+					</div>
+				</div>
+				<div class="lg:flex lg:flex-row gap-8 mb-6 mt-12">
+					<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
+						<p class="mb-3 text-base">
+							En cas de rides très marquées, le traitement par toxine botulique
+							peut être complété par des injections d’acide hyaluronique. Le
+							fait de détendre le muscle avant de combler les plis très profonds
+							prolonge l’effet de l’acide hyaluronique.
+						</p>
+						<p class="mb-3 text-base">
+							Chacune des injections est réalisée avec une quantité de produit
+							infime et adaptée à chaque patient, en fonction notamment de la
+							puissance musculaire, afin d’éviter l’aspect « figé ».
+						</p>
+						<p class="text-base">
+							Les injections de toxine botulique peuvent également être débutées
+							vers 25 ans à visée préventive pour retarder l’apparition des
+							rides d’expression. Une séance par an est généralement suffisante
+							dans cette indication.
+						</p>
+					</div>
+					<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
+						<img
+							src="/img/botox2.jpg"
+							alt="Botox"
+							class="rounded-lg w-full"
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="px-8 py-24 bg-white text-black text-center">
+			<h2 class="section-title">Tarifs</h2>
+
+			<TarifsBotox />
+
+			<a href="/demander-un-rdv/" class="cta rounded brown">Prendre RDV</a>
+			
+			
+		</section>
+	</main>
+	<!-- FIN DE GAUCHE DROITE -->
+</Layout>
+
+<Footer />
+
+<script>
+	import Swiper from "swiper/bundle";
+	import "swiper/css/bundle";
+
+	function initializeZoneSlider() {
+		const swiperElement = document.querySelector(".mySwiper");
+		const swiperThumbsElement = document.querySelector(".mySwiperThumbsZone");
+
+		//@ts-ignore
+		if (swiperElement && swiperThumbsElement && !swiperElement.swiper) {
+			var swiperThumbs = new Swiper(".mySwiperThumbsZone", {
+				slidesPerView: "auto",
+				freeMode: false,
+				loop: false,
+				grabCursor: true,
+				spaceBetween: 30,
+				watchSlidesProgress: true,
+				slideToClickedSlide: true,
+
+				breakpoints: {
+					// when window width is >= 320px
+					320: {
+						slidesPerView: 3,
+						spaceBetween: 10,
+					},
+					// when window width is >= 480px
+					480: {
+						slidesPerView: 3,
+						spaceBetween: 20,
+					},
+					// when window width is >= 640px
+					640: {
+						slidesPerView: 3,
+						spaceBetween: 30,
+					},
+					// when window width is >= 992px
+					992: {
+						slidesPerView: 5,
+						spaceBetween: 30,
+					},
+					// when window width is >= 1200px
+					1200: {
+						slidesPerView: 6,
+						spaceBetween: 50,
+					},
+				},
+			});
+			var swiper = new Swiper(".mySwiper", {
+				slideActiveClass: "swiper-slide-active",
+				effect: "fade",
+				fadeEffect: {
+					crossFade: true,
+				},
+				loop: true,
+				spaceBetween: 0,
+				grabCursor: true,
+				navigation: {
+					nextEl: ".gdm-button-next",
+					prevEl: ".gdm-button-prev",
+				},
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+				freeMode: false,
+				slidesPerView: 1,
+				watchSlidesProgress: false,
+				thumbs: {
+					swiper: swiperThumbs,
+				},
+			});
+		}
+	}
+
+	document.addEventListener("DOMContentLoaded", initializeZoneSlider);
+
+	document.addEventListener("astro:page-load", initializeZoneSlider);
+</script>
+
+<style lang="scss">
+	:root {
+		--swiper-theme-color: #d19f6b !important;
+		--swiper-pagination-bullet-size: 10px !important;
+		--swiper-pagination-bullet-width: 10px !important;
+		--swiper-pagination-bullet-horizontal-gap: 6px;
+		--swiper-pagination-bullet-width: 26px;
+		--swiper-pagination-bullet-height: 5px;
+		--swiper-pagination-bullet-border-radius: 99px;
+		--swiper-pagination-bullet-inactive-color: #dddddd;
+		--swiper-pagination-bullet-inactive-opacity: 1;
+	}
+	main {
+		margin: auto;
+	}
+	.gdm-button-prev,
+	.gdm-button-next {
+		@apply absolute;
+	}
+	.gdm-button-prev {
+		@apply left-6;
+	}
+	.gdm-button-next {
+		@apply right-6;
+	}
+	.swiper-fade .mySwiperThumbs .swiper-slide,
+	.swiper-fade .mySwiperThumbsZone .swiper-slide {
+		pointer-events: auto !important;
+		transition-property: opacity;
+		transition: 300ms ease all;
+	}
+
+	.mySwiperThumbs,
+	.mySwiperThumbsZone {
+		.swiper-wrapper {
+			/*@apply mx-auto text-center flex flex-wrap justify-center gap-4 sm:gap-6;*/
+		}
+		.swiper-slide {
+			@apply cursor-pointer h-36 border-2 border-transparent rounded-lg overflow-hidden relative text-center text-white text-base flex flex-col justify-end items-center leading-6 pb-0 filter grayscale transition-all duration-300 ease-in-out bg-cover bg-center bg-no-repeat hover:grayscale-0 max-w-[200px];
+			h4 {
+				@apply text-[18px] z-20 relative mb-4;
+			}
+			&.swiper-slide-thumb-active {
+				@apply filter grayscale-0 border-2 border-white;
+			}
+			.overlay {
+				@apply bg-black bg-opacity-10 absolute top-0 left-0 right-0 bottom-0 z-10;
+			}
+		}
+		.swiper-slide-thumb-active {
+			@apply font-bold;
+		}
+	}
+
+	.mainswiper {
+		@apply text-center;
+		.swiper-slide {
+			@apply text-left text-base bg-grey-600 h-0 mx-auto text-white;
+			.elemcontainer {
+				@apply grid grid-cols-1 sm:grid-cols-2 gap-6 sm:text-base text-sm max-w-[850px] text-center px-6 sm:px-0 py-8 mx-auto;
+			}
+			h3 {
+				@apply text-[22px] leading-7 mb-3;
+			}
+			p {
+				@apply text-[18px] mb-2;
+			}
+			&.swiper-slide-active {
+				@apply h-auto  mx-auto;
+			}
+		}
+	}
+	.hero-element {
+		background: url("/img/herobotox.jpg") no-repeat center center;
+		@apply relative bg-cover bg-center;
+	}
+	.overlay {
+		@apply absolute top-0 bottom-0 left-0 right-0  bg-black bg-opacity-50 pointer-events-none  transition-all duration-500;
+	}
+</style>

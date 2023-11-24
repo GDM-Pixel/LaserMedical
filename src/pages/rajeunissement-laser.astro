@@ -1,1 +1,313 @@
-COUCOU
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import HeroBox from "../components/HeroBox.astro";
+import Accordion from "../components/Accordion.astro";
+import TarifAvantage from "../components/TarifAvantage.astro";
+import TarifsResurfacing from "../content/tarifs/resurfacing.md";
+import { Image } from "astro:assets";
+import Footer from "../components/Footer.astro";
+import SeanceInjection from "../assets/img/seance-injection.png";
+---
+
+<Layout
+	title="Rajeunissement Laser Réunion | Médecin Esthétique | Laser Médical"
+	description="Le laser Discovery Picoseconde apparait comme le traitement idéal pour le rajeunissement et l'amélioration de la qualité de la peau.">
+	<div class="hero-element">
+		<div class="overlay"></div>
+		<Header />
+		<HeroBox
+			title="Rejunévation Laser"
+			body="Rajeunissez votre peau en stimulant la production naturelle de votre collagène grâce au laser"
+		/>
+	</div>
+	<main>
+		<section class="container gauche-droite pt-24 pb-24">
+			<div class="lg:flex lg:flex-row-reverse gap-8 mb-24">
+				<div class="col lg:w-1/2 flex flex-col justify-center">
+					<h3 class="text-lg md:text-xl lg:text-xxl mb-6">
+						Le resurfacing par laser Discovery Picoseconde
+					</h3>
+					<p class="text-base mb-3">
+						Le <strong>laser Discovery® picoseconde</strong> apparait comme le traitement idéal pour le rajeunissement et l’amélioration de la qualité de la peau.
+					</p>
+					<p class="text-base mb-3">On obtient <strong>d’excellents résultats</strong>, avec un risque d’effet secondaire très rare voire exceptionnel.</p>
+                    <p class="text-base">Le principe d’action du laser discovery picoseconde est de créer <strong>des micro-lésions dermiques appelés LIOB</strong> (Laser Induced Optical Breakdown) et une <strong>ablation épidermique fractionnée</strong>. Cette double stimulation induit une régénération de la peau via <strong>la synthèse de nouvelles fibres de collagène et d’élastine</strong>.</p>
+				</div>
+				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
+					<img
+						src="/img/whatisbotox.jpg"
+						alt="La toxine botulique, c'est quoi ?"
+						class="w-full rounded-lg"
+					/>
+				</div>
+			</div>
+			
+
+			<div class="mt-24 rounded-ss-lg rounded-se-lg overflow-hidden shadow-md">
+				<Accordion
+					items={[
+						{
+							title: "En savoir plus",
+							answer:
+								"<p>Le laser discovery délivre sur la peau des impulsions de l’ordre de la picoseconde (10‾¹² seconde, correspondant au millième du milliardième d’une seconde).</p><p>L’intérêt de ce temps infiniment court est d’induire une <strong>stimulation cutanée par effet mécanique</strong> ou « photo-acoustique » en créant dans les différentes couches de la peau des LIOB : Laser Induced Optical Breakdown</p>En effet, les autres techniques laser (laser CO2, radiofréquence, ultrasons) utilisent l’effet thermique ou photo thermique pour la régénération contrairement au picoseconde agissant par effet mécanique ou photo-acoustique.</p><p>Or, l’effet thermique lors d’un traitement est le plus grand pourvoyeur de complications telles que la brûlure ou l’hyperpigmentation cutanée post inflammatoire...</p>",
+						},
+					]}
+				/>
+			</div>
+		</section>
+		
+
+		<section class="gauche-droite pt-24 pb-24 px-8 bg-grey-100">
+            <div class="container">
+			<h2 class="semi-section-title">Déroulement d’une séance laser</h2>
+			<div class="lg:flex lg:flex-row-reverse gap-8 mb-24">
+				<div class="col lg:w-1/2 flex flex-col justify-center">
+					<div class="rounded-ss-lg rounded-se-lg overflow-hidden">
+						<h3 class="text-lg md:text-xl lg:text-xxl mb-6">
+							Avant la séance
+						</h3>
+						<p class="mb-3 text-base">
+							Il est recommandé d’appliquer une protection solaire SPF 50+ au moins 1 semaine avant.
+						</p>
+						<p class="mb-3 text-base">
+							La séance dure environ 15 minutes. Lors du passage laser, on ressent des picotements d’intensité variable. Afin de rendre la séance plus confortable il est possible d’appliquer une crème anesthésiante 30 min avant le traitement.
+						</p>
+						<p class="text-base">
+							Le nombre de séances varie entre 1 à 4 et dépend de plusieurs facteurs dont : le nombre et le type de cicatrices, le phototype du patient, l’importance du vieillissement cutané. Les séances sont espacées d’au moins 1 mois.
+						</p>
+					</div>
+				</div>
+				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
+					<img
+						src="/img/consulting1.jpg"
+						alt="Evaluation personnalisée"
+						class="rounded-lg w-full"
+					/>
+				</div>
+			</div>
+			<div class="lg:flex lg:flex-row gap-8 mb-6">
+				<div class="col lg:w-1/2 flex flex-col justify-center">
+					<h3 class="text-lg md:text-xl lg:text-xxl mb-6">
+						Immédiatement après le traitement
+					</h3>
+					<p class="mb-3 text-base">
+						Des rougeurs et un léger gonflement surviennent, mais disparaissent en 72 à 96 heures. Dans les heures qui suivent, le patient ressent une sensation de chaleur similaire à un coup de soleil.
+					</p>
+					<p class="mb-3 text-base">
+						De très petites croûtes de la taille d’une tête d’épingle apparaissent dès le lendemain et disparaissent en quelques jours.
+					</p>
+					<p class="text-base">
+						Dans les jours qui suivent la séance, on peut appliquer une crème hydratante réparatrice. Il est recommandé d’éviter l’exposition solaire et d’appliquer une crème solaire protectrice SPF 50+ pendant 10 jours
+					</p>
+					
+				</div>
+				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
+					<Image
+						src={SeanceInjection}
+						alt="La séance d'injection"
+						class="rounded-lg w-full"
+					/>
+				</div>
+			</div>
+			
+            </div>
+		</section>
+		<section class="bigtopo text-justify py-24 bg-grey-400 text-white">
+			<h2 class="section-title dark text-center px-4">
+				Résultats du resurfacing par laser
+			</h2>
+			<div class="container mt-20">
+				<div class="lg:flex lg:flex-row-reverse gap-8 mb-6">
+					<div class="col lg:w-1/2 flex flex-col justify-center">
+						<p class="mb-3 text-base">
+							Des résultats probants sont visibles rapidement au bout de quelques jours après cicatrisation de la peau et s’améliorent progressivement durant les 3 mois après le traitement.
+						</p>
+						<p class="mb-3 text-base">
+							On observe une amélioration de la qualité de la peau avec un resserrement des pores, un grain de peau plus lisse et plus homogène ainsi qu’une réduction des ridules.
+						</p>
+						<p class="text-base">
+							On obtient également des résultats très satisfaisants sur les cicatrices d’acné ou cicatrices post traumatiques : au fur et à mesure des séances les cicatrices sont plus lisses et de moins en moins profondes.
+						</p>
+					</div>
+					<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
+						<img src="/img/botox1.jpg" alt="Botox" class="rounded-lg w-full" />
+					</div>
+				</div>
+				
+			</div>
+		</section>
+
+		<section class="px-8 py-24 bg-white text-black text-center">
+			<h2 class="section-title">Tarifs</h2>
+
+			<TarifsResurfacing />
+
+			<a href="/demander-un-rdv/" class="cta rounded brown">Prendre RDV</a>
+			
+		</section>
+	</main>
+	<!-- FIN DE GAUCHE DROITE -->
+</Layout>
+
+<Footer />
+
+<script>
+	import Swiper from "swiper/bundle";
+	import "swiper/css/bundle";
+
+	function initializeZoneSlider() {
+		const swiperElement = document.querySelector(".mySwiper");
+		const swiperThumbsElement = document.querySelector(".mySwiperThumbsZone");
+
+		//@ts-ignore
+		if (swiperElement && swiperThumbsElement && !swiperElement.swiper) {
+			var swiperThumbs = new Swiper(".mySwiperThumbsZone", {
+				slidesPerView: "auto",
+				freeMode: false,
+				loop: false,
+				grabCursor: true,
+				spaceBetween: 30,
+				watchSlidesProgress: true,
+				slideToClickedSlide: true,
+
+				breakpoints: {
+					// when window width is >= 320px
+					320: {
+						slidesPerView: 3,
+						spaceBetween: 10,
+					},
+					// when window width is >= 480px
+					480: {
+						slidesPerView: 3,
+						spaceBetween: 20,
+					},
+					// when window width is >= 640px
+					640: {
+						slidesPerView: 3,
+						spaceBetween: 30,
+					},
+					// when window width is >= 992px
+					992: {
+						slidesPerView: 5,
+						spaceBetween: 30,
+					},
+					// when window width is >= 1200px
+					1200: {
+						slidesPerView: 6,
+						spaceBetween: 50,
+					},
+				},
+			});
+			var swiper = new Swiper(".mySwiper", {
+				slideActiveClass: "swiper-slide-active",
+				effect: "fade",
+				fadeEffect: {
+					crossFade: true,
+				},
+				loop: true,
+				spaceBetween: 0,
+				grabCursor: true,
+				navigation: {
+					nextEl: ".gdm-button-next",
+					prevEl: ".gdm-button-prev",
+				},
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+				freeMode: false,
+				slidesPerView: 1,
+				watchSlidesProgress: false,
+				thumbs: {
+					swiper: swiperThumbs,
+				},
+			});
+		}
+	}
+
+	document.addEventListener("DOMContentLoaded", initializeZoneSlider);
+
+	document.addEventListener("astro:page-load", initializeZoneSlider);
+</script>
+
+<style lang="scss">
+	:root {
+		--swiper-theme-color: #d19f6b !important;
+		--swiper-pagination-bullet-size: 10px !important;
+		--swiper-pagination-bullet-width: 10px !important;
+		--swiper-pagination-bullet-horizontal-gap: 6px;
+		--swiper-pagination-bullet-width: 26px;
+		--swiper-pagination-bullet-height: 5px;
+		--swiper-pagination-bullet-border-radius: 99px;
+		--swiper-pagination-bullet-inactive-color: #dddddd;
+		--swiper-pagination-bullet-inactive-opacity: 1;
+	}
+	main {
+		margin: auto;
+	}
+	.gdm-button-prev,
+	.gdm-button-next {
+		@apply absolute;
+	}
+	.gdm-button-prev {
+		@apply left-6;
+	}
+	.gdm-button-next {
+		@apply right-6;
+	}
+	.swiper-fade .mySwiperThumbs .swiper-slide,
+	.swiper-fade .mySwiperThumbsZone .swiper-slide {
+		pointer-events: auto !important;
+		transition-property: opacity;
+		transition: 300ms ease all;
+	}
+
+	.mySwiperThumbs,
+	.mySwiperThumbsZone {
+		.swiper-wrapper {
+			/*@apply mx-auto text-center flex flex-wrap justify-center gap-4 sm:gap-6;*/
+		}
+		.swiper-slide {
+			@apply cursor-pointer h-36 border-2 border-transparent rounded-lg overflow-hidden relative text-center text-white text-base flex flex-col justify-end items-center leading-6 pb-0 filter grayscale transition-all duration-300 ease-in-out bg-cover bg-center bg-no-repeat hover:grayscale-0 max-w-[200px];
+			h4 {
+				@apply text-[18px] z-20 relative mb-4;
+			}
+			&.swiper-slide-thumb-active {
+				@apply filter grayscale-0 border-2 border-white;
+			}
+			.overlay {
+				@apply bg-black bg-opacity-10 absolute top-0 left-0 right-0 bottom-0 z-10;
+			}
+		}
+		.swiper-slide-thumb-active {
+			@apply font-bold;
+		}
+	}
+
+	.mainswiper {
+		@apply text-center;
+		.swiper-slide {
+			@apply text-left text-base bg-grey-600 h-0 mx-auto text-white;
+			.elemcontainer {
+				@apply grid grid-cols-1 sm:grid-cols-2 gap-6 sm:text-base text-sm max-w-[850px] text-center px-6 sm:px-0 py-8 mx-auto;
+			}
+			h3 {
+				@apply text-[22px] leading-7 mb-3;
+			}
+			p {
+				@apply text-[18px] mb-2;
+			}
+			&.swiper-slide-active {
+				@apply h-auto  mx-auto;
+			}
+		}
+	}
+	.hero-element {
+		background: url("/img/rejuvenation-laser.jpg") no-repeat center center;
+		@apply relative bg-cover bg-center;
+	}
+	.overlay {
+		@apply absolute top-0 bottom-0 left-0 right-0  bg-black bg-opacity-50 pointer-events-none  transition-all duration-500;
+	}
+</style>
