@@ -26,20 +26,35 @@ let slug =
 		<meta name="generator" content={Astro.generator} />
 		<ViewTransitions />
 		<title>{title}</title>
-		<link rel="prefetch" href="/img/hero-home-bck.webp" as="image" />
-		<link rel="prefetch" href="/img/hero-epilation-laser-bck.webp" as="image" />
-		<link rel="prefetch" href="/img/hero-detatouage-laser.jpg" as="image" />
-		<link rel="prefetch" href="/img/hero-acide-hyaluronique.webp" as="image" />
-		<link rel="prefetch" href="/img/herobotox.jpg" as="image" />
-		<link rel="prefetch" href="/img/rejuvenation-laser.jpg" as="image" />
-		<link rel="prefetch" href="/img/hero-mesolift.jpg" as="image" />
-		<link rel="prefetch" href="/img/hero-exilis-elite.jpg" as="image" />
-		<link rel="prefetch" href="/img/hero-cryo.jpg" as="image" />
 	</head>
 	<body class={slug}>
 		<slot />
 		<Repere />
-		<style is:global lang="scss">
+	</body>
+</html>
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+    const loadedImages = {};
+//@ts-ignore
+    function preloadImage(url) {
+		//@ts-ignore
+        if (!loadedImages[url]) {
+            const img = new Image();
+            img.src = url;
+			//@ts-ignore
+            loadedImages[url] = true;
+        }
+    }
+
+    document.querySelectorAll('a[data-image-src]').forEach(link => {
+        link.addEventListener('mouseover', function() {
+			//@ts-ignore
+            preloadImage(this.getAttribute('data-image-src'));
+        });
+    });
+});
+</script>
+<style is:global lang="scss">
 			:root {
 				--accent: 136, 58, 234;
 				--accent-light: 224, 204, 250;
@@ -289,5 +304,3 @@ let slug =
 				}
 			}
 		</style>
-	</body>
-</html>

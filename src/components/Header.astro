@@ -5,8 +5,6 @@ interface Props {
 	//body: string;
 	//href: string;
 }
-
-
 ---
 
 <div class="topbar" transition:persist>
@@ -94,7 +92,7 @@ interface Props {
 		<nav class="desktop-nav">
 			<ul>
 				<li>
-					<a href="/"
+					<a href="/" data-image-src="/img/hero-home-bck.webp"
 						><svg
 							xmlns="http://www.w3.org/2000/svg"
 							height="1em"
@@ -105,8 +103,17 @@ interface Props {
 						></a
 					>
 				</li>
-				<li><a href="/epilation-definitive/">Epilation laser</a></li>
-				<li><a href="/detatouage-laser/">Détatouage laser</a></li>
+				<li>
+					<a
+						href="/epilation-definitive/"
+						data-image-src="/img/hero-epilation-laser-bck.webp"
+						>Epilation laser</a>
+				</li>
+				<li>
+					<a
+						href="/detatouage-laser/"
+						data-image-src="/img/hero-detatouage-laser.jpg">Détatouage laser</a>
+				</li>
 
 				<!-- Menu Visage avec sous-menu -->
 				<li>
@@ -123,12 +130,24 @@ interface Props {
 					>
 					<ul>
 						<li>
-							<a href="/injection-acide-hyaluronique/">Acide hyaluronique</a>
+							<a
+								href="/injection-acide-hyaluronique/"
+								data-image-src="/img/hero-acide-hyaluronique.webp"
+								>Acide hyaluronique</a
+							>
 						</li>
-						<li><a href="/toxine-botulique/">Toxine botulique</a></li>
-						<li><a href="/rajeunissement-laser/">Réjuvénation laser</a></li>
-						<li><a href="/mesolift/">Mésolift</a></li>
-						<li><a href="/exilis-elite/">Radiofréquence</a></li>
+						<li>
+							<a href="/toxine-botulique/" data-image-src="/img/herobotox.jpg"
+								>Toxine botulique</a>
+						</li>
+						<li>
+							<a
+								href="/rajeunissement-laser/"
+								data-image-src="/img/rejuvenation-laser.jpg"
+								>Réjuvénation laser</a>
+						</li>
+						<li><a href="/mesolift/" data-image-src="/img/hero-mesolift.jpg">Mésolift</a></li>
+						<li><a href="/exilis-elite/" data-image-src="/img/hero-exilis-elite.jpg">Radiofréquence</a></li>
 					</ul>
 				</li>
 
@@ -146,8 +165,8 @@ interface Props {
 						></a
 					>
 					<ul>
-						<li><a href="/cryolipolyse/">Cryolipolyse</a></li>
-						<li><a href="/exilis-elite/">Raffermissement cutané</a></li>
+						<li><a href="/cryolipolyse/" data-image-src="/img/hero-cryo.jpg">Cryolipolyse</a></li>
+						<li><a href="/exilis-elite/" data-image-src="/img/hero-exilis-elite.jpg">Raffermissement cutané</a></li>
 					</ul>
 				</li>
 
@@ -220,8 +239,6 @@ interface Props {
 		</div>
 	</div>
 </div>
-
-
 
 <script>
 	function setup() {
@@ -396,7 +413,6 @@ interface Props {
 			@apply visible xl:hidden;
 		}
 	}
-	
 
 	.mobile-menu-overlay {
 		opacity: 0;
@@ -455,7 +471,7 @@ interface Props {
 		max-width: 360px; /* ou la largeur souhaitée */
 		height: fit-content;
 		min-height: 50vh; /* ou la hauteur souhaitée */
-		max-height: 90vh; 
+		max-height: 90vh;
 		overflow-y: auto;
 		border-radius: 10px;
 		display: flex;
@@ -467,34 +483,34 @@ interface Props {
 		opacity: 0; /* Commencer invisible */
 		transform: scale(0.6);
 		transition:
-		opacity 0.3s ease,
-		transform 0.3s ease;
+			opacity 0.3s ease,
+			transform 0.3s ease;
 		pointer-events: none;
 	}
 	/* Styliser la barre de défilement pour Chrome, Safari et Edge */
-.lm-nav-content::-webkit-scrollbar {
-    width: 8px; /* Largeur de la barre de défilement */
-}
+	.lm-nav-content::-webkit-scrollbar {
+		width: 8px; /* Largeur de la barre de défilement */
+	}
 
-.lm-nav-content::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Couleur de la piste de défilement */
-    border-radius: 8px; /* Arrondir les coins */
-}
+	.lm-nav-content::-webkit-scrollbar-track {
+		background: #f1f1f1; /* Couleur de la piste de défilement */
+		border-radius: 8px; /* Arrondir les coins */
+	}
 
-.lm-nav-content::-webkit-scrollbar-thumb {
-    background: #888; /* Couleur de la barre de défilement */
-    border-radius: 8px; /* Arrondir les coins */
-}
+	.lm-nav-content::-webkit-scrollbar-thumb {
+		background: #888; /* Couleur de la barre de défilement */
+		border-radius: 8px; /* Arrondir les coins */
+	}
 
-.lm-nav-content::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Couleur de la barre de défilement au survol */
-}
+	.lm-nav-content::-webkit-scrollbar-thumb:hover {
+		background: #555; /* Couleur de la barre de défilement au survol */
+	}
 
-/* Styliser la barre de défilement pour Firefox */
-.lm-nav-content {
-    scrollbar-width: thin; /* "auto" ou "thin" */
-    scrollbar-color: #888 #f1f1f1; /* couleur de la barre et de la piste */
-}
+	/* Styliser la barre de défilement pour Firefox */
+	.lm-nav-content {
+		scrollbar-width: thin; /* "auto" ou "thin" */
+		scrollbar-color: #888 #f1f1f1; /* couleur de la barre et de la piste */
+	}
 
 	.lm-nav.activated {
 		opacity: 1; /* Pleinement visible */
