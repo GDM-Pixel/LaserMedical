@@ -189,7 +189,7 @@ import AutresSoinsVisage from "../../components/AutresSoinsVisage.astro";
 						</div>
 					</div>
 					<div
-						class="nav-container relative top-48 z-30 mx-auto max-w-7xl h-12 hidden md:block">
+						class="nav-container relative top-48 z-10 mx-auto max-w-7xl h-12 hidden lg:block pointer-events-none">
 						<button class="gdm-button-prev"
 							><svg
 								width="25"
@@ -226,7 +226,7 @@ import AutresSoinsVisage from "../../components/AutresSoinsVisage.astro";
 										class="w-full h-auto"
 									/>
 								</div><div class="text-left flex flex-col justify-center">
-									<h3>Lèvres</h3><p>
+									<h3><a href="/injection-acide-hyaluronique/injection-levre/">Lèvres</a></h3><p>
 										On redéfinit les contours des lèvres par l’injection d’acide
 										hyaluronique dans les crêtes philtrales et l’ourlet.
 									</p>
@@ -247,7 +247,7 @@ import AutresSoinsVisage from "../../components/AutresSoinsVisage.astro";
 										class="w-full h-auto"
 									/>
 								</div><div class="text-left flex flex-col justify-center">
-									<h3>Cernes</h3><p>
+									<h3><a href="/injection-acide-hyaluronique/cernes/">Cernes</a></h3><p>
 										Le cerne correspond au creux séparant la paupière inférieure
 										de la joue donnant un air fatigué au visage. L’injection du
 										cerne est souvent associée au comblement de la vallée des
@@ -265,7 +265,7 @@ import AutresSoinsVisage from "../../components/AutresSoinsVisage.astro";
 										class="w-full h-auto"
 									/>
 								</div><div class="text-left flex flex-col justify-center">
-									<h3>Comblement des rides</h3><p>
+									<h3><a href="/injection-acide-hyaluronique/rajeunissement-du-front/">Comblement des rides</a></h3><p>
 										On injecte l’acide hyaluronique très superficiellement le
 										long des rides (blanching technique).
 									</p><p>
@@ -312,7 +312,7 @@ import AutresSoinsVisage from "../../components/AutresSoinsVisage.astro";
 										class="w-full h-auto"
 									/>
 								</div><div class="text-left flex flex-col justify-center">
-									<h3>Comblement du sillon naso génien</h3><p>
+									<h3><a href="/injection-acide-hyaluronique/sillon-naso-genien/">Comblement du sillon naso génien</a></h3><p>
 										L’injection d’acide hyaluronique au niveau du sillon naso
 										génien permet de l’atténuer et de bloquer la ptose.
 									</p>
@@ -335,8 +335,8 @@ import AutresSoinsVisage from "../../components/AutresSoinsVisage.astro";
 									<h3>Visage creusé</h3><p>
 										L’objectif est de restaurer les volumes suite à la fonte des
 										graisses du visage. Plusieurs régions du visage sont
-										concernées : les tempes, la vallée des larmes, les joues ou
-										encore le front.
+										concernées : les <a href="/injection-acide-hyaluronique/tempes-et-pattes-doie/">tempes</a>, la <a href="/injection-acide-hyaluronique/vallee-des-larmes/">vallée des larmes</a>, les <a href="/injection-acide-hyaluronique/injection-pommette/">joues</a> ou
+										encore le <a href="/injection-acide-hyaluronique/rajeunissement-du-front/">front</a>.
 									</p>
 									<p>
 										Ces signes du vieillissement sont plus souvent retrouvés sur
@@ -354,7 +354,7 @@ import AutresSoinsVisage from "../../components/AutresSoinsVisage.astro";
 										class="w-full h-auto"
 									/>
 								</div><div class="text-left flex flex-col justify-center">
-									<h3>Ovale du visage et jawline</h3><p>
+									<h3><a href="/injection-acide-hyaluronique/bajoues-et-ovale-du-visage/">Ovale du visage et jawline</a></h3><p>
 										L’injection d’acide hyaluronique est réalisée en avant et en
 										arrière de la zone de la bajoue.
 									</p>
@@ -371,7 +371,7 @@ import AutresSoinsVisage from "../../components/AutresSoinsVisage.astro";
 								<div>
 									<Image src={ZoneNez} alt="Zone nez" class="w-full h-auto" />
 								</div><div class="text-left flex flex-col justify-center">
-									<h3>Nez</h3><p>
+									<h3><a href="/injection-acide-hyaluronique/rhinoplastie/">Nez</a></h3><p>
 										La rhinoplastie médicale est une technique alternative à la
 										chirurgie pour corriger certains défauts esthétiques du nez
 										: creux, bosses, pointe du nez tombante.
@@ -388,7 +388,7 @@ import AutresSoinsVisage from "../../components/AutresSoinsVisage.astro";
 										class="w-full h-auto"
 									/>
 								</div><div class="text-left flex flex-col justify-center">
-									<h3>Rajeunir les mains</h3><p>
+									<h3><a href="/injection-acide-hyaluronique/rajeunissement-des-mains">Rajeunir les mains</a></h3><p>
 										Avec l’âge, le dos des mains se « squelettisent » suite à la
 										fonte des graisses sous la peau.
 									</p>
@@ -628,7 +628,7 @@ import AutresSoinsVisage from "../../components/AutresSoinsVisage.astro";
 	}
 	.gdm-button-prev,
 	.gdm-button-next {
-		@apply absolute;
+		@apply absolute z-40 pointer-events-auto;
 	}
 	.gdm-button-prev {
 		@apply left-6;
@@ -668,15 +668,17 @@ import AutresSoinsVisage from "../../components/AutresSoinsVisage.astro";
 	.mainswiper {
 		@apply text-center;
 		.swiper-slide {
-			@apply text-left text-base bg-grey-600 h-0 mx-auto text-white;
+			@apply text-left text-base bg-grey-600 h-0 mx-auto text-white z-20;
 			.elemcontainer {
-				@apply grid grid-cols-1 sm:grid-cols-2 gap-6 sm:text-base text-sm max-w-[850px] text-center px-6 sm:px-0 py-8 mx-auto;
+				@apply grid grid-cols-1 sm:grid-cols-2 gap-6 sm:text-base text-sm max-w-[850px] text-center px-6 md:px-0 py-8 mx-auto;
 			}
 			h3 {
 				@apply text-[22px] leading-7 mb-3;
+                a {@apply text-white hover:text-white;}
 			}
 			p {
 				@apply text-[18px] mb-2;
+				a {@apply text-white underline hover:text-white;}
 			}
 			&.swiper-slide-active {
 				@apply h-auto  mx-auto;

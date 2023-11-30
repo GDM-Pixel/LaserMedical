@@ -7,39 +7,42 @@ import TarifsMesolift from "../../content/tarifs/mesolift.md";
 import { Image } from "astro:assets";
 import Footer from "../../components/Footer.astro";
 import AutresSoinsInjections from "../../components/AutresSoinsInjections.astro";
-import ResultsGalleryInjections from "../../components/Resultats/ResultsGalleryInjections.astro";
+import ResultsGalleryInjectionsLevres from "../../components/Resultats/ResultsGalleryInjectionsLevres.astro";
 ---
 
 <Layout
-	title="Ovale du visage et bajoue I Centre Laser Médical à la Réunion"
-	description="Redessiner l'ovale du visage et redéfinir la jawline grâce à l'acide hyaluronique. Première consultation médicale d'information gratuite.">
+	title="Injection des lèvres à l'acide hyaluronique | Laser Médical | Réunion"
+	description="L'injection d'acide hyaluronique dans les lèvres permet une redéfinition de leurs contours et une augmentation de leurs volumes avec des résultats naturels et harmonieux.">
 	<div class="hero-element">
 		<div class="overlay"></div>
 		<Header />
 		<HeroBox
-			title="Ovale du visage et jawline"
-			body="Redéfinissez la séparation entre votre visage et votre cou grâce à l'acide hyaluronique."
+			title="Injections des lèvres"
+			body="Retrouvez des lèvres pulpeuses et hydratées grâce à l'acide hyaluronique"
 		/>
 	</div>
 	<main>
 		<section class="container gauche-droite pt-24 pb-18">
 			<div class="lg:flex lg:flex-row gap-8 mb-24">
 				<div class="col lg:w-1/2 flex flex-col justify-center">
-					<h3 class="text-lg md:text-xl lg:text-xxl mb-6">LOREM IPSUM</h3>
+					<h3 class="text-lg md:text-xl lg:text-xxl mb-6">
+						Contourns et volume
+					</h3>
 					<p class="text-base mb-3">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non
-						interdum justo. Integer eget metus orci. Sed sed ipsum consectetur,
-						fringilla tellus ut, blandit lacus. Nullam quis leo sollicitudin,
-						volutpat orci eu, efficitur felis. In cursus, ante vitae tempus
-						interdum, ante lorem dictum purus, in eleifend libero lacus vitae
-						quam.
+						La bouche est une région déterminante dans la jeunesse et la beauté d’un visage. Toutes les formes de lèvres sont dans la nature, mais quelques mesures définissent les « proportions idéales » :
+						<ul class="pl-3">
+							<li class="list-disc mb-1 text-base">Une projection d’environ 1,5 mm de la lèvre supérieure par rapport à la lèvre inférieure.</li>
+							<li class="list-disc mb-1 text-base">La hauteur de la lèvre supérieure est environ égale à 2/3 de celle de la lèvre inférieure.</li>
+							<li class="list-disc mb-1 text-base">Les crêtes philtrales et l’ourlet sont bien définis.</li>
+						</ul>
 					</p>
 					<p class="text-base mb-3">
-						Integer at nunc fringilla, semper erat sed, sagittis diam. Sed
-						mollis, metus non porta vulputate, metus lorem tincidunt neque, ut
-						scelerisque nunc lacus venenatis erat. Aenean commodo, orci luctus
-						pellentesque ornare, neque mi pretium ante, vitae ornare leo elit et
-						turpis.
+						La bouche est une des régions anatomiques du visage les plus affectées par les effets du vieillissement :
+						<ul class="pl-3">
+							<li class="list-disc mb-1 text-base">Lèvres rouges amincies et plissées.</li>
+							<li class="list-disc mb-1 text-base">Effacement des contours des lèvres et des crêtes philtrales.</li>
+							<li class="list-disc mb-1 text-base">Allongement de la lèvre blanche supérieure avec apparition de rides verticales (communément appelées « code barre »).</li>
+						</ul>
 					</p>
 				</div>
 				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
@@ -52,22 +55,39 @@ import ResultsGalleryInjections from "../../components/Resultats/ResultsGalleryI
 			</div>
 			<div class="lg:flex lg:flex-row-reverse gap-8 mb-24">
 				<div class="col lg:w-1/2 flex flex-col justify-center">
-					<h3 class="text-lg md:text-xl lg:text-xxl mb-6">LOREM IPSUM</h3>
-					<p class="text-base mb-3">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non
-						interdum justo. Integer eget metus orci. Sed sed ipsum consectetur,
-						fringilla tellus ut, blandit lacus. Nullam quis leo sollicitudin,
-						volutpat orci eu, efficitur felis. In cursus, ante vitae tempus
-						interdum, ante lorem dictum purus, in eleifend libero lacus vitae
-						quam.
-					</p>
-					<p class="text-base mb-3">
-						Integer at nunc fringilla, semper erat sed, sagittis diam. Sed
-						mollis, metus non porta vulputate, metus lorem tincidunt neque, ut
-						scelerisque nunc lacus venenatis erat. Aenean commodo, orci luctus
-						pellentesque ornare, neque mi pretium ante, vitae ornare leo elit et
-						turpis.
-					</p>
+					<h3 class="text-lg md:text-xl lg:text-xxl mb-6">
+						Le traitement à l'acide hyaluronique
+					</h3>
+					<Accordion extraClass="clearaccordion"
+					items={[
+						{
+							title: "Redéfinition des contours",
+							answer:
+								"<p>L’injection dans les crêtes philtrales et l’ourlet de la lèvre rouge supérieure permet une nette amélioration de l’aspect de la bouche sans apporter de volume..</p>",
+								isopen:true
+						},
+						{
+							title: "Volume des lèvres",
+							answer:
+								"<p>On injecte sous le muscle orbiculaire des lèvres pour augmenter le volume induisant également une légère eversion des lèvres.  Les lèvres supérieurs et inférieurs comportent respectivement un tubercule médian et deux tubercules latéraux. L’injection de ces tubercules augmente la projection des lèvres et leur donne un aspect pulpeux et plus jeune.</p><p>Une projection excessive est disgracieuse et entraine l’aspect « Bec de canard ». L’injection des lèvres doit donc être réalisé avec une technique appropriée et avec une connaissance parfaite de l’anatomie esthétique des lèvres.</p><p>Afin que l’augmentation des lèvres soit harmonieuse sur le visage du patient on doit également considérer la projection de son nez et de son menton.</p>",
+						},
+						{
+							title: "Lèvres plissées sèches",
+							answer:
+								"<p>On utilise un acide hyaluronique fluide afin d’hydrater et de repulper les lèvres rouges avec une augmentation minime de volume</p>",
+						},
+						{
+							title: "Code barre lèvres blanches",
+							answer:
+								"<p>Traitement des rides verticales par blanching technique souvent associé à un nappage à la canule afin de corriger l’amincissement de la lèvre blanche.</p>",
+						},
+							{
+							title: "Lèvre blanche supérieure allongée",
+							answer:
+								"<p>L’injection d’acide hyaluronique dans l’ourlet et dans le vermillon de la lèvre rouge supérieure permet son ascension et réduit ainsi la longueur de la lèvre blanche.</p>",
+						},
+					]}
+				/>
 				</div>
 				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
 					<img
@@ -85,31 +105,8 @@ import ResultsGalleryInjections from "../../components/Resultats/ResultsGalleryI
 			</h2>
 
 			<div class="max-w-3xl mx-auto">
-				<ResultsGalleryInjections />
+				<ResultsGalleryInjectionsLevres />
 			</div>
-			<p class="text-justify max-w-3xl mx-auto text-base mb-6 mt-6">
-				La <strong>radiofréquence</strong> procure des <strong
-					>résultats durables et mesurables</strong
-				>. Avec son <strong>système non invasif</strong>, toutes les zones du
-				corps peuvent être traitées et améliorées en toute sécurité. L’Exilis
-				Elite est le seul appareil breveté, permettant <strong
-					>au cours d’un même traitement de raffermir la peau et de réduire les
-					amas graisseux et la cellulite</strong
-				>.
-			</p>
-			<p class="text-justify max-w-3xl mx-auto text-base mb-6">
-				<strong>Dans les suites immédiates</strong> de la séance les résultats
-				ne sont pas encore visibles. La fonte graisseuse et la formation de
-				collagène et d’élastine vont s’effectuer progressivement les semaines
-				suivant le traitement. <strong
-					>Les premiers effets peuvent être observés après deux semaines</strong
-				>.
-			</p>
-			<p class="text-justify max-w-3xl mx-auto text-base mb-6">
-				<strong>Pour un résultat optimal</strong>, 3 à 4 séances espacées d’une
-				à deux semaines sont nécessaires. Le <strong>résultat final</strong>
-				sera observé 3 mois après les séances d’Exilis Elite.
-			</p>
 		</section>
 		<AutresSoinsInjections />
 	</main>
@@ -118,157 +115,11 @@ import ResultsGalleryInjections from "../../components/Resultats/ResultsGalleryI
 
 <Footer />
 
-<script>
-	import Swiper from "swiper/bundle";
-	import "swiper/css/bundle";
-
-	function initializeZoneSlider() {
-		const swiperElement = document.querySelector(".mySwiper");
-		const swiperThumbsElement = document.querySelector(".mySwiperThumbsZone");
-
-		//@ts-ignore
-		if (swiperElement && swiperThumbsElement && !swiperElement.swiper) {
-			var swiperThumbs = new Swiper(".mySwiperThumbsZone", {
-				slidesPerView: "auto",
-				freeMode: false,
-				loop: false,
-				grabCursor: true,
-				spaceBetween: 30,
-				watchSlidesProgress: true,
-				slideToClickedSlide: true,
-
-				breakpoints: {
-					// when window width is >= 320px
-					320: {
-						slidesPerView: 3,
-						spaceBetween: 10,
-					},
-					// when window width is >= 480px
-					480: {
-						slidesPerView: 3,
-						spaceBetween: 20,
-					},
-					// when window width is >= 640px
-					640: {
-						slidesPerView: 3,
-						spaceBetween: 30,
-					},
-					// when window width is >= 992px
-					992: {
-						slidesPerView: 5,
-						spaceBetween: 30,
-					},
-					// when window width is >= 1200px
-					1200: {
-						slidesPerView: 6,
-						spaceBetween: 50,
-					},
-				},
-			});
-			var swiper = new Swiper(".mySwiper", {
-				slideActiveClass: "swiper-slide-active",
-				effect: "fade",
-				fadeEffect: {
-					crossFade: true,
-				},
-				loop: true,
-				spaceBetween: 0,
-				grabCursor: true,
-				navigation: {
-					nextEl: ".gdm-button-next",
-					prevEl: ".gdm-button-prev",
-				},
-				pagination: {
-					el: ".swiper-pagination",
-					clickable: true,
-				},
-				freeMode: false,
-				slidesPerView: 1,
-				watchSlidesProgress: false,
-				thumbs: {
-					swiper: swiperThumbs,
-				},
-			});
-		}
-	}
-
-	document.addEventListener("DOMContentLoaded", initializeZoneSlider);
-
-	document.addEventListener("astro:page-load", initializeZoneSlider);
-</script>
-
 <style lang="scss">
-	:root {
-		--swiper-theme-color: #d19f6b !important;
-		--swiper-pagination-bullet-size: 10px !important;
-		--swiper-pagination-bullet-width: 10px !important;
-		--swiper-pagination-bullet-horizontal-gap: 6px;
-		--swiper-pagination-bullet-width: 26px;
-		--swiper-pagination-bullet-height: 5px;
-		--swiper-pagination-bullet-border-radius: 99px;
-		--swiper-pagination-bullet-inactive-color: #dddddd;
-		--swiper-pagination-bullet-inactive-opacity: 1;
-	}
 	main {
 		margin: auto;
 	}
-	.gdm-button-prev,
-	.gdm-button-next {
-		@apply absolute;
-	}
-	.gdm-button-prev {
-		@apply left-6;
-	}
-	.gdm-button-next {
-		@apply right-6;
-	}
-	.swiper-fade .mySwiperThumbs .swiper-slide,
-	.swiper-fade .mySwiperThumbsZone .swiper-slide {
-		pointer-events: auto !important;
-		transition-property: opacity;
-		transition: 300ms ease all;
-	}
 
-	.mySwiperThumbs,
-	.mySwiperThumbsZone {
-		.swiper-wrapper {
-			/*@apply mx-auto text-center flex flex-wrap justify-center gap-4 sm:gap-6;*/
-		}
-		.swiper-slide {
-			@apply cursor-pointer h-36 border-2 border-transparent rounded-lg overflow-hidden relative text-center text-white text-base flex flex-col justify-end items-center leading-6 pb-0 filter grayscale transition-all duration-300 ease-in-out bg-cover bg-center bg-no-repeat hover:grayscale-0 max-w-[200px];
-			h4 {
-				@apply text-[18px] z-20 relative mb-4;
-			}
-			&.swiper-slide-thumb-active {
-				@apply filter grayscale-0 border-2 border-white;
-			}
-			.overlay {
-				@apply bg-black bg-opacity-10 absolute top-0 left-0 right-0 bottom-0 z-10;
-			}
-		}
-		.swiper-slide-thumb-active {
-			@apply font-bold;
-		}
-	}
-
-	.mainswiper {
-		@apply text-center;
-		.swiper-slide {
-			@apply text-left text-base bg-grey-600 h-0 mx-auto text-white;
-			.elemcontainer {
-				@apply grid grid-cols-1 sm:grid-cols-2 gap-6 sm:text-base text-sm max-w-[850px] text-center px-6 sm:px-0 py-8 mx-auto;
-			}
-			h3 {
-				@apply text-[22px] leading-7 mb-3;
-			}
-			p {
-				@apply text-[18px] mb-2;
-			}
-			&.swiper-slide-active {
-				@apply h-auto  mx-auto;
-			}
-		}
-	}
 	.hero-element {
 		background: url("/img/hero-mesolift.jpg") no-repeat center center;
 		@apply relative bg-cover bg-center;

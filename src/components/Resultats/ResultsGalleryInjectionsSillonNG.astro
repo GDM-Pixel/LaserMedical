@@ -1,0 +1,51 @@
+---
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
+//import '@fancyapps/ui/dist/fancybox/fancybox.umd.js';
+---
+
+<script
+	is:inline
+	src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"
+></script>
+<div class="gallery" id="MyCarousel">
+	<a data-src="/img/result-acide-1.png" data-fancybox="injections">
+		<img src="/img/result-acide-1.png" width="630" height="354" />
+	</a>
+	<div class="flex gap-4">
+		<a data-src="/img/result-acide-2.png" data-fancybox="injections">
+			<img src="/img/result-acide-2.png" width="141" height="78" />
+		</a>
+		<a data-src="/img/result-acide-3.png" data-fancybox="injections">
+			<img src="/img/result-acide-3.png" width="141" height="78" />
+		</a>
+		<a data-src="/img/result-acide-4.png" data-fancybox="injections">
+			<img src="/img/result-acide-4.png" width="141" height="78" />
+		</a>
+		<a data-src="/img/result-acide-5.png" data-fancybox="injections">
+			<img src="/img/result-acide-5.png" width="141" height="78" />
+		</a>
+	</div>
+</div>
+
+<style lang="scss">
+	.gallery {
+		@apply flex flex-col gap-4;
+		img {
+			@apply w-full;
+		}
+	}
+</style>
+
+<script>
+	function initializeFancybox() {
+		//@ts-ignore
+		Fancybox.bind("[data-fancybox]", {
+			Thumbs: {
+				type: "classic",
+			},
+		});
+	}
+	initializeFancybox();
+	document.addEventListener("DOMContentLoaded", initializeFancybox);
+	document.addEventListener("astro:page-load", initializeFancybox);
+</script>
