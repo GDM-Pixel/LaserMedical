@@ -21,18 +21,18 @@ const nosTarifsHomme = allTarifsHomme.map((n) => ({
 <div class="tabnav">
 	<span
 		data-target="tariffemme"
-		class="tab tariffemme active md:text-md sm:text-base text-[16px] px-4 py-2 font-semibold"
+		class="tablaser tariffemme active md:text-md sm:text-base text-[16px] px-4 py-2 font-semibold"
 		>Tarifs femme</span
 	>
 	<span
 		data-target="tarifhomme"
-		class="tab tarifhomme md:text-md sm:text-base text-[16px] px-4 py-2 font-semibold"
+		class="tablaser tarifhomme md:text-md sm:text-base text-[16px] px-4 py-2 font-semibold"
 		>Tarifs homme</span
 	>
 </div></div>
 
 <div class="tab-content mx-auto px-0 relative h-auto">
-	<div id="tariffemme" class="mt-8 mb-12 tabcontentEl active">
+	<div id="tariffemme" class="mt-8 mb-12 tabcontentElLaser active">
 		<div class="mySwiperFemme">
 			<div class="swiper mySwiperThumbsFemme">
 				<div class="swiper-wrapper">
@@ -59,7 +59,7 @@ const nosTarifsHomme = allTarifsHomme.map((n) => ({
 			</div>
 		</div>
 	</div>
-	<div id="tarifhomme" class="mt-8 mb-12 tabcontentEl">
+	<div id="tarifhomme" class="mt-8 mb-12 tabcontentElLaser">
 		<div class="mySwiperHomme">
 			<div class="swiper mySwiperThumbsHomme">
 				<div class="swiper-wrapper">
@@ -93,7 +93,7 @@ const nosTarifsHomme = allTarifsHomme.map((n) => ({
 	import "swiper/css/bundle";
 
 	//@ts-ignore
-	function initializeSwiper(selectorThumbs, selectorMain) {
+	function initializeSwiperLaser(selectorThumbs, selectorMain) {
 		const swiperMainElement = document.querySelector(selectorMain);
 		// Vérifier si le Swiper existe déjà
 		if (swiperMainElement && !swiperMainElement.swiper) {
@@ -122,20 +122,20 @@ const nosTarifsHomme = allTarifsHomme.map((n) => ({
 
 	// Initialisation des instances Swiper au chargement de la page
 	document.addEventListener("DOMContentLoaded", () => {
-		initializeSwiper(".mySwiperThumbsFemme", ".mySwiperFemme");
-		initializeSwiper(".mySwiperThumbsHomme", ".mySwiperHomme");
+		initializeSwiperLaser(".mySwiperThumbsFemme", ".mySwiperFemme");
+		initializeSwiperLaser(".mySwiperThumbsHomme", ".mySwiperHomme");
 	});
 
 	// Réinitialisation des instances Swiper lors du chargement d'une nouvelle page avec Astro
 	document.addEventListener("astro:page-load", () => {
-		initializeSwiper(".mySwiperThumbsFemme", ".mySwiperFemme");
-		initializeSwiper(".mySwiperThumbsHomme", ".mySwiperHomme");
+		initializeSwiperLaser(".mySwiperThumbsFemme", ".mySwiperFemme");
+		initializeSwiperLaser(".mySwiperThumbsHomme", ".mySwiperHomme");
 	});
 </script>
 <script>
 	//FONCTION QUI GERE LES TABS ET LEURS CONTENUS
 function attachTabClickHandlers() {
-  const tabs = document.querySelectorAll(".tab");
+  const tabs = document.querySelectorAll(".tablaser");
   tabs.forEach((tab) => {
     tab.removeEventListener("click", handleTabClick); // Nettoyez d'abord
     tab.addEventListener("click", handleTabClick); // Attachez ensuite
@@ -143,12 +143,12 @@ function attachTabClickHandlers() {
 }
 
 function handleTabClick() {
-  const tabs = document.querySelectorAll(".tab");
-  const tabContents = document.querySelectorAll(".tabcontentEl");
+  const tabs = document.querySelectorAll(".tablaser");
+  const tabContents = document.querySelectorAll(".tabcontentElLaser");
   //@ts-ignore
   const targetId = this.getAttribute("data-target");
   const newActiveTabContent = document.getElementById(targetId);
-  const currentActiveTabContent = document.querySelector(".tabcontentEl.active");
+  const currentActiveTabContent = document.querySelector(".tabcontentElLaser.active");
 
   tabs.forEach((tab) => tab.classList.remove("active"));
   //@ts-ignore
@@ -186,7 +186,7 @@ function resetSwipers() {
   }
 }
 
-document.querySelectorAll(".tab").forEach((tab) => {
+document.querySelectorAll(".tablaser").forEach((tab) => {
   tab.addEventListener("click", handleTabClick);
 });
 
@@ -239,13 +239,13 @@ document.addEventListener("astro:page-load", attachTabClickHandlers);
 	.tabnav {
 		@apply flex text-center mx-auto px-8 ;
 	}
-	.tab {
+	.tablaser {
 		@apply text-grey-400 bg-grey-100 transition-all duration-300 rounded-ss-lg rounded-se-lg ;
 		&:hover {
 			@apply cursor-pointer bg-grey-200 transition-all duration-200 text-white;
 		}
 	}
-	.tab.active {
+	.tablaser.active {
 		@apply text-white bg-black;
 	}
 	#tariffemme,

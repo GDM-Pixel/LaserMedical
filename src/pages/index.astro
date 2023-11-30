@@ -623,7 +623,7 @@ function handleTabClick() {
         tabContent.classList.toggle("active", tabContent.id === targetId);
     });
 }
-
+attachTabClickHandlers();
 // Attachez les gestionnaires d'onglets lorsque le DOM est prêt
 document.addEventListener("DOMContentLoaded", attachTabClickHandlers);
 // Réattachez les gestionnaires d'onglets sur les événements de navigation d'Astro

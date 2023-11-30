@@ -14,11 +14,13 @@
     "@astrojs/react": "^3.0.6",
     "@astrojs/tailwind": "^5.0.2",
     "@fancyapps/ui": "^5.0.28",
+    "@netlify/functions": "^2.4.0",
     "@types/react": "^18.2.38",
     "@types/react-dom": "^18.2.17",
     "astro": "^3.5.4",
     "astro-breadcrumbs": "^1.8.0",
     "gsap": "^3.12.3",
+    "node-fetch": "^3.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-transition-group": "^4.4.5",
@@ -26,5 +28,8 @@
     "swiper": "^11.0.4",
     "tailwindcss": "^3.3.5",
     "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.6.9"
   }
 }

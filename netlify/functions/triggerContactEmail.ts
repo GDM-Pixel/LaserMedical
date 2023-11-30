@@ -19,15 +19,16 @@ const handler: Handler = async function(event) {
   };
 
   //automatically generated snippet from the email preview
-  //sends a request to an email handler for a subscribed email
+  //@ts-ignore
   await fetch(`${process.env.URL}/.netlify/functions/emails/contactus`, {
     headers: {
+      //@ts-ignore
       "netlify-emails-secret": process.env.NETLIFY_EMAILS_SECRET as string,
     },
     method: "POST",
     body: JSON.stringify({
-      from: "charles@gdm-pixel.fr",
-      to: "gdmpixel.fr@gmail.com",
+      from: "contact@medecine-esthetique.re",
+      to: "contact@medecine-esthetique.re",
       subject: "Vous avez un nouveau message : " + requestBody.demande,
       parameters: {
         userName: requestBody.userName,
