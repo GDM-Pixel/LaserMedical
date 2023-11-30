@@ -1,0 +1,35 @@
+---
+import { Image } from "astro:assets";
+import AutreLevre from "../assets/img/autre-levre.png";
+import AutreDoubleMenton from "../assets/img/autre-double-menton.png";
+import AutreSillonNG from "../assets/img/autre-sillon-nasogenien.png";
+import AutreCernes from "../assets/img/autre-cernes.png";
+---
+<section class="autresoins bg-white-400 pt-12 pb-16 text-center">
+			<h2 class="text-grey-800 section-title">Autres injections</h2>
+			<div class="flex flex-col md:flex-row items-center justify-center gap-6 mb-8">
+				<div>
+					<Image src={AutreLevre} alt="Lèvres" /><h4 class="text-grey-800 mt-2">
+						Lèvres
+					</h4>
+				</div>
+				<div>
+					<Image src={AutreDoubleMenton} alt="Double menton" /><h4
+						class="text-grey-800 mt-2">
+						Double menton
+					</h4>
+				</div>
+				<div>
+					<Image src={AutreSillonNG} alt="Sillons nasogéniens" /><h4
+						class="text-grey-800 mt-2">
+						Sillons nasogéniens
+					</h4>
+				</div>
+				<div>
+					<Image src={AutreCernes} alt="Cernes" /><h4 class="text-grey-800 mt-2">
+						Cernes
+					</h4>
+				</div>
+			</div>
+			<a href="/demander-un-rdv/" class="cta rounded brown">Prendre RDV</a>
+		</section>

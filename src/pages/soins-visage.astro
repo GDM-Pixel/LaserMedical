@@ -4,19 +4,7 @@ import Header from "../components/Header.astro";
 import HeroBox from "../components/HeroBox.astro";
 import { Image } from "astro:assets";
 import Footer from "../components/Footer.astro";
-import AcideHyal1 from "../assets/img/acide-hyal1.png";
-import AcideHyal2 from "../assets/img/acide-hyal2.png";
-import ZoneLevres from "../assets/img/zone-levre.png";
-import ZoneCernes from "../assets/img/zone-cernes.png";
-import ZoneRides from "../assets/img/zone-rides.png";
-import ZonePeau from "../assets/img/zone-peau.png";
-import ZoneSillonNG from "../assets/img/zone-sillon-ng.png";
-import ZoneVisageCreuse from "../assets/img/zone-visage-creuse.png";
-import ZoneOvalBajoues from "../assets/img/zone-oval-bajoues.png";
-import ZoneNez from "../assets/img/zone-nez.png";
-import ZoneMains from "../assets/img/zone-mains.png";
-import Evaluation from "../assets/img/evaluation.png";
-import SeanceInjection from "../assets/img/seance-injection.png";
+
 ---
 
 <Layout
@@ -28,13 +16,13 @@ import SeanceInjection from "../assets/img/seance-injection.png";
 	</div>
 	<main>
 		<section class="soins-visage text-center mt-24">
-			<h1 class="section-title mb-6">Nos soins pour votre visage</h1>
-			<p class="section-intro text-base max-w-3xl mx-auto">
+			<h1 class="section-title mb-6 px-6 text-lg md:text-xxl">Nos soins pour votre visage</h1>
+			<p class="section-intro text-base max-w-3xl mx-auto px-6">
 				Découvrez toutes les techniques de médecine esthétique disponibles au
 				centre laser médical et identifiez la solution qui correspond au mieux à
 				vos attentes.
 			</p>
-			<div class="grid grid-cols-3 gap-8 max-w-7xl mx-auto mt-12">
+			<div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 max-w-7xl mx-auto mt-12 px-6">
 				<a class="tile-soins" href="/injection-acide-hyaluronique/">
 					<h2>Acide hyaluronique</h2><div class="effect"></div>
                     <div class="overlay"></div>
@@ -67,10 +55,10 @@ import SeanceInjection from "../assets/img/seance-injection.png";
 					<img src="/img/ovale-autres-soins.jpg" alt="Mésolift" />
                 </a>
 
-				<a class="tile-soins" href="/taches-pigmentaires/">
-					<h2>Tâches pigmentaires</h2><div class="effect"></div>
+				<a class="tile-soins" href="/cryolipolyse/">
+					<h2>Cryolipolyse</h2><div class="effect"></div>
                     <div class="overlay"></div>
-					<img src="/img/peeling-autres-soins.jpg" alt="Tâches pigmentaires" />
+					<img src="/img/vignette-cryolipolyse-accueil.jpg" alt="cryolipolyse" />
                 </a>
 			</div>
 		</section>
@@ -89,9 +77,9 @@ import SeanceInjection from "../assets/img/seance-injection.png";
 		margin: auto;
 	}
 	.tile-soins {
-		@apply relative transition-all duration-500 rounded-md flex flex-col justify-center items-center  text-center h-[200px] lg:h-[300px] ;
+		@apply relative transition-all duration-500 rounded-md flex flex-col justify-center items-center  text-center h-[200px] h-[300px] ;
 		.effect {
-			@apply absolute w-[300px] h-[100px] z-30 transition-all duration-200 ease-in-out border-2 border-white;
+			@apply absolute w-[80%] h-[100px] z-30 transition-all duration-200 ease-in-out border-2 border-white ;
 		}
         .overlay {
             @apply bg-black opacity-30 absolute w-full h-full z-20 transition-all duration-200 ease-in-out;}

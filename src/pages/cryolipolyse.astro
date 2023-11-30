@@ -1,0 +1,580 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import HeroBox from "../components/HeroBox.astro";
+import Accordion from "../components/Accordion.astro";
+import TarifsCryolipolyse from "../content/tarifs/cryolipolyse.md";
+import { Image } from "astro:assets";
+import Footer from "../components/Footer.astro";
+import SeanceInjection from "../assets/img/seance-injection.png";
+import ResultsGalleryCryolipolyse from "../components/Resultats/ResultsGalleryCryolipolyse.astro";
+---
+
+<Layout
+	title="Cryolipolyse Réunion | Médecin Esthétique | Laser Médical"
+	description="Première consultation d'information gratuite par un de nos médecins experts. Réduction de 30 à 45% du bourrelet graisseux après une seule séance d'amincissement par cryolipolyse.">
+	<div class="hero-element">
+		<div class="overlay"></div>
+		<Header />
+		<HeroBox
+			title="Cryolipolyse"
+			body="La cryolipolyse ou coolsculpting est une technique d’amincissement utilisant le froid afin d’éliminer les amas de graisse localisés du corps. Elle permet une réduction significative et définitive des bourrelets graisseux de n’importe quelle zone du corps (ventre, poignées d’amour, culotte de cheval…), sans les inconvénients d’une technique invasive comme la liposuccion"
+		/>
+	</div>
+	<main>
+		<section class="container gauche-droite pt-24 pb-18">
+			<div class="lg:flex lg:flex-row gap-8 mb-24">
+				<div class="col lg:w-1/2 flex flex-col justify-center">
+					<h3 class="text-lg md:text-xl lg:text-xxl mb-6">
+						Principe de la cryolipolyse
+					</h3>
+					<p class="text-base mb-3">
+						Cette technique a été mise au point par les docteurs Anderson et
+						Manstein du Wellmann Institute de Boston suite à une observation
+						faite depuis longtemps : les cellules adipeuses sont plus sensibles
+						à une exposition au froid que les autres cellules de l’organisme.
+					</p>
+					<p class="text-base mb-6">
+						Le traitement débute par l’aspiration de l’amas graisseux dans la
+						pièce à main. Le tissu adipeux entre alors en contact avec des
+						plaques de refroidissement qui génèrent un effet de froid jusqu’à ce
+						que la température programmée soit atteinte. Ce froid est ensuite
+						maintenu et contrôlé en permanence pendant toute la durée du
+						traitement provoquant l’élimination des cellules graisseuses
+						sous-cutanées.
+					</p>
+					<Accordion
+						extraClass="shadow-md"
+						items={[
+							{
+								title: "En savoir plus",
+								answer:
+									"<p>L’application du froid provoque une inflammation localisée du tissu adipeux (panniculite) sans traumatisme des tissus adjacents pauvres en lipides (peau, nerfs, vaisseaux sanguins et lymphatiques). En effet, le refroidissement à une température de – 8°C engendre une cristallisation des acides gras saturés intra-adipocytaires entrainant la destruction des cellules graisseuses. Les cellules sont ensuite éliminées définitivement de l’organisme au fil des semaines suivant la séance selon le processus d’apoptose (mort programmée des cellules).</p><p>Cette diminution du nombre d’adipocytes entraine la réduction de l’épaisseur des bourrelets graisseux traités, sculptant ainsi votre silhouette.</p>",
+								isopen: false,
+							},
+						]}
+					/>
+				</div>
+
+				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
+					<img
+						src="/img/cryolipo1.jpg"
+						alt="Crylipolyse, c'est quoi ?"
+						class="w-full rounded-lg"
+					/>
+				</div>
+			</div>
+		</section>
+
+		<section class="zone-slider bg-grey-600 py-12">
+			<div class="relative mt-12 mb-12">
+				<h2 class="section-title text-center dark">Les zones traitables</h2>
+				<div class="mySwiper">
+					<div class="swiper mySwiperThumbsZone container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img
+									class="absolute w-full h-full object-cover -z-10"
+									src="/img/cryo-abdomen-thumb.jpg"
+									alt="Abdomen"
+								/>
+								<h4>Abdomen</h4>
+								<div class="overlay"></div>
+							</div>
+							<div class="swiper-slide">
+								<img
+									class="absolute w-full h-full object-cover -z-10"
+									src="/img/cryo-flanc-thumb.jpg"
+									alt="Flanc"
+								/>
+								<h4>Flanc</h4>
+								<div class="overlay"></div>
+							</div>
+							<div class="swiper-slide">
+								<img
+									class="absolute w-full h-full object-cover -z-10"
+									src="/img/cryo-cuisse-thumb.jpg"
+									alt="Cuisses"
+								/>
+								<h4>Cuisses</h4>
+								<div class="overlay"></div>
+							</div>
+							<div class="swiper-slide">
+								<img
+									class="absolute w-full h-full object-cover -z-10"
+									src="/img/cryo-genou-thumb.jpg"
+									alt="Genoux"
+								/>
+								<h4>Genoux</h4>
+								<div class="overlay"></div>
+							</div>
+							<div class="swiper-slide">
+								<img
+									class="absolute w-full h-full object-cover -z-10"
+									src="/img/cryo-fesses-thumb.jpg"
+									alt="Fesses"
+								/>
+								<h4>Fesses</h4>
+								<div class="overlay"></div>
+							</div>
+							<div class="swiper-slide">
+								<img
+									class="absolute w-full h-full object-cover -z-10"
+									src="/img/cryo-poignees-amour-thumb.jpg"
+									alt="Poignées d'amour"
+								/>
+								<h4>Poignées d'amour</h4>
+								<div class="overlay"></div>
+							</div>
+							<div class="swiper-slide">
+								<img
+									class="absolute w-full h-full object-cover -z-10"
+									src="/img/cryo-menton-thumb.jpg"
+									alt="Menton"
+								/>
+								<h4>Menton</h4>
+								<div class="overlay"></div>
+							</div>
+							<div class="swiper-slide">
+								<img
+									class="absolute w-full h-full object-cover -z-10"
+									src="/img/cryo-bras-thumb.jpg"
+									alt="Bras"
+								/>
+								<h4>Bras</h4>
+								<div class="overlay"></div>
+							</div>
+							<div class="swiper-slide">
+								<img
+									class="absolute w-full h-full object-cover -z-10"
+									src="/img/cryo-dos-thumb.jpg"
+									alt="Dos"
+								/>
+								<h4>Dos</h4>
+								<div class="overlay"></div>
+							</div>
+						</div>
+					</div>
+					<div
+						class="nav-container relative top-48 z-30 mx-auto max-w-7xl h-12 hidden md:block">
+						<button class="gdm-button-prev"
+							><svg
+								width="25"
+								height="25"
+								viewBox="0 0 25 25"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M25 12.5C25 9.18479 23.683 6.00537 21.3388 3.66116C18.9946 1.31696 15.8152 -8.0296e-07 12.5 -1.09278e-06C9.1848 -1.38261e-06 6.00537 1.31696 3.66117 3.66116C1.31696 6.00537 1.38261e-06 9.18479 1.09278e-06 12.5C8.0296e-07 15.8152 1.31696 18.9946 3.66117 21.3388C6.00537 23.683 9.18479 25 12.5 25C15.8152 25 18.9946 23.683 21.3388 21.3388C23.683 18.9946 25 15.8152 25 12.5ZM13.2324 6.5918C13.6914 6.13281 14.4336 6.13281 14.8877 6.5918C15.3418 7.05078 15.3467 7.79297 14.8877 8.24707L10.6396 12.4951L14.8877 16.7432C15.3467 17.2021 15.3467 17.9443 14.8877 18.3984C14.4287 18.8525 13.6865 18.8574 13.2324 18.3984L8.1543 13.3301C7.69531 12.8711 7.69531 12.1289 8.1543 11.6748L13.2324 6.5918Z"
+									fill="white"></path>
+							</svg>
+						</button>
+						<button class="gdm-button-next"
+							><svg
+								width="25"
+								height="25"
+								viewBox="0 0 25 25"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M0 12.5C0 15.8152 1.31696 18.9946 3.66117 21.3388C6.00537 23.683 9.18479 25 12.5 25C15.8152 25 18.9946 23.683 21.3388 21.3388C23.683 18.9946 25 15.8152 25 12.5C25 9.18479 23.683 6.00537 21.3388 3.66117C18.9946 1.31696 15.8152 0 12.5 0C9.18479 0 6.00537 1.31696 3.66117 3.66117C1.31696 6.00537 0 9.18479 0 12.5ZM11.7676 18.4082C11.3086 18.8672 10.5664 18.8672 10.1123 18.4082C9.6582 17.9492 9.65332 17.207 10.1123 16.7529L14.3604 12.5049L10.1123 8.25684C9.65332 7.79785 9.65332 7.05566 10.1123 6.60156C10.5713 6.14746 11.3135 6.14258 11.7676 6.60156L16.8457 11.6699C17.3047 12.1289 17.3047 12.8711 16.8457 13.3252L11.7676 18.4082Z"
+									fill="white"></path>
+							</svg>
+						</button>
+					</div>
+					<div
+						class="swiper-wrapper mt-8 mainswiper mb-12 pb-8 max-w-[800px] flex">
+						<div class="swiper-slide">
+							<div class="elemcontainer">
+								<div>
+									<img
+										src="/img/cryo-abdomen-main.jpg"
+										alt="Abdomen"
+										class="w-full h-auto rounded-md"
+									/>
+								</div>
+								<div class="text-left flex flex-col justify-center">
+									<h3>Abdomen</h3><p>
+										La cryolipolyse de l'abdomen : une approche médicale non
+										chirurgicale ciblant les cellules adipeuses résistantes,
+										pour une silhouette abdominale plus fine et définie.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="elemcontainer">
+								<div>
+									<img
+										src="/img/cryo-flanc-main.jpg"
+										alt="Flanc"
+										class="w-full h-auto rounded-md"
+									/>
+								</div><div class="text-left flex flex-col justify-center">
+									<h3>Flanc</h3><p>
+										Traitez les flancs avec la cryolipolyse : une solution
+										médicale non invasive pour éliminer les amas graisseux et
+										sculpter les contours de votre taille.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="elemcontainer">
+								<div>
+									<img
+										src="/img/cryo-cuisse-main.jpg"
+										alt="Cuisses"
+										class="w-full h-auto rounded-md"
+									/>
+								</div><div class="text-left flex flex-col justify-center">
+									<h3>Cuisses</h3><p>
+										Cryolipolyse sur les cuisses : une méthode médicale précise
+										pour réduire la graisse et améliorer le contour des cuisses,
+										sans temps d'arrêt
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="elemcontainer">
+								<div>
+									<img
+										src="/img/cryo-genou-main.jpg"
+										alt="Genoux"
+										class="w-full h-auto rounded-md"
+									/>
+								</div><div class="text-left flex flex-col justify-center">
+									<h3>Genoux</h3><p>
+										Affinez vos genoux avec la cryolipolyse : une technique
+										médicale douce pour réduire les dépôts graisseux et
+										redéfinir le contour des genoux.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="elemcontainer">
+								<div>
+									<img
+										src="/img/cryo-fesses-main.jpg"
+										alt="Fesses"
+										class="w-full h-auto rounded-md"
+									/>
+								</div><div class="text-left flex flex-col justify-center">
+									<h3>Fesses</h3><p>
+										Redefinez le galbe des fesses grâce à la cryolipolyse : une
+										approche médicale non invasive pour éliminer les graisses et
+										sculpter les courbes.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="elemcontainer">
+								<div>
+									<img
+										src="/img/cryo-poignees-amour-main.jpg"
+										alt="Poignées d'amour"
+										class="w-full h-auto rounded-md"
+									/>
+								</div><div class="text-left flex flex-col justify-center">
+									<h3>Poignées d'amour</h3><p>
+										Adieu poignées d'amour avec la cryolipolyse : une technique
+										médicale non chirurgicale ciblant spécifiquement les
+										graisses latérales pour une taille affinée.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="elemcontainer">
+								<div>
+									<img
+										src="/img/cryo-menton-main.jpg"
+										alt="Menton"
+										class="w-full h-auto rounded-md"
+									/>
+								</div><div class="text-left flex flex-col justify-center">
+									<h3>Menton</h3><p>
+										Redessinez votre profil avec la cryolipolyse du menton, une
+										méthode médicale ciblée pour éliminer le double menton et
+										affiner le bas du visage.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="elemcontainer">
+								<div>
+									<img
+										src="/img/cryo-bras-main.jpg"
+										alt="Bras"
+										class="w-full h-auto rounded-md"
+									/>
+								</div><div class="text-left flex flex-col justify-center">
+									<h3>Bras</h3><p>
+										Affinez vos bras avec la cryolipolyse : une procédure
+										médicale non invasive pour réduire les graisses et tonifier
+										l'apparence des bras.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="elemcontainer">
+								<div>
+									<img
+										src="/img/cryo-dos-main.jpg"
+										alt="Dos"
+										class="w-full h-auto rounded-md"
+									/>
+								</div><div class="text-left flex flex-col justify-center">
+									<h3>Dos</h3><p>
+										La cryolipolyse pour le dos : éliminez les graisses
+										indésirables de manière non invasive pour un dos plus lisse
+										et une silhouette harmonieuse.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination mt-8 px-6"></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="gauche-droite pt-24 pb-24 px-8 bg-grey-100">
+			<div class="container">
+				<h2 class="semi-section-title">Déroulement d’une séance de Coolsculpting</h2>
+				<div class="lg:flex lg:flex-row gap-8 mb-18">
+					<div class="col lg:w-1/2 flex flex-col justify-center">
+						<div class="rounded-ss-lg rounded-se-lg overflow-hidden">
+							<Accordion
+								extraClass="clearaccordion"
+								items={[
+									{
+										title: "Evaluation personnalisée",
+										answer:
+											"<p>Avant de procéder au traitement, vous rencontrerez un médecin esthétique ayant reçu une formation spécifique sur la cryolipolyse. L’interrogatoire et l’examen clinique permettront d’écarter les contre-indications (maladie de Raynaud, urticaire au froid …) et de bien sélectionner les candidats au traitement par coolsculpting.</p><p>Cette technique est indiquée chez les patients sans problème de poids qui présentent un excès de graisse localisée malgré un régime alimentaire équilibré et de l’exercice. En effet, la méthode de cryolipolyse aura des effets limités sur les bourrelets de graisses de patients obèses et aucune action sur les graisses viscérales (présentes en cas de surpoids).</p><p>Ensemble, vous étudierez votre silhouette afin de déterminer les zones précises où vous désirez remodeler votre corps. A l’issue de cette consultation, le médecin esthétique établira un plan de traitement détaillé afin d’atteindre le résultat souhaité. Une fiche d’instructions avant et après la cryolipolyse vous sera remise afin d’améliorer les résultats du traitement et d’éviter la survenue d’effets indésirables.</p>",
+										isopen: true,
+									},
+									{
+										title: "La séance de cryolipolyse",
+										answer:
+											"<p>Le médecin esthétique délimite les zones graisseuses à traiter puis mesure l’épaisseur du pli adipeux et la circonférence de la zone afin de définir les paramètres de traitement (intensité du froid, puissance d’aspiration, durée et type d’applicateur). Des photos seront pratiquées avant la séance sous différents angles pour visualiser les résultats avant-après lors de la consultation de contrôle.</p><p>Le médecin applique sur la zone à traiter une membrane imprégnée de gel qui va permettre de protéger votre peau puis positionne l’applicateur sur la zone graisseuse ciblée.</p><p>Au début du traitement, le patient peut ressentir une traction des tissus, des picotements, voire une douleur pendant 5 à 10 minutes. Ces réactions sont dues à l’aspiration du bourrelet graisseux et au début du processus de congélation des cellules adipeuses. Par la suite, la zone traitée est anesthésiée par le froid.</p><p>Les séances de cryolipolyse dure 70 minutes, temps optimal afin de détruire le maximum de cellules graisseuses (adipocytes). Le patient est ainsi en position allongée, il peut lire, regarder une vidéo et une boisson peut lui être proposée.</p>",
+									},
+									{
+										title: "Après une cryolipolyse",
+										answer:
+											"<p>Lors du retrait de l’applicateur, la zone traitée paraît dure, solide comme « gelée », rouge et prend la forme de la pièce à main. Le médecin masse énergiquement la zone pendant quelques minutes afin d’améliorer les résultats. Des douleurs d’intensité variable peuvent alors survenir. Elles durent en général 7 à 10 minutes.</p><p>Dans les heures qui suivent la procédure de coolsculpting, la zone traitée peut être rouge, gonflée ou sensible. Des hématomes, liés au processus d’aspiration, peuvent apparaître. Des douleurs ultérieures sur la zone traitée (notamment la région abdominale), accompagnées d’une éventuelle inflammation, peuvent être ressenties pendant 1 à 2 semaines. Des troubles de la sensibilité cutanée (paresthésies et dysesthésies) sont possibles et peuvent durer quelques semaines. Toutes ces réactions sont normales et disparaissent progressivement. Elles ne limitent pas les activités quotidiennes du patient.</p><p>Les résultats ne sont pas visibles immédiatement après la séance de coolsculpting. Les résultats sur la fonte graisseuse commencent à être observés au bout de 2 à 4 semaines après le traitement et continuent de s’améliorer pendant 3 mois. Une consultation de contrôle par votre médecin esthétique est réalisée à la 12 ème semaine suivant la procédure afin de visualiser le résultat final. Selon l’objectif souhaité et l’épaisseur initiale du bourrelet graisseux, une 2ème voire une 3ème séance peuvent être réalisées pour améliorer le résultat. Un intervalle d’au moins 4 semaines doit être respecté entre les séances.</p>",
+									},
+								]}
+							/>
+						</div>
+					</div>
+					<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
+						<img
+							src="/img/consulting1.jpg"
+							alt="Evaluation personnalisée"
+							class="rounded-lg w-full"
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="bigtopo text-justify px-8 py-24 bg-grey-400 text-white">
+			<h2 class="section-title dark text-center">Résultats du coolsculpting</h2>
+
+			<div class="max-w-3xl mx-auto">
+				<ResultsGalleryCryolipolyse />
+			</div>
+			<p class="text-justify max-w-3xl mx-auto text-base mb-6 mt-6">
+				La cryolipolyse est un traitement non chirurgical de réduction de la graisse sous-cutanée par le froid approuvé par la FDA (Food and Drug Administration). Toutes les zones du corps présentant des surcharges graisseuses localisées peuvent bénéficier de cette méthode.
+			</p>
+			<p class="text-justify max-w-3xl mx-auto text-base mb-6">
+				La cryolipolyse permet d’obtenir d’excellents résultats en quelques semaines sans anesthésie ni éviction sociale. La sécurité et l’efficacité de la cryolipolyse médicale ont été démontrées par différents essais cliniques et au cours de plus de 2 millions de traitements réalisés sur des patients du monde entier.
+			</p>
+			<p class="text-justify max-w-3xl mx-auto text-base mb-6">
+				Dans notre centre de médecine esthétique, on observe après une seule séance de cryolipolyse une réduction de 30 à 45% de l’épaisseur du bourrelet graisseux et une nette amélioration de la cellulite adipeuse.
+			</p>
+            <p class="text-justify max-w-3xl mx-auto text-base">
+				Dans les suites immédiates de la séance les résultats ne sont pas encore visibles. La fonte graisseuse va s’effectuer progressivement les semaines suivant le traitement avec un résultat final obtenu à 3 mois.
+			</p>
+		</section>
+
+		<section class="px-8 py-24 bg-white text-black text-center">
+			<h2 class="section-title">Tarifs</h2>
+
+			<TarifsCryolipolyse />
+
+			<a href="/demander-un-rdv/" class="cta rounded brown">Prendre RDV</a>
+		</section>
+	</main>
+	<!-- FIN DE GAUCHE DROITE -->
+</Layout>
+
+<Footer />
+
+<script>
+	import Swiper from "swiper/bundle";
+	import "swiper/css/bundle";
+
+	function initializeZoneSlider() {
+		const swiperElement = document.querySelector(".mySwiper");
+		const swiperThumbsElement = document.querySelector(".mySwiperThumbsZone");
+
+		//@ts-ignore
+		if (swiperElement && swiperThumbsElement && !swiperElement.swiper) {
+			var swiperThumbs = new Swiper(".mySwiperThumbsZone", {
+				slidesPerView: "auto",
+				freeMode: false,
+				loop: false,
+				grabCursor: true,
+				spaceBetween: 30,
+				watchSlidesProgress: true,
+				slideToClickedSlide: true,
+
+				breakpoints: {
+					// when window width is >= 320px
+					320: {
+						slidesPerView: 3,
+						spaceBetween: 10,
+					},
+					// when window width is >= 480px
+					480: {
+						slidesPerView: 3,
+						spaceBetween: 20,
+					},
+					// when window width is >= 640px
+					640: {
+						slidesPerView: 3,
+						spaceBetween: 30,
+					},
+					// when window width is >= 992px
+					992: {
+						slidesPerView: 5,
+						spaceBetween: 30,
+					},
+					// when window width is >= 1200px
+					1200: {
+						slidesPerView: 6,
+						spaceBetween: 50,
+					},
+				},
+			});
+			var swiper = new Swiper(".mySwiper", {
+				slideActiveClass: "swiper-slide-active",
+				effect: "fade",
+				fadeEffect: {
+					crossFade: true,
+				},
+				loop: true,
+				spaceBetween: 0,
+				grabCursor: true,
+				navigation: {
+					nextEl: ".gdm-button-next",
+					prevEl: ".gdm-button-prev",
+				},
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+				freeMode: false,
+				slidesPerView: 1,
+				watchSlidesProgress: false,
+				thumbs: {
+					swiper: swiperThumbs,
+				},
+			});
+		}
+	}
+
+	document.addEventListener("DOMContentLoaded", initializeZoneSlider);
+
+	document.addEventListener("astro:page-load", initializeZoneSlider);
+</script>
+
+<style lang="scss">
+	:root {
+		--swiper-theme-color: #d19f6b !important;
+		--swiper-pagination-bullet-size: 10px !important;
+		--swiper-pagination-bullet-width: 10px !important;
+		--swiper-pagination-bullet-horizontal-gap: 6px;
+		--swiper-pagination-bullet-width: 26px;
+		--swiper-pagination-bullet-height: 5px;
+		--swiper-pagination-bullet-border-radius: 99px;
+		--swiper-pagination-bullet-inactive-color: #dddddd;
+		--swiper-pagination-bullet-inactive-opacity: 1;
+	}
+	main {
+		margin: auto;
+	}
+	.gdm-button-prev,
+	.gdm-button-next {
+		@apply absolute;
+	}
+	.gdm-button-prev {
+		@apply left-6;
+	}
+	.gdm-button-next {
+		@apply right-6;
+	}
+	.swiper-fade .mySwiperThumbs .swiper-slide,
+	.swiper-fade .mySwiperThumbsZone .swiper-slide {
+		pointer-events: auto !important;
+		transition-property: opacity;
+		transition: 300ms ease all;
+	}
+
+	.mySwiperThumbs,
+	.mySwiperThumbsZone {
+		.swiper-wrapper {
+			/*@apply mx-auto text-center flex flex-wrap justify-center gap-4 sm:gap-6;*/
+		}
+		.swiper-slide {
+			@apply cursor-pointer h-36 border-2 border-transparent rounded-lg overflow-hidden relative text-center text-white text-base flex flex-col justify-end items-center leading-6 pb-0 filter grayscale transition-all duration-300 ease-in-out bg-cover bg-center bg-no-repeat hover:grayscale-0 max-w-[200px];
+			h4 {
+				@apply text-[18px] z-20 relative mb-4;
+			}
+			&.swiper-slide-thumb-active {
+				@apply filter grayscale-0 border-2 border-white;
+			}
+			.overlay {
+				@apply bg-black bg-opacity-10 absolute top-0 left-0 right-0 bottom-0 z-10;
+			}
+		}
+		.swiper-slide-thumb-active {
+			@apply font-bold;
+		}
+	}
+
+	.mainswiper {
+		@apply text-center;
+		.swiper-slide {
+			@apply text-left text-base bg-grey-600 h-0 mx-auto text-white;
+			.elemcontainer {
+				@apply grid grid-cols-1 sm:grid-cols-2 gap-6 sm:text-base text-sm max-w-[850px] text-center px-6 sm:px-0 py-8 mx-auto;
+			}
+			h3 {
+				@apply text-[22px] leading-7 mb-3;
+			}
+			p {
+				@apply text-[18px] mb-2;
+			}
+			&.swiper-slide-active {
+				@apply h-auto  mx-auto;
+			}
+		}
+	}
+	.hero-element {
+		background: url("/img/hero-cryo.jpg") no-repeat center center;
+		@apply relative bg-cover bg-center;
+	}
+	.overlay {
+		@apply absolute top-0 bottom-0 left-0 right-0  bg-black bg-opacity-50 pointer-events-none  transition-all duration-500;
+	}
+</style>

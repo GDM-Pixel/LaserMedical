@@ -1,0 +1,699 @@
+---
+import Layout from "../layouts/Layout.astro";
+import TarifsAcideHyaluronique from "../content/tarifs/acidehyaluronique.md";
+import Header from "../components/Header.astro";
+import HeroBox from "../components/HeroBox.astro";
+import Accordion from "../components/Accordion.astro";
+import TarifAvantage from "../components/TarifAvantage.astro";
+import ResultsGalleryInjections from "../components/Resultats/ResultsGalleryInjections.astro";
+import { Image } from "astro:assets";
+import Footer from "../components/Footer.astro";
+import AcideHyal1 from "../assets/img/acide-hyal1.png";
+import AcideHyal2 from "../assets/img/acide-hyal2.png";
+import ZoneLevres from "../assets/img/zone-levre.png";
+import ZoneCernes from "../assets/img/zone-cernes.png";
+import ZoneRides from "../assets/img/zone-rides.png";
+import ZonePeau from "../assets/img/zone-peau.png";
+import ZoneSillonNG from "../assets/img/zone-sillon-ng.png";
+import ZoneVisageCreuse from "../assets/img/zone-visage-creuse.png";
+import ZoneOvalBajoues from "../assets/img/zone-oval-bajoues.png";
+import ZoneNez from "../assets/img/zone-nez.png";
+import ZoneMains from "../assets/img/zone-mains.png";
+import Evaluation from "../assets/img/evaluation.png";
+import SeanceInjection from "../assets/img/seance-injection.png";
+import AutresSoinsVisage from "../components/AutresSoinsVisage.astro";
+---
+
+<Layout title="Page des composants" description="Ceci est la meta description">
+	<div class="hero-element">
+		<div class="overlay"></div>
+		<Header />
+		<HeroBox
+			title="Injection acide hyaluronique"
+			body="L’injection d’acide hyaluronique est le traitement de médecine esthétique le plus réalisé dans le monde. Il est utilisée pour combler les rides et sillons naso géniens, redonner du volume au visage et améliorer l’hydratation de la peau. Avec des résultats immédiats et naturels, l’acide hyaluronique est le traitement de choix pour lutter contre les signes du vieillissement."
+		/>
+	</div>
+	<main>
+		<section class="container gauche-droite pt-24 pb-24">
+			<div class="lg:flex lg:flex-row-reverse gap-8 mb-24">
+				<div class="col lg:w-1/2 flex flex-col justify-center">
+					<h3 class="text-lg md:text-xl lg:text-xxl mb-6">
+						L’acide hyaluronique, qu’est-ce que c’est ?
+					</h3>
+					<p class="text-base mb-3">
+						L’acide hyaluronique est une molécule présente naturellement dans
+						notre peau et les différents tissus de l’organisme. Il exerce une
+						fonction essentielle dans le maintien de la qualité cutanée.
+					</p>
+					<p class="text-base">
+						L’acide hyaluronique est un produit résorbable, sans spécificité
+						d’espèces ni de tissus. Il n’existe donc pas de risques d’allergie
+						et aucun test n’est nécessaire avant le traitement. Les effets
+						secondaires après injection sont minimes.
+					</p>
+				</div>
+				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
+					<Image
+						src={AcideHyal1}
+						alt="L'acide Hyaluronique, c'est quoi ?"
+						class="w-full"
+					/>
+				</div>
+			</div>
+			<div class="lg:flex lg:flex-row gap-8 mb-6">
+				<div class="col lg:w-1/2 flex flex-col justify-center">
+					<h3 class="text-lg md:text-xl lg:text-xxl mb-6">
+						Pour quoi utiliser l’acide hyaluronique ?
+					</h3>
+					<p class="text-base mb-3">
+						Avec le temps, la peau s’affine et les rides apparaissent. L’acide
+						hyaluronique présent dans la derme diminue, entrainant une
+						altération de la qualité de la peau.
+					</p>
+					<p class="text-base">
+						Au centre laser médical, nous utilisons l’acide hyaluronique de la
+						gamme Juvederm® fabriqué et distribué en France par les
+						laboratoires Allergan. Juvéderm® offre un panel d’acide
+						hyaluronique de réticulations différentes aux propriétés
+						exceptionnelles tels que Juvederm® Voluma with lidocaïne ou encore
+						Juvéderm® Volift with lidocaïne.
+					</p>
+				</div>
+				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
+					<Image
+						src={AcideHyal2}
+						alt="Dans quels cas utiliser l'acide hyaluronique ?"
+						class="w-full"
+					/>
+				</div>
+			</div>
+
+			<div class="mt-24 rounded-ss-lg rounded-se-lg overflow-hidden shadow-md">
+				<Accordion
+					items={[
+						{
+							title: "En savoir plus",
+							answer:
+								"<p><strong>L’acide hyaluronique est utilisé dans plusieurs spécialitées médicales et notamment pour le traitement de l’arthose du genou</strong>. Les injections d’acide hyaluronique sont maintenant pratiquées depuis plus de 20 ans dans le domaine de la médecine esthétique. Grâce à ses propriétés exceptionnelles, l’acide hyaluronique a très rapidement remplacé les autres produits injectables comme le collagène dans la correction des rides et des pertes de volume du visage.</p>",
+						},
+					]}
+				/>
+			</div>
+		</section>
+		<section class="zone-slider bg-grey-600 py-12">
+			<div class="relative mt-12 mb-12">
+				<h2 class="section-title text-center dark">Les zones d'injections</h2>
+				<div class="mySwiper">
+					<div class="swiper mySwiperThumbsZone container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<Image
+									src={ZoneLevres}
+									alt="Zone Levres"
+									class="absolute w-full h-full object-cover -z-10"
+								/>
+								<h4>Lèvres</h4>
+								<div class="overlay"></div>
+							</div>
+							<div class="swiper-slide">
+								<Image
+									src={ZoneCernes}
+									alt="Zone Cernes"
+									class="absolute w-full h-full object-cover -z-10"
+								/>
+								<h4>Cernes</h4>
+								<div class="overlay"></div>
+							</div>
+							<div class="swiper-slide">
+								<Image
+									src={ZoneRides}
+									alt="Zone Rides"
+									class="absolute w-full h-full object-cover -z-10"
+								/>
+								<h4>Comblement des rides</h4>
+								<div class="overlay"></div>
+							</div>
+							<div class="swiper-slide">
+								<Image
+									src={ZonePeau}
+									alt="Zone Peau"
+									class="absolute w-full h-full object-cover -z-10"
+								/>
+								<h4>Hydratation et éclat de la peau</h4>
+								<div class="overlay"></div>
+							</div>
+							<div class="swiper-slide">
+								<Image
+									src={ZoneSillonNG}
+									alt="Zone Sillon NG"
+									class="absolute w-full h-full object-cover -z-10"
+								/>
+								<h4>Comblement du sillon naso génien</h4>
+								<div class="overlay"></div>
+							</div>
+							<div class="swiper-slide">
+								<Image
+									src={ZoneVisageCreuse}
+									alt="Zone Visage"
+									class="absolute w-full h-full object-cover -z-10"
+								/>
+								<h4>Visage creusé</h4>
+								<div class="overlay"></div>
+							</div>
+							<div class="swiper-slide">
+								<Image
+									src={ZoneOvalBajoues}
+									alt="Zone Bajoues"
+									class="absolute w-full h-full object-cover -z-10"
+								/>
+								<h4>Oval du visage et bajoues</h4>
+								<div class="overlay"></div>
+							</div>
+							<div class="swiper-slide">
+								<Image
+									src={ZoneNez}
+									alt="Zone Nez"
+									class="absolute w-full h-full object-cover -z-10"
+								/>
+								<h4>Nez</h4>
+								<div class="overlay"></div>
+							</div>
+							<div class="swiper-slide">
+								<Image
+									src={ZoneMains}
+									alt="Zone Main"
+									class="absolute w-full h-full object-cover -z-10"
+								/>
+								<h4>Mains</h4>
+								<div class="overlay"></div>
+							</div>
+						</div>
+					</div>
+					<div
+						class="nav-container relative top-48 z-30 mx-auto max-w-7xl h-12 hidden md:block">
+						<button class="gdm-button-prev"
+							><svg
+								width="25"
+								height="25"
+								viewBox="0 0 25 25"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M25 12.5C25 9.18479 23.683 6.00537 21.3388 3.66116C18.9946 1.31696 15.8152 -8.0296e-07 12.5 -1.09278e-06C9.1848 -1.38261e-06 6.00537 1.31696 3.66117 3.66116C1.31696 6.00537 1.38261e-06 9.18479 1.09278e-06 12.5C8.0296e-07 15.8152 1.31696 18.9946 3.66117 21.3388C6.00537 23.683 9.18479 25 12.5 25C15.8152 25 18.9946 23.683 21.3388 21.3388C23.683 18.9946 25 15.8152 25 12.5ZM13.2324 6.5918C13.6914 6.13281 14.4336 6.13281 14.8877 6.5918C15.3418 7.05078 15.3467 7.79297 14.8877 8.24707L10.6396 12.4951L14.8877 16.7432C15.3467 17.2021 15.3467 17.9443 14.8877 18.3984C14.4287 18.8525 13.6865 18.8574 13.2324 18.3984L8.1543 13.3301C7.69531 12.8711 7.69531 12.1289 8.1543 11.6748L13.2324 6.5918Z"
+									fill="white"></path>
+							</svg>
+						</button>
+						<button class="gdm-button-next"
+							><svg
+								width="25"
+								height="25"
+								viewBox="0 0 25 25"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M0 12.5C0 15.8152 1.31696 18.9946 3.66117 21.3388C6.00537 23.683 9.18479 25 12.5 25C15.8152 25 18.9946 23.683 21.3388 21.3388C23.683 18.9946 25 15.8152 25 12.5C25 9.18479 23.683 6.00537 21.3388 3.66117C18.9946 1.31696 15.8152 0 12.5 0C9.18479 0 6.00537 1.31696 3.66117 3.66117C1.31696 6.00537 0 9.18479 0 12.5ZM11.7676 18.4082C11.3086 18.8672 10.5664 18.8672 10.1123 18.4082C9.6582 17.9492 9.65332 17.207 10.1123 16.7529L14.3604 12.5049L10.1123 8.25684C9.65332 7.79785 9.65332 7.05566 10.1123 6.60156C10.5713 6.14746 11.3135 6.14258 11.7676 6.60156L16.8457 11.6699C17.3047 12.1289 17.3047 12.8711 16.8457 13.3252L11.7676 18.4082Z"
+									fill="white"></path>
+							</svg>
+						</button>
+					</div>
+					<div
+						class="swiper-wrapper mt-8 mainswiper mb-12 pb-8 max-w-[800px] flex">
+						<div class="swiper-slide">
+							<div class="elemcontainer">
+								<div>
+									<Image
+										src={ZoneLevres}
+										alt="Zone Levres"
+										class="w-full h-auto"
+									/>
+								</div><div class="text-left flex flex-col justify-center">
+									<h3>Lèvres</h3><p>
+										On redéfinit les contours des lèvres par l’injection d’acide
+										hyaluronique dans les crêtes philtrales et l’ourlet.
+									</p>
+									<p>
+										On injecte directement dans les lèvres rouges si l’on
+										recherche une augmentation de volume.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="elemcontainer">
+								<div>
+									<Image
+										src={ZoneCernes}
+										alt="Zone Cernes"
+										class="w-full h-auto"
+									/>
+								</div><div class="text-left flex flex-col justify-center">
+									<h3>Cernes</h3><p>
+										Le cerne correspond au creux séparant la paupière inférieure
+										de la joue donnant un air fatigué au visage. L’injection du
+										cerne est souvent associée au comblement de la vallée des
+										larmes.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="elemcontainer">
+								<div>
+									<Image
+										src={ZoneRides}
+										alt="Zone Rides"
+										class="w-full h-auto"
+									/>
+								</div><div class="text-left flex flex-col justify-center">
+									<h3>Comblement des rides</h3><p>
+										On injecte l’acide hyaluronique très superficiellement le
+										long des rides (blanching technique).
+									</p><p>
+										Lors de la séance, l’effet est immédiat avec une nette
+										amélioration des résultats les jours suivants. Toutes les
+										rides du visage peuvent être traitées notamment celles
+										localisées sur le pourtour des lèvres et des yeux.
+									</p><p>
+										Pour un résultat optimal, le comblement des rides est
+										souvent associé à l’injection de toxine botulique.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="elemcontainer">
+								<div>
+									<Image src={ZonePeau} alt="Zone Peau" class="w-full h-auto" />
+								</div><div class="text-left flex flex-col justify-center">
+									<h3>Hydratation et éclat de la peau</h3><p>
+										Le traitement consiste à réaliser des micro-injections dans
+										le derme moyen de la peau d’acide hyaluronique pur non
+										réticulé.
+									</p>
+									<p>
+										Le protocole recommandé du traitement mésolift par
+										Profhilo® comprend 2 séances espacées d’1 mois puis une
+										séance d’entretien tous les 6 mois.
+									</p>
+									<p>
+										L’injection peut être réalisée sur le visage, le décolleté
+										ou encore les mains.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="elemcontainer">
+								<div>
+									<Image
+										src={ZoneSillonNG}
+										alt="Zone naso génien"
+										class="w-full h-auto"
+									/>
+								</div><div class="text-left flex flex-col justify-center">
+									<h3>Comblement du sillon naso génien</h3><p>
+										L’injection d’acide hyaluronique au niveau du sillon naso
+										génien permet de l’atténuer et de bloquer la ptose.
+									</p>
+									<p>
+										Elle peut être associée à l’injection des pommettes et de la
+										vallée des larmes ayant un effet liftant sur les joues.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="elemcontainer">
+								<div>
+									<Image
+										src={ZoneVisageCreuse}
+										alt="Zone visage"
+										class="w-full h-auto"
+									/>
+								</div><div class="text-left flex flex-col justify-center">
+									<h3>Visage creusé</h3><p>
+										L’objectif est de restaurer les volumes suite à la fonte des
+										graisses du visage. Plusieurs régions du visage sont
+										concernées : les tempes, la vallée des larmes, les joues ou
+										encore le front.
+									</p>
+									<p>
+										Ces signes du vieillissement sont plus souvent retrouvés sur
+										un visage initialement mince et longiligne.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="elemcontainer">
+								<div>
+									<Image
+										src={ZoneOvalBajoues}
+										alt="Zone ovale du visage"
+										class="w-full h-auto"
+									/>
+								</div><div class="text-left flex flex-col justify-center">
+									<h3>Ovale du visage et jawline</h3><p>
+										L’injection d’acide hyaluronique est réalisée en avant et en
+										arrière de la zone de la bajoue.
+									</p>
+									<p>
+										L’effet obtenu est de masquer les éventuelles bajoues et
+										redéfinir les contours de l’ovale du visage (appelés
+										jawline).
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="elemcontainer">
+								<div>
+									<Image src={ZoneNez} alt="Zone nez" class="w-full h-auto" />
+								</div><div class="text-left flex flex-col justify-center">
+									<h3>Nez</h3><p>
+										La rhinoplastie médicale est une technique alternative à la
+										chirurgie pour corriger certains défauts esthétiques du nez
+										: creux, bosses, pointe du nez tombante.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="elemcontainer">
+								<div>
+									<Image
+										src={ZoneMains}
+										alt="Zone Mains"
+										class="w-full h-auto"
+									/>
+								</div><div class="text-left flex flex-col justify-center">
+									<h3>Rajeunir les mains</h3><p>
+										Avec l’âge, le dos des mains se « squelettisent » suite à la
+										fonte des graisses sous la peau.
+									</p>
+									<p>
+										L’injection d’acide hyaluronique au niveau des mains a pour
+										effet de masquer les tendons et les veines devenus
+										apparents.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination mt-8 px-6"></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="container gauche-droite pt-24 pb-24 px-8">
+			<h2 class="semi-section-title">Déroulement d’une séance</h2>
+			<div class="lg:flex lg:flex-row-reverse gap-8 mb-24">
+				<div class="col lg:w-1/2 flex flex-col justify-center">
+					<div class="rounded-ss-lg rounded-se-lg overflow-hidden">
+						<h3 class="text-lg md:text-xl lg:text-xxl mb-6">
+							Evaluation personnalisée
+						</h3>
+						<p class="mb-3 text-base">
+							Le praticien réalise une consultation de façon systématique avant
+							toute séance d’injections d’acide hyaluronique.
+						</p>
+						<p class="mb-3 text-base">
+							L’analyse des signes du vieillissement sur votre visage par un
+							médecin esthétique expert est une étape essentielle. Elle permet
+							d’établir un protocole de traitement adapté qui répondra au mieux
+							à vos attentes.
+						</p>
+						<p class="text-base">
+							La quantité de produit (nombre de seringues) varie en fonction de
+							chaque patient. Elle est évaluée le plus précisément possible lors
+							de cette première consultation.
+						</p>
+					</div>
+				</div>
+				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
+					<Image
+						src={Evaluation}
+						alt="Evaluation personnalisée"
+						class="rounded-lg w-full"
+					/>
+				</div>
+			</div>
+			<div class="lg:flex lg:flex-row gap-8 mb-6">
+				<div class="col lg:w-1/2 flex flex-col justify-center">
+					<h3 class="text-lg md:text-xl lg:text-xxl mb-6">
+						La séance d'injections d'acide hyaluronique
+					</h3>
+					<p class="mb-3 text-base">
+						Le médecin esthétique peut réaliser une anesthésie locale avant
+						injection afin de rendre le traitement plus confortable. Le
+						traitement dure de 20 à 60 minutes en fonction du nombre de zone
+						traitée. Les résultats sont visibles immédiatement avec une
+						amélioration les jours suivant les injections.
+					</p>
+					<p class="mb-3 text-base">
+						Dans les suites de la séance, un léger œdème et des rougeurs peuvent
+						apparaitre pendant quelque heures. Des ecchymoses, qui se masqueront
+						facilement avec un maquillage couvrant peuvent durer environ 1
+						semaine.
+					</p>
+					<p class="text-base">
+						Une consultation de contrôle peut être réalisée 15 jours après la
+						séance afin d’observer les résultats et apporter une éventuelle
+						retouche.
+					</p>
+				</div>
+				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
+					<Image
+						src={SeanceInjection}
+						alt="La séance d'injection"
+						class="rounded-lg w-full"
+					/>
+				</div>
+			</div>
+		</section>
+		<section class="bigtopo text-justify px-8 py-24 bg-grey-400 text-white">
+			<h2 class="section-title dark text-center">
+				Résultats injections acide hyaluronique
+			</h2>
+			<div class="max-w-3xl mx-auto">
+				<ResultsGalleryInjections />
+			</div>
+		</section>
+
+		<section class="text-justify px-8 py-24 bg-white text-black">
+			<h2 class="section-title text-center">Questions / Réponses</h2>
+			<div class="max-w-3xl mx-auto shadow-xl">
+				<Accordion
+					items={[
+						{
+							title: "Est-ce douloureux ?",
+							answer:
+								"<p>Les injections sont peu douloureuses, et donc souvent pratiquées sans anesthésie.</p><p>Pour les patients sensibles, le médecin peut réaliser une anesthésie des zones à traiter par la pose de la crème anesthésiante une heure avant le traitement.</p>",
+							isopen: true,
+						},
+						{
+							title: "Combien de temps dure une séance d’injections ?",
+							answer:
+								"<p>Elle dure de 15 min à 1h30.</p><p><strong>Plusieurs facteurs rentrent en jeu dans le résultat du traitement</strong> d’épilation laser et donc dans le nombre de séances nécessaires afin d’atteindre l’objectif fixé :</p><p>Plusieurs facteurs déterminent la durée d’une séance d’injections d’acide hyaluronique : nombre de zones à traiter, nombre de seringues utilisées.</p>",
+						},
+						{
+							title:
+								"Quels sont les effets secondaires des injections d'acide hyaluronique ?",
+							answer:
+								"<p>Après les injections, on observe souvent un léger gonflement associé à une rougeur disparaissant au bout de quelques heures.</p><p>Plus rarement, de petites ecchymoses aux points d’injections peuvent se former le lendemain et disparaissent au bout de 7 à 10 jours.</p>",
+						},
+						{
+							title:
+								"Recommandations avant et après les injections d'acide hyaluronique ?",
+							answer:
+								"<p>La prise d’aspirine est à éviter la semaine précédant l’injection. Il est préférable d’éviter l’exposition prolongée au soleil, aux UV ainsi que la pratique de sauna et hammam les 2 jours suivant l’injection.</p><p>On recommande également de masser la zone traitée les 5 jours suivant le traitement.</p>",
+						},
+						{
+							title: "Quel est le prix des injections d'acide hyaluronique ?",
+							answer:
+								"<p>Votre praticien en médecine esthétique utilise les produits d’acide hyaluronique de la gamme Juvederm du laboratoire Allergan.</p><p>Le tarif varie selon la quantité de produit utilisée et donc du nombre de zones injectées. En général, l’injection d’une zone comme les lèvres, les sillons naso géniens ou la vallée des larmes requiert 1 seule seringue d’acide hyaluronique.</p><p>Prix de la seringue d’acide hyaluronique : 290 euros TTC</p>",
+						},
+					]}
+				/>
+			</div>
+		</section>
+
+		<AutresSoinsVisage />
+		<section class="tarifs pt-24 text-center pb-24 px-8">
+			<h2 class="section-title">Tarifs</h2>
+			
+		<TarifsAcideHyaluronique />
+
+
+			<a href="/demander-un-rdv/" class="cta rounded brown">Prendre RDV</a>
+			
+		</section>
+	</main>
+	<!-- FIN DE GAUCHE DROITE -->
+	<Footer />
+</Layout>
+
+
+
+<script>
+	import Swiper from "swiper/bundle";
+	import "swiper/css/bundle";
+
+	function initializeZoneSlider() {
+		const swiperElement = document.querySelector(".mySwiper");
+		const swiperThumbsElement = document.querySelector(".mySwiperThumbsZone");
+
+		//@ts-ignore
+		if (swiperElement && swiperThumbsElement && !swiperElement.swiper) {
+			var swiperThumbs = new Swiper(".mySwiperThumbsZone", {
+				slidesPerView: 6,
+				freeMode: false,
+				loop: true,
+				grabCursor: true,
+				spaceBetween: 30,
+				watchSlidesProgress: true,
+				slideToClickedSlide: true,
+
+				breakpoints: {
+					// when window width is >= 320px
+					320: {
+						slidesPerView: 3,
+						spaceBetween: 10,
+					},
+					// when window width is >= 480px
+					480: {
+						slidesPerView: 3,
+						spaceBetween: 20,
+					},
+					// when window width is >= 640px
+					640: {
+						slidesPerView: 3,
+						spaceBetween: 30,
+					},
+					// when window width is >= 992px
+					992: {
+						slidesPerView: 5,
+						spaceBetween: 30,
+					},
+					// when window width is >= 1200px
+					1200: {
+						slidesPerView: 6,
+						spaceBetween: 50,
+					},
+				},
+			});
+			var swiper = new Swiper(".mySwiper", {
+				slideActiveClass: "swiper-slide-active",
+				effect: "fade",
+				fadeEffect: {
+					crossFade: true,
+				},
+				loop: true,
+				spaceBetween: 0,
+				grabCursor: true,
+				navigation: {
+					nextEl: ".gdm-button-next",
+					prevEl: ".gdm-button-prev",
+				},
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true, 
+				},
+				freeMode: false,
+				slidesPerView: 1,
+				watchSlidesProgress: false,
+				thumbs: {
+					swiper: swiperThumbs,
+				},
+			});
+		}
+	}
+
+
+	document.addEventListener("DOMContentLoaded", initializeZoneSlider);
+
+	document.addEventListener("astro:page-load", initializeZoneSlider);
+</script>
+
+<style lang="scss">
+	:root {
+		--swiper-theme-color: #d19f6b !important;
+		--swiper-pagination-bullet-size: 10px !important;
+		--swiper-pagination-bullet-width: 10px !important;
+		--swiper-pagination-bullet-horizontal-gap: 6px;
+		--swiper-pagination-bullet-width: 26px;
+		--swiper-pagination-bullet-height: 5px;
+		--swiper-pagination-bullet-border-radius: 99px;
+		--swiper-pagination-bullet-inactive-color: #dddddd;
+		--swiper-pagination-bullet-inactive-opacity: 1;
+	}
+	main {
+		margin: auto;
+	}
+	.gdm-button-prev,
+	.gdm-button-next {
+		@apply absolute;
+	}
+	.gdm-button-prev {
+		@apply left-6;
+	}
+	.gdm-button-next {
+		@apply right-6;
+	}
+	.swiper-fade .mySwiperThumbs .swiper-slide,
+	.swiper-fade .mySwiperThumbsZone .swiper-slide {
+		pointer-events: auto !important;
+		transition-property: opacity;
+		transition: 300ms ease all;
+	}
+
+	.mySwiperThumbs,
+	.mySwiperThumbsZone {
+		.swiper-wrapper {
+			/*@apply mx-auto text-center flex flex-wrap justify-center gap-4 sm:gap-6;*/
+		}
+		.swiper-slide {
+			@apply cursor-pointer h-36 border-2 border-transparent rounded-lg overflow-hidden relative text-center text-white text-base flex flex-col justify-end items-center leading-6 pb-0 filter grayscale transition-all duration-300 ease-in-out bg-cover bg-center bg-no-repeat hover:grayscale-0 max-w-[200px];
+			h4 {
+				@apply text-[18px] z-20 relative mb-4;
+			}
+			&.swiper-slide-thumb-active {
+				@apply filter grayscale-0 border-2 border-white;
+			}
+			.overlay {
+				@apply bg-black bg-opacity-10 absolute top-0 left-0 right-0 bottom-0 z-10;
+			}
+		}
+		.swiper-slide-thumb-active {
+			@apply font-bold;
+		}
+	}
+
+	.mainswiper {
+		@apply text-center;
+		.swiper-slide {
+			@apply text-left text-base bg-grey-600 h-0 mx-auto text-white;
+			.elemcontainer {
+				@apply grid grid-cols-1 sm:grid-cols-2 gap-6 sm:text-base text-sm max-w-[850px] text-center px-6 sm:px-0 py-8 mx-auto;
+			}
+			h3 {
+				@apply text-[22px] leading-7 mb-3;
+			}
+			p {
+				@apply text-[18px] mb-2;
+			}
+			&.swiper-slide-active {
+				@apply h-auto  mx-auto;
+			}
+		}
+	}
+	.hero-element {
+		background: url("/img/hero-acide-hyaluronique.webp") no-repeat center center;
+		@apply relative bg-cover bg-center;
+	}
+	.overlay {
+		@apply absolute top-0 bottom-0 left-0 right-0  bg-black bg-opacity-50 pointer-events-none  transition-all duration-500;
+	}
+</style>
