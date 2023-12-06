@@ -1,0 +1,355 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import HeroBox from "../components/HeroBox.astro";
+import { Image } from "astro:assets";
+import Footer from "../components/Footer.astro";
+import AcideHyal1 from "../assets/img/acide-hyal1.png";
+import AcideHyal2 from "../assets/img/acide-hyal2.png";
+import ZoneLevres from "../assets/img/zone-levre.png";
+import ZoneCernes from "../assets/img/zone-cernes.png";
+import ZoneRides from "../assets/img/zone-rides.png";
+import ZonePeau from "../assets/img/zone-peau.png";
+import ZoneSillonNG from "../assets/img/zone-sillon-ng.png";
+import ZoneVisageCreuse from "../assets/img/zone-visage-creuse.png";
+import ZoneOvalBajoues from "../assets/img/zone-oval-bajoues.png";
+import ZoneNez from "../assets/img/zone-nez.png";
+import ZoneMains from "../assets/img/zone-mains.png";
+import Evaluation from "../assets/img/evaluation.png";
+import SeanceInjection from "../assets/img/seance-injection.png";
+import TarifsLaserHomme from "../content/tarifs/tarifslaserhomme.md";
+import TarifsLaserFemme from "../content/tarifs/tarifslaserfemme.md";
+import TarifsAcideHyaluronique from "../content/tarifs/acidehyaluronique.md";
+import TarifsBotox from "../content/tarifs/botox.md";
+import TarifsMesolift from "../content/tarifs/mesolift.md";
+import TarifsDetatouage from "../content/tarifs/detatouagelaser.md";
+import TarifsResurfacing from "../content/tarifs/resurfacing.md";
+import TarifsCryolipolyse from "../content/tarifs/cryolipolyse.md";
+import TarifsRadiofrequence from "../content/tarifs/exilis.md";
+import TarifsLesionsVasculaires from "../content/tarifs/lesionsvasculaires.md";
+import TarifsElectrolyse from "../content/tarifs/electrolyse.md";
+---
+
+<Layout
+	title="Médecine esthétique du visage à la Réunion | Laser Medical"
+	description="Découvrez nos techniques de médecine esthétique pour votre visage..">
+	<div class="hero-element">
+		<div class="overlay"></div>
+		<Header />
+	</div>
+	<main>
+		<section class="tarifs text-center mt-24">
+			<h1 class="section-title mb-6 px-6 text-lg md:text-xxl">
+				Tarifs
+			</h1>
+			<p class="section-intro text-base max-w-3xl mx-auto px-6">
+				Découvrez toutes les techniques de médecine esthétique disponibles au
+				centre laser médical et identifiez la solution qui correspond au mieux à
+				vos attentes.
+			</p>
+<div class="relative mt-8 mb-6">
+				<div class="mySwiper">
+					<div class="swiper mySwiperThumbsTarifs container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="/img/epilation-laser-femme-thumb.jpg" alt="Epilation laser femme" width="190" height="140" loading="lazy"/>
+								<h4>Epilation laser femme</h4>
+								<div class="overlay"></div>
+							</div>
+							<div class="swiper-slide">
+								<img src="/img/epilation-laser-homme-thumb.jpg" alt="Epilation laser homme" width="190" height="140" loading="lazy"/>
+								<h4>Epilation laser homme</h4>
+								<div class="overlay"></div>
+							</div>
+							<div class="swiper-slide">
+								<img src="/img/acide-hyaluronique-thumb.jpg" alt="Acide hyaluronique" width="190" height="140" loading="lazy"/>
+								<h4>Acide hyaluronique</h4>
+								<div class="overlay"></div>
+							</div>
+							<div class="swiper-slide">
+								<img src="/img/botox-thumb.jpg" alt="Toxine botulique" width="190" height="140" loading="lazy"/>
+								<h4>Toxine botulique</h4>
+								<div class="overlay"></div>
+							</div>
+							<div class="swiper-slide">
+								<img src="/img/mesolift-thumb.jpg" alt="Mesolift" width="190" height="140" loading="lazy"/>
+								<h4>Mesolift</h4>
+								<div class="overlay"></div>
+							</div>
+							<div class="swiper-slide">
+								<img src="/img/detatouage-thumb.jpg" alt="Détatouage laser" width="190" height="140" loading="lazy"/>
+								<h4>Détatouage laser</h4>
+								<div class="overlay"></div>
+							</div>
+							<div class="swiper-slide">
+								<img src="/img/rejunevation-laser-thumb.jpg" alt="Réjuvénation laser" width="190" height="140" loading="lazy"/>
+								<h4>Réjuvénation laser</h4>
+								<div class="overlay"></div>
+							</div>
+							<div class="swiper-slide">
+								<img src="/img/cryolipolyse-thumb.jpg" alt="Cryolipolyse" width="190" height="140" loading="lazy"/>
+								<h4>Cryolipolyse</h4>
+								<div class="overlay"></div>
+							</div>
+							<div class="swiper-slide">
+								<img src="/img/radiofrequence-thumb.jpg" alt="Radiofréquence" width="190" height="140" loading="lazy"/>
+								<h4>Radiofréquence</h4>
+								<div class="overlay"></div>
+							</div>
+                            <div class="swiper-slide">
+								<img src="/img/lesions-vasculaires-thumb.jpg" alt="Lésions vasculaires" width="190" height="140" loading="lazy"/>
+								<h4>Lésions vasculaires</h4>
+								<div class="overlay"></div>
+							</div>
+                            <div class="swiper-slide">
+								<img src="/img/electrolyse-thumb.jpg" alt="Electrolyse" width="190" height="140" loading="lazy"/>
+								<h4>Electrolyse (épilation éléctrique)</h4>
+								<div class="overlay"></div>
+							</div>
+						</div>
+					</div>
+					<div
+						class="nav-container relative top-48 z-10 mx-auto max-w-7xl h-12 hidden lg:block pointer-events-none">
+						<button class="gdm-button-prev"
+							><svg
+								width="25"
+								height="25"
+								viewBox="0 0 25 25"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M25 12.5C25 9.18479 23.683 6.00537 21.3388 3.66116C18.9946 1.31696 15.8152 -8.0296e-07 12.5 -1.09278e-06C9.1848 -1.38261e-06 6.00537 1.31696 3.66117 3.66116C1.31696 6.00537 1.38261e-06 9.18479 1.09278e-06 12.5C8.0296e-07 15.8152 1.31696 18.9946 3.66117 21.3388C6.00537 23.683 9.18479 25 12.5 25C15.8152 25 18.9946 23.683 21.3388 21.3388C23.683 18.9946 25 15.8152 25 12.5ZM13.2324 6.5918C13.6914 6.13281 14.4336 6.13281 14.8877 6.5918C15.3418 7.05078 15.3467 7.79297 14.8877 8.24707L10.6396 12.4951L14.8877 16.7432C15.3467 17.2021 15.3467 17.9443 14.8877 18.3984C14.4287 18.8525 13.6865 18.8574 13.2324 18.3984L8.1543 13.3301C7.69531 12.8711 7.69531 12.1289 8.1543 11.6748L13.2324 6.5918Z"></path>
+							</svg>
+						</button>
+						<button class="gdm-button-next"
+							><svg
+								width="25"
+								height="25"
+								viewBox="0 0 25 25"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M0 12.5C0 15.8152 1.31696 18.9946 3.66117 21.3388C6.00537 23.683 9.18479 25 12.5 25C15.8152 25 18.9946 23.683 21.3388 21.3388C23.683 18.9946 25 15.8152 25 12.5C25 9.18479 23.683 6.00537 21.3388 3.66117C18.9946 1.31696 15.8152 0 12.5 0C9.18479 0 6.00537 1.31696 3.66117 3.66117C1.31696 6.00537 0 9.18479 0 12.5ZM11.7676 18.4082C11.3086 18.8672 10.5664 18.8672 10.1123 18.4082C9.6582 17.9492 9.65332 17.207 10.1123 16.7529L14.3604 12.5049L10.1123 8.25684C9.65332 7.79785 9.65332 7.05566 10.1123 6.60156C10.5713 6.14746 11.3135 6.14258 11.7676 6.60156L16.8457 11.6699C17.3047 12.1289 17.3047 12.8711 16.8457 13.3252L11.7676 18.4082Z"></path>
+							</svg>
+						</button>
+					</div>
+					<div
+						class="swiper-wrapper mt-0 swiper-tarifs mb-16 pb-8 max-w-[800px] flex">
+						<div class="swiper-slide">
+							<TarifsLaserFemme />
+						</div>
+						<div class="swiper-slide">
+                           <TarifsLaserHomme />
+						</div>
+						<div class="swiper-slide">
+							<TarifsAcideHyaluronique />
+						</div>
+						<div class="swiper-slide">
+							<TarifsBotox />
+						</div>
+						<div class="swiper-slide">
+                            <TarifsMesolift />
+						</div>
+						<div class="swiper-slide">
+                            <TarifsDetatouage />
+						</div>
+						<div class="swiper-slide">
+                            <TarifsResurfacing/>
+						</div>
+						<div class="swiper-slide">
+                           <TarifsCryolipolyse />
+						</div>
+						<div class="swiper-slide">
+                            <TarifsRadiofrequence />
+						</div>
+                        <div class="swiper-slide">
+                           <TarifsLesionsVasculaires />
+						</div>
+                        <div class="swiper-slide">
+							<TarifsElectrolyse />
+						</div>
+					</div>
+					<div class="swiper-pagination mt-12 px-6"></div>
+				</div>
+			</div>
+		
+
+			
+		</section>
+	</main>
+
+	<section class="mt-12 text-center pb-24 px-8">
+		<a href="/demander-un-rdv/" class="cta rounded brown">Prendre RDV</a>
+	</section>
+</Layout>
+<!-- FIN DE GAUCHE DROITE -->
+
+<Footer />
+
+<script>
+	import Swiper from "swiper/bundle";
+	import "swiper/css/bundle";
+
+	function initializeTarifsSlider() {
+		const swiperElement = document.querySelector(".mySwiper");
+		const swiperThumbsElement = document.querySelector(".mySwiperThumbsTarifs");
+
+		//@ts-ignore
+		if (swiperElement && swiperThumbsElement && !swiperElement.swiper) {
+			var swiperTarifsThumbs = new Swiper(".mySwiperThumbsTarifs", {
+				slidesPerView: 6,
+				freeMode: false,
+				loop: true,
+				grabCursor: true,
+				spaceBetween: 30,
+				watchSlidesProgress: true,
+				slideToClickedSlide: true,
+
+				breakpoints: {
+					// when window width is >= 320px
+					320: {
+						slidesPerView: 3,
+						spaceBetween: 10,
+					},
+					// when window width is >= 480px
+					480: {
+						slidesPerView: 3,
+						spaceBetween: 20,
+					},
+					// when window width is >= 640px
+					640: {
+						slidesPerView: 3,
+						spaceBetween: 30,
+					},
+					// when window width is >= 992px
+					992: {
+						slidesPerView: 5,
+						spaceBetween: 30,
+					},
+					// when window width is >= 1200px
+					1200: {
+						slidesPerView: 6,
+						spaceBetween: 50,
+					},
+				},
+			});
+			var swiper = new Swiper(".mySwiper", {
+				slideActiveClass: "swiper-slide-active",
+				effect: "fade",
+				fadeEffect: {
+					crossFade: true,
+				},
+				loop: true,
+				spaceBetween: 0,
+				grabCursor: true,
+				navigation: {
+					nextEl: ".gdm-button-next",
+					prevEl: ".gdm-button-prev",
+				},
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+				freeMode: false,
+				slidesPerView: 1,
+				watchSlidesProgress: false,
+				thumbs: {
+					swiper: swiperTarifsThumbs,
+				},
+			});
+		}
+	}
+
+	document.addEventListener("DOMContentLoaded", initializeTarifsSlider);
+
+	document.addEventListener("astro:page-load", initializeTarifsSlider);
+</script>
+
+<style lang="scss">
+
+    :root {
+		--swiper-theme-color: #d19f6b !important;
+		--swiper-pagination-bullet-size: 10px !important;
+		--swiper-pagination-bullet-width: 10px !important;
+		--swiper-pagination-bullet-horizontal-gap: 6px;
+		--swiper-pagination-bullet-width: 26px;
+		--swiper-pagination-bullet-height: 5px;
+		--swiper-pagination-bullet-border-radius: 99px;
+		--swiper-pagination-bullet-inactive-color: #dddddd;
+		--swiper-pagination-bullet-inactive-opacity: 1;
+	}
+	main {
+		margin: auto;
+	}
+	
+	.hero-element {
+		@apply relative bg-cover bg-center bg-grey-600;
+	}
+	.overlay {
+		@apply absolute top-0 bottom-0 left-0 right-0 pointer-events-none  transition-all duration-500;
+	}
+
+    .gdm-button-prev,
+	.gdm-button-next {
+		@apply absolute z-40 pointer-events-auto ;
+        svg {
+            @apply fill-grey-400 hover:fill-brown-600 transition-all duration-300;
+        }
+	}
+	.gdm-button-prev {
+		@apply left-6;
+	}
+	.gdm-button-next {
+		@apply right-6;
+	}
+	.swiper-fade .mySwiperTarifsThumbs .swiper-slide,
+	.swiper-fade .mySwiperThumbsTarifs .swiper-slide {
+		pointer-events: auto !important;
+		transition-property: opacity;
+		transition: 300ms ease all;
+	}
+
+	.mySwiperThumbs,
+	.mySwiperThumbsTarifs {
+		.swiper-wrapper {
+			/*@apply mx-auto text-center flex flex-wrap justify-center gap-4 sm:gap-6;*/
+		}
+		.swiper-slide {
+			@apply cursor-pointer h-36 border-2 border-transparent rounded-lg overflow-hidden relative text-center text-white text-base flex flex-col justify-end items-center leading-6 pb-0 filter grayscale transition-all duration-300 ease-in-out bg-cover bg-center bg-no-repeat hover:grayscale-0 max-w-[200px];
+			h4 {
+				@apply text-[18px] z-50 relative mb-4;
+			}
+            img {@apply absolute w-full h-full object-cover -z-10;}
+			&.swiper-slide-thumb-active {
+				@apply filter grayscale-0 border-2 border-white;
+			}
+			.overlay {
+				@apply bg-black bg-opacity-40 absolute top-0 left-0 right-0 bottom-0 z-10;
+			}
+		}
+		.swiper-slide-thumb-active {
+			@apply font-bold;
+		}
+	}
+
+	.swiper-tarifs {
+		@apply text-center;
+		.swiper-slide {
+			@apply text-left text-base h-0 mx-auto text-black z-20;
+			.elemcontainer {
+				@apply grid grid-cols-1 sm:grid-cols-2 gap-6 sm:text-base text-sm max-w-[850px] text-center px-6 md:px-0 py-8 mx-auto;
+			}
+			h3 {
+				@apply text-[22px] leading-7 mb-3;
+                a {@apply text-black hover:text-white;}
+			}
+			p {
+				@apply text-[18px] mb-2;
+				a {@apply text-black underline hover:text-white;}
+			}
+			&.swiper-slide-active {
+				@apply h-auto  mx-auto;
+			}
+		}
+	}
+</style>

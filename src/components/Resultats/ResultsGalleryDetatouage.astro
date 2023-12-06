@@ -1,0 +1,42 @@
+---
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
+//import '@fancyapps/ui/dist/fancybox/fancybox.umd.js';
+---
+
+<script
+	is:inline
+	src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"
+></script>
+<div class="gallery" id="MyCarousel">
+		<a data-src="/img/detatouage-avant-apres-1.jpg" data-fancybox="injections">
+		<img class="w-full" src="/img/detatouage-avant-apres-1.jpg" width="630" height="354" />
+		</a>
+	<div class="flex gap-4">
+		<a data-src="/img/detatouage-avant-apres-2.jpg" data-fancybox="injections">
+			<img src="/img/detatouage-avant-apres-2.jpg" width="141" height="78" />
+		</a>
+	</div>
+</div>
+
+<style lang="scss">
+	.gallery {
+		@apply flex flex-col gap-4;
+		img {
+			
+		}
+	}
+</style>
+
+<script>
+	function initializeFancybox() {
+		//@ts-ignore
+		Fancybox.bind("[data-fancybox]", {
+			Thumbs: {
+				type: "classic",
+			},
+		});
+	}
+	initializeFancybox();
+	document.addEventListener("DOMContentLoaded", initializeFancybox);
+	document.addEventListener("astro:page-load", initializeFancybox);
+</script>

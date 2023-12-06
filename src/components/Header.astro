@@ -43,16 +43,7 @@ interface Props {
 					></path></svg
 				>
 			</span>
-			<span class="gogdm" data-goto="aHR0cHM6Ly90d2l0dGVyLmNvbS9nZG1fcGl4ZWw=">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					height="1em"
-					viewBox="0 0 512 512"
-					><path
-						d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
-					></path></svg
-				>
-			</span>
+
 			<span
 				class="gogdm"
 				data-goto="aHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2luL2NoYXJsZXMtYW5ub25pLThhNjQ1NjU2Lw==">
@@ -65,18 +56,7 @@ interface Props {
 					></path></svg
 				>
 			</span>
-			<span
-				class="gogdm"
-				data-goto="aHR0cHM6Ly93d3cueW91dHViZS5jb20vYy9HRE1QaXhlbA==">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					height="1em"
-					viewBox="0 0 576 512"
-					><path
-						d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
-					></path></svg
-				></span
-			>
+
 		</div>
 	</div>
 </div>
@@ -148,6 +128,7 @@ interface Props {
 						</li>
 						<li><a href="/mesolift/" data-image-src="/img/hero-mesolift.jpg">Mésolift</a></li>
 						<li><a href="/exilis-elite/" data-image-src="/img/hero-exilis-elite.jpg">Radiofréquence</a></li>
+						<li><a href="/lesions-vasculaires/" data-image-src="/img/laser-vasculaire-hero.jpg">Lésions vasculaires</a></li>
 					</ul>
 				</li>
 
@@ -167,6 +148,7 @@ interface Props {
 					<ul>
 						<li><a href="/cryolipolyse/" data-image-src="/img/hero-cryo.jpg">Cryolipolyse</a></li>
 						<li><a href="/exilis-elite/" data-image-src="/img/hero-exilis-elite.jpg">Raffermissement cutané</a></li>
+						<li><a href="/lesions-vasculaires/" data-image-src="/img/laser-vasculaire-hero.jpg">Lésions vasculaires</a></li>
 					</ul>
 				</li>
 
@@ -211,17 +193,18 @@ interface Props {
 				class="gdm-list flex flex-col justify-start alig-start text-left mt-6">
 				<ul>
 					<li><a href="/epilation-definitive/">EPILATION LASER</a></li>
-					<li><a href="/detatouage-laser/">DETATOUAGE LASER</a></li>
+					<li><a href="/detatouage-laser/" data-image-src="/img/hero-detatouage-laser.jpg">DETATOUAGE LASER</a></li>
 					<li>
 						<a href="/soins-visage/">VISAGE</a>
 						<ul class="sub-menu ml-4">
 							<li>
-								<a href="/injection-acide-hyaluronique/">Acide hyaluronique</a>
+								<a href="/injection-acide-hyaluronique/" data-image-src="/img/hero-acide-hyaluronique.webp">Acide hyaluronique</a>
 							</li>
-							<li><a href="/toxine-botulique/">Toxine botulique</a></li>
+							<li><a href="/toxine-botulique/" data-image-src="/img/herobotox.jpg" data-image-src="/img/rejuvenation-laser.jpg">Toxine botulique</a></li>
 							<li><a href="/rajeunissement-laser/">Réjuvénation laser</a></li>
-							<li><a href="/mesolift/">Mésolift</a></li>
-							<li><a href="/exilis-elite/">Radiofréquence</a></li>
+							<li><a href="/mesolift/" data-image-src="/img/hero-mesolift.jpg">Mésolift</a></li>
+							<li><a href="/exilis-elite/" data-image-src="/img/hero-exilis-elite.jpg">Radiofréquence</a></li>
+							<li><a href="/lesions-vasculaires/" data-image-src="/img/laser-vasculaire-hero.jpg" data-image-src="/img/laser-vasculaire-hero.jpg">Lésions vasculaires</a></li>
 						</ul>
 					</li>
 					<li>
@@ -229,6 +212,7 @@ interface Props {
 						<ul class="sub-menu ml-4">
 							<li><a href="/cryolipolyse/">Cryolipolyse</a></li>
 							<li><a href="/exilis-elite/">Radiofréquence</a></li>
+							<li><a href="/lesions-vasculaires/" data-image-src="/img/laser-vasculaire-hero.jpg">Lésions vasculaires</a></li>
 						</ul>
 					</li>
 					<li><a href="/tarifs/">TARIFS</a></li>
@@ -360,7 +344,7 @@ interface Props {
 			@apply max-w-[1600px] flex flex-row lg:flex-col px-0 pt-0 lg:pt-10 pb-0 justify-between items-center;
 		}
 		.logo {
-			@apply max-w-[140px] lg:max-w-[230px] w-[330px] mb-0 lg:mb-6 h-auto transition-all duration-300 ease-in-out;
+			@apply max-w-[140px] lg:max-w-[280px] w-[330px] mb-0 lg:mb-6 h-auto transition-all duration-300 ease-in-out;
 		}
 		nav.desktop-nav {
 			@apply xl:flex items-center h-[46px] justify-center hidden lg:block mt-0 mb-4;
@@ -369,9 +353,9 @@ interface Props {
 				li {
 					@apply relative;
 					a {
-						@apply md:text-sm lg:text-sm xl:text-base uppercase font-semibold h-full flex items-center text-white lg:px-4 xl:px-4 mx-2 flex-auto  hover:text-white hover:bg-black;
+						@apply md:text-sm lg:text-sm xl:text-base uppercase font-semibold h-full flex items-center text-white lg:px-4 xl:px-4 mx-2 flex-auto  hover:text-white hover:bg-brown-500;
 						&.active {
-							@apply text-white bg-grey-700;
+							@apply text-white bg-brown-700;
 							svg {
 								@apply fill-white;
 							}

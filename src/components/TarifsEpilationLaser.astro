@@ -208,7 +208,7 @@ document.addEventListener("astro:page-load", attachTabClickHandlers);
 			@apply mx-auto text-center flex flex-wrap justify-center gap-4 sm:gap-6;
 		}
 		.swiper-slide {
-			@apply cursor-pointer h-36 rounded-lg overflow-hidden  text-center text-white text-base flex flex-col justify-end items-center leading-6 pb-6 filter grayscale transition-all duration-300 ease-in-out bg-cover bg-center bg-no-repeat hover:grayscale-0 max-w-[200px];
+			@apply cursor-pointer h-36 rounded-lg overflow-hidden text-center text-white text-base flex flex-col justify-end items-center leading-6 pb-6 filter grayscale transition-all duration-300 ease-in-out bg-cover bg-center bg-no-repeat hover:grayscale-0 max-w-[200px];
 			h4 {
 				@apply text-[18px] z-20 relative;
 			}
@@ -246,13 +246,13 @@ document.addEventListener("astro:page-load", attachTabClickHandlers);
 		}
 	}
 	.tablaser.active {
-		@apply text-white bg-black;
+		@apply text-white bg-grey-300;
 	}
 	#tariffemme,
 	#tarifhomme {
 		position: relative;
 		max-width:100%;
-		overflow-x: hidden;
+		
 	}
 	@keyframes fadeIn {
 		from {

@@ -1,0 +1,224 @@
+---
+import Layout from "../layouts/Layout.astro";
+import TarifsAcideHyaluronique from "../content/tarifs/detatouagelaser.md";
+import Header from "../components/Header.astro";
+import HeroBox from "../components/HeroBox.astro";
+import Accordion from "../components/Accordion.astro";
+import TarifAvantage from "../components/TarifAvantage.astro";
+import ResultsGalleryDetatouage from "../components/Resultats/ResultsGalleryDetatouage.astro";
+import { Image } from "astro:assets";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Lésions vasculaires Réunion | Médecine Esthétique | Laser Médical" description="Effacez les vaisseaux indésirables grâce au laser vasculaire.">
+	<div class="hero-element">
+		<div class="overlay"></div>
+
+		<Header />
+		<HeroBox
+			title="Lésions vasculaires"
+			body="Effacez les vaisseaux indésirables grâce au laser vasculaire."
+		/>
+	</div>
+	<main>
+		<section class="container gauche-droite pt-24 pb-24">
+			<div class="lg:flex lg:flex-row gap-8 mb-24">
+				<div class="col lg:w-1/2 flex flex-col justify-center">
+					<h3 class="text-lg md:text-xl lg:text-xxl mb-6">
+						Comment fonctionne le laser vasculaire ?
+					</h3>
+					<p class="text-base mb-3">
+					Le principe de fonctionnement du traitement par laser vasculaire repose sur le phénomène de photocoagulation. La cible du laser vasculaire Nd :Yag est l’oxyhémoglobine contenue dans le sang. L’énergie laser va chauffer le vaisseau visible à la surface de la peau afin de coaguler ses parois. La sclérose (fermeture) du vaisseau se fera progressivement dans les semaines qui suivent.
+					</p>
+					<p class="text-base">
+						Les indications du laser vasculaire Nd :Yag (1064 nm) long pulse sont les suivantes : varicosités/ télangiectasies , angiomes stellaires et angiomes rubis.
+					</p>
+				</div>
+				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
+					<img
+						class="rounded-md"
+						src="/img/laser-vasculaire-1.jpg"
+						alt=""
+						loading="lazy"
+					/>
+				</div>
+			</div>
+			<div class="lg:flex lg:flex-row-reverse gap-8 mb-24">
+				<div class="col lg:w-1/2 flex flex-col justify-center">
+					<h3 class="text-lg md:text-xl lg:text-xxl mb-6">
+						En savoir plus...
+					</h3>
+					<div class="rounded-ss-lg rounded-se-lg overflow-hidden shadow-md">
+				<Accordion
+					items={[
+						{
+							title: "Qu’est-ce qu’angiome ? ",
+							answer:
+								"<p>Un angiome est une lésion vasculaire visible à la surface de la peau et qui peut apparaître sur toutes les zones du corps et le visage.</p><p>Les angiomes stellaires se présentent sous la forme de petits vaisseaux dilatés en étoile avec un point rouge central.</p><p>Les angiomes ou tâches rubis apparaissent sous la forme d’une papule (« bouton ») rouge vif ou violacée mesurant quelques millimètres.</p><p>Ces lésions surviennent en général à l’âge adulte (à partir de 30-40 ans). Certains facteurs favorisent leur apparition : hérédité, exposition solaire, modifications hormonales.</p>",	
+								isopen:true
+						},
+						{
+							title: "Qu’est ce qu’une varicosité/télangiectasie ?",
+							answer:
+								"<p>Les varicosités (télangiectasies) correspondent à une dilatation permanente et visible des veinules superficielles. De couleur rouge, bleue ou violacée en fonction de leur taille et leur profondeur, elles peuvent être de forme variable (en éventail, en nappe, linéaires).</p><p>Plus fréquemment situées sur les cuisses et les jambes, elles peuvent également apparaître sur d’autres zones du corps et le visage (ailes du nez, pommettes, menton).</p><p>Les causes à l’origine de cette dilatation sont multiples : insuffisance veineuse, fragilité de la paroi des vaisseaux superficiels, traumatismes, facteurs héréditaires, âge, surpoids, sédentarité, station debout prolongée, certaines modifications hormonales (grossesse, ménopause) ou encore le tabagisme.</p>",	
+								
+						},
+					]}
+					extraClass="clearaccordion"
+				/>
+			</div>
+				</div>
+				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
+					<img
+						class="rounded-md"
+						src="/img/laser-vasculaire-2.jpg"
+						alt=""
+						loading="lazy"
+					/>
+				</div>
+			</div>
+
+	
+
+			
+		</section>
+
+		<section class="text-justify px-8 py-24 bg-grey-400 text-white">
+			<h2 class="section-title text-center dark">
+				Déroulement d’une séance
+			</h2>
+			<div class="max-w-3xl mx-auto shadow-xl">
+				<Accordion
+					items={[
+						{
+							title: "Consultation d'information",
+							answer:
+								"<p>Une consultation par un médecin est réalisée de façon systématique. Elle permet l’examen des lésions vasculaires, vérifier l’absence de contre-indication et d’établir les paramètres qui seront ensuite utilisés pour un traitement optimal.</p><p>En cas de varicosités associées à des varices (insuffisance veineuse), un bilan veineux (Echo-doppler veineux, transillumination) avec un phlébologue-angiologue spécialisé est recommandé avant le traitement laser.</p>",
+							isopen: true,
+						},
+						{
+							title: "Avant la séance de laser vasculaire",
+							answer:
+								"<p>Les zones à traiter ne doivent être ni bronzées, ni avoir été exposées au soleil dans les 4 semaines précédant le traitement laser.</p><p>Le jour de la séance, la peau doit être nettoyée et propre, sans maquillage, crème ou lotion.</p>",
+						},
+						{
+							title: "La séance de laser vasculaire",
+							answer:
+								"<p>La durée de la séance de laser vasculaire varie en fonction de la surface à traiter. L’utilisation pendant le traitement d’un système de refroidissement (DCD Cryogen) permet d’améliorer le confort du patient.</p><p>Pour les varicosités, le passage du laser induit un spasme voire une disparition spontanée du vaisseau. Pour les angiomes, le laser entraîne une rétraction avec un noircissement de la lésion.</p>",
+						},
+						{
+							title: "Après la séance de laser vasculaire",
+							answer:
+								"<p>Au bout de quelques minutes, un gonflement se forme sur le trajet du vaisseau (effet d’ortie) traité pour les varicosités. Dans les jours suivants, des petites croûtes peuvent survenir et disparaissent en quelques jours sans laisser de cicatrice. Une accentuation provisoire des varicosités est possible les premières semaines.</p><p>Pour les angiomes, une rougeur périphérique avec œdème survient dans les suites immédiates de la séance. Des croûtelles sont possibles pendant quelques jours.</p>",
+						},
+					]}
+				/>
+			</div>
+		</section>
+
+		<section class="bigtopo text-justify px-8 py-24 bg-white">
+			<h2 class="section-title text-center">Résultats du laser vasculaire</h2>
+			<p class="text-center text-base max-w-[850px] mx-auto mb-8">
+			Le plus souvent, 1 à 2 séances suffisent pour traiter les angiomes stellaires et les tâches rubis.
+			</p>
+			<p class="text-center text-base max-w-[850px] mx-auto mb-8">Pour les varicosités, le nombre de séance est variable (de 1 à 4 séances ou plus) en fonction des lésions initiales et des troubles associés. Le laser vasculaire peut être combiné aux microscléroses pratiquées par le phlébologue dans certaines indications (insuffisance veineuse, veine d’alimentation plus profonde).</p>
+			<p class="text-center text-base max-w-[850px] mx-auto mb-8">Le délai entre les séances est de 2 mois, temps nécessaire pour apprécier les résultats.</p>
+
+			<div class="max-w-3xl mx-auto">
+				<ResultsGalleryDetatouage />
+			</div>
+		</section>
+		<section class="tarifs pt-24 text-center pb-24 px-8 bg-grey-100">
+			<h2 class="section-title">Tarifs</h2>
+
+			<TarifsAcideHyaluronique />
+
+			<a href="/demander-un-rdv/" class="cta rounded brown">Prendre RDV</a>
+			<TarifAvantage />
+		</section>
+	</main>
+	<!-- FIN DE GAUCHE DROITE -->
+</Layout>
+
+<Footer />
+
+<style lang="scss">
+	:root {
+		--swiper-theme-color: #d19f6b !important;
+		--swiper-pagination-bullet-size: 10px !important;
+		--swiper-pagination-bullet-width: 10px !important;
+		--swiper-pagination-bullet-horizontal-gap: 6px;
+		--swiper-pagination-bullet-width: 26px;
+		--swiper-pagination-bullet-height: 5px;
+		--swiper-pagination-bullet-border-radius: 99px;
+		--swiper-pagination-bullet-inactive-color: #dddddd;
+		--swiper-pagination-bullet-inactive-opacity: 1;
+	}
+	main {
+		margin: auto;
+	}
+	.gdm-button-prev,
+	.gdm-button-next {
+		@apply absolute;
+	}
+	.gdm-button-prev {
+		@apply left-6;
+	}
+	.gdm-button-next {
+		@apply right-6;
+	}
+	.swiper-fade .mySwiperThumbs .swiper-slide,
+	.swiper-fade .mySwiperThumbsZone .swiper-slide {
+		pointer-events: auto !important;
+		transition-property: opacity;
+		transition: 300ms ease all;
+	}
+
+	.mySwiperThumbs,
+	.mySwiperThumbsZone {
+		.swiper-wrapper {
+			/*@apply mx-auto text-center flex flex-wrap justify-center gap-4 sm:gap-6;*/
+		}
+		.swiper-slide {
+			@apply cursor-pointer h-36 border-2 border-transparent rounded-lg overflow-hidden relative text-center text-white text-base flex flex-col justify-end items-center leading-6 pb-0 filter grayscale transition-all duration-300 ease-in-out bg-cover bg-center bg-no-repeat hover:grayscale-0 max-w-[200px];
+			h4 {
+				@apply text-[18px] z-20 relative mb-4;
+			}
+			&.swiper-slide-thumb-active {
+				@apply filter grayscale-0 border-2 border-white;
+			}
+			.overlay {
+				@apply bg-black bg-opacity-10 absolute top-0 left-0 right-0 bottom-0 z-10;
+			}
+		}
+		.swiper-slide-thumb-active {
+			@apply font-bold;
+		}
+	}
+
+	.mainswiper {
+		@apply text-center;
+		.swiper-slide {
+			@apply text-left text-base bg-grey-600 h-0 mx-auto text-white;
+			.elemcontainer {
+				@apply grid grid-cols-1 sm:grid-cols-2 gap-6 sm:text-base text-sm max-w-[850px] text-center px-6 sm:px-0 py-8 mx-auto;
+			}
+			h3 {
+				@apply text-[22px] leading-7 mb-3;
+			}
+			p {
+				@apply text-[18px] mb-2;
+			}
+			&.swiper-slide-active {
+				@apply h-auto  mx-auto;
+			}
+		}
+	}
+	.hero-element {
+		background: url("/img/laser-vasculaire-hero.jpg") no-repeat center center;
+		@apply relative bg-cover bg-center;
+	}
+	.overlay {
+		@apply absolute top-0 bottom-0 left-0 right-0  bg-black bg-opacity-50 pointer-events-none  transition-all duration-500;
+	}
+</style>
