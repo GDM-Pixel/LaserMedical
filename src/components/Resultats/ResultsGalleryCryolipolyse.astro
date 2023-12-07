@@ -8,21 +8,30 @@ import "@fancyapps/ui/dist/fancybox/fancybox.css";
 	src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"
 ></script>
 <div class="gallery" id="MyCarousel">
-	<a data-src="/img/result-acide-1.png" data-fancybox="injections">
-		<img src="/img/result-acide-1.png" width="630" height="354" />
+	<a data-src="/img/avant-cryo-homme.jpg" data-caption="Cryolipolyse Homme - Avant" data-fancybox="injections">
+		<img src="/img/avant-cryo-homme.jpg" width="630" height="354" />
 	</a>
 	<div class="flex gap-4">
-		<a data-src="/img/result-acide-2.png" data-fancybox="injections">
-			<img src="/img/result-acide-2.png" width="141" height="78" />
+		<a data-src="/img/apres-cryolipolyse-homme.jpg"  data-caption="Cryolipolyse Homme - Après" data-fancybox="injections">
+			<img src="/img/apres-cryolipolyse-homme.jpg" width="141" height="78" />
 		</a>
-		<a data-src="/img/result-acide-3.png" data-fancybox="injections">
-			<img src="/img/result-acide-3.png" width="141" height="78" />
+		<a data-src="/img/double-menton-avant-cryolipolyse.jpg"  data-caption="Double menton - Avant" data-fancybox="injections">
+			<img src="/img/double-menton-avant-cryolipolyse.jpg" width="141" height="78" />
 		</a>
-		<a data-src="/img/result-acide-4.png" data-fancybox="injections">
-			<img src="/img/result-acide-4.png" width="141" height="78" />
+		<a data-src="/img/double-menton-apres-cryolipolyse.jpg"  data-caption="Double menton - Après" data-fancybox="injections">
+			<img src="/img/double-menton-apres-cryolipolyse.jpg" width="141" height="78" />
 		</a>
-		<a data-src="/img/result-acide-5.png" data-fancybox="injections">
-			<img src="/img/result-acide-5.png" width="141" height="78" />
+		<a data-src="/img/abdomen-avant-cryolipolyse.jpg"  data-caption="Abdomen - Avant" data-fancybox="injections">
+			<img src="/img/abdomen-avant-cryolipolyse.jpg" width="141" height="78" />
+		</a>
+		<a data-src="/img/abdomen-apres-cryolipolyse.jpg"  data-caption="Abdomen - Après" data-fancybox="injections">
+			<img src="/img/abdomen-apres-cryolipolyse.jpg" width="141" height="78" />
+		</a>
+		<a data-src="/img/ventre-femme-avant-cryo.jpg"  data-caption="Ventre - Avant" data-fancybox="injections">
+			<img src="/img/ventre-femme-avant-cryo.jpg" width="141" height="78" />
+		</a>
+		<a data-src="/img/ventre-apres-cryolipolyse.jpg"  data-caption="Ventre - Après" data-fancybox="injections">
+			<img src="/img/ventre-apres-cryolipolyse.jpg" width="141" height="78" />
 		</a>
 	</div>
 </div>
@@ -43,6 +52,9 @@ import "@fancyapps/ui/dist/fancybox/fancybox.css";
 			Thumbs: {
 				type: "classic",
 			},
+			Carousel: {
+    transition: "fade",
+  },
 		});
 	}
 	initializeFancybox();

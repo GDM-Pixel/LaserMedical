@@ -74,5 +74,51 @@ export default {
 		},
 	
 	},
+	plugins: [require("@tailwindcss/typography"),
+	function ({ addBase, theme }) {
+		addBase({
+			'.blogpost h1': {
+				color: theme('colors.grey.800'),
+				fontSize: theme('fontSize.xxl'),
+				fontWeight: theme('fontWeight.bold'),
+				lineHeight: theme('lineHeight.tight'),
+				marginBottom: theme('margin.4'),
+				marginTop: theme('margin.4'),
+			},
+			'.article-content h2': {
+				color: theme('colors.grey.800'),
+				fontSize: theme('fontSize.xxxl'),
+				fontWeight: theme('fontWeight.bold'),
+			},
+			'.article-content h3': {
+				color: theme('colors.grey.800'),
+				fontSize: theme('fontSize.xxl'),
+				fontWeight: theme('fontWeight.bold'),
+			},
+			'.article-content h4': {
+				color: theme('colors.grey.800'),
+				fontSize: theme('fontSize.xl'),
+				fontWeight: theme('fontWeight.bold'),
+			},
+			'.article-content h5': {
+				color: theme('colors.grey.800'),
+				fontSize: theme('fontSize.lg'),
+				fontWeight: theme('fontWeight.bold'),
+			},
+			'.article-content h6': {
+				color: theme('colors.grey.800'),
+				fontSize: theme('fontSize.base'),
+				fontWeight: theme('fontWeight.bold'),
+			},
+			'.article-content p': {
+				color: theme('colors.grey.800'),
+				fontSize: theme('fontSize.base'),
+				fontWeight: theme('fontWeight.normal'),
+				marginBottom: theme('margin.3'),
+				textAlign: 'justify',
+			},
+		});
+	},
+	],
 }
 

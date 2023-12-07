@@ -1,0 +1,62 @@
+---
+// Définissez un type pour les auteurs
+type AuteurInfo = {
+    nom: string;
+    titre: string;
+    description: string;
+    photo: string;
+};
+
+type Auteurs = {
+    "esra-chami": AuteurInfo;
+    "julien-lefevre": AuteurInfo;
+    // Ajoutez d'autres auteurs ici si nécessaire
+};
+
+const auteurs: Auteurs = {
+    "esra-chami": {
+        nom: "Esra Chami",
+        titre: "Expert en médecine esthétique",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit feugiat odio sollicitudin ultrices.",
+        photo: "/img/esra-chami-author.jpg"
+    },
+    "julien-lefevre": {
+        nom: "Julien Lefevre",
+        titre: "Expert en médecine esthétique",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit feugiat odio sollicitudin ultrices.",
+        photo: "/img/julien-lefevre-author.jpg"
+    }
+};
+
+// Assurez-vous que nomAuteur correspond au type de clé de Auteurs
+const nomAuteur: keyof Auteurs = Astro.props.auteur;
+const auteur: AuteurInfo = auteurs[nomAuteur] || { 
+    nom: "Auteur Inconnu", 
+    titre: "Non spécifié", 
+    description: "Aucune description disponible." 
+};
+---
+
+<div class="authorbox block sm:flex max-w-5xl mx-auto mt-3 rounded-lg overflow-clip">
+	<div class="col1 w-full sm:w-2/5" data-astro-cid-dwrmp7mt="">
+		<img src={auteur.photo} alt={`Photo de ${auteur.nom}`} width="445" height="445" />
+	</div>
+	<div class="col2 w-full sm:w-3/5 flex flex-col justify-center p-8">
+		<h4>{auteur.nom}</h4>
+		<span class="h5">{auteur.titre}</span>
+		<p>
+		{auteur.description}
+		</p>
+	</div>
+</div>
+
+<style lang="scss">
+.authorbox {
+  @apply bg-black text-white mb-12;
+  img {@apply rounded-lg w-full;}
+  h4 {@apply text-lg font-bold;}
+  .h5 {@apply text-brown-500 md:text-md text-base mb-3;}
+  p {@apply text-sm md:text-base;}
+}   
+
+</style>

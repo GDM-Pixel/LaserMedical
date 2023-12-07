@@ -1,0 +1,39 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+const allPosts = await getCollection("articles");
+
+---
+
+<div class="related-post-container grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6">
+	{
+		allPosts.slice(0, 4).map((post) => (
+			<div class="element-container">
+				<a class="blogpostwraper" href={`/articles/${post.slug}`}>
+					<img
+						src={post.data.image}
+						alt={post.data.title}
+						width="377"
+						height="211"
+					/>
+					<div class="postmetawraper">
+						<h3>{post.data.title}</h3>
+					</div>
+				</a>
+			</div>
+		))
+	}
+</div>
+
+
+<style lang="scss">
+	.related-post-container {
+		@apply relative overflow-hidden z-20 mb-12;
+		.postmetawraper {
+			
+			h3 {
+				@apply font-bold text-base mt-2;
+			}
+		}
+	}
+</style>

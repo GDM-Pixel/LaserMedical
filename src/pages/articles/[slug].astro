@@ -1,8 +1,10 @@
 ---
 import { Image } from "astro:assets";
-import Layout from "../../layouts/Layout.astro";
+import BlogPost from "../../layouts/BlogPost.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
+import BoiteAuteur from "../../components/BoiteAuteur.astro";
+import RelatedPost from "../../components/RelatedPost.astro";
 //@ts-ignore
 import { getCollection, type CollectionEntry } from "astro:content";
 export async function getStaticPaths() {
@@ -28,48 +30,59 @@ const { post } = Astro.props;
 const { Content, headings } = await post.render();
 ---
 
-<Layout title="Page des composants" description="Ceci est la meta description">
+<BlogPost
+	title="Page des composants"
+	description="Ceci est la meta description">
 	<Header />
 	<main class="mt-12">
-		<div class="container flex gap-6">
-			<article class="w-2/3">
+		<div class="max-w-6xl lg:flex lg:gap-6 block mx-auto px-6">
+			<article class="lg:w-2/3 w-full">
 				<img
 					src={post.data.image}
 					alt={post.data.title}
-                    width="795"
-                    height="445"
-					transition:name={`featuredImg_${post.slug}`}
+					width="795"
+					height="445"
 				/>
 
 				<h1>{post.data.title}</h1>
 				<div class="article-content">
 					<Content />
 				</div>
+
+				<BoiteAuteur auteur={post.data.author} />
 			</article>
-			<aside class="w-1/3" transition:persist>
-				<div class="novacontainer">
-					<div class="novainner">
-						<div class="header-nova-box">
-							
+			<aside class="lg:w-1/3 w-full" transition:persist>
+				<div class="askcontainer rounded-t-sm border border-grey-200 shadow-md pb-12">
+					<div class="askinner">
+						<div class="header-ask-box bg-grey-600 p-6">
+							<img
+								src="/img/logo-white.svg"
+								class="logo"
+								alt="Logo Laser Médical"
+							/>
 						</div>
-						
-						<p>Vous ne trouvez pas de réponse à votre question ?</p>
-						<span class="ask">Demandez à NOVA</span>
-						
+						<div class="flex flex-col justify-center items-center">
+						<p class="text-center text-base px-4 mt-6">Vous avez besoin de plus d'informations sur nos traitement ?</p>
+						<a href="/contact/" class="cta rounded brown mx-auto mt-6">Contactez-nous</a></div>
 					</div>
 				</div>
 			</aside>
 		</div>
+		<div class="max-w-6xl mx-auto px-6"><RelatedPost /></div>
 	</main>
 	<Footer />
-</Layout>
+</BlogPost>
 <style lang="scss">
-	
-
-	
-
-	
-	
-	
-
+	.blogpost h1 {
+		@apply text-xxl font-bold mb-6 mt-6;
+	}
+	.article-content {
+		@apply pb-2;
+	}
+	.article-content h2 {
+		@apply text-xxl font-bold mb-3;
+	}
+	.article-content p {
+		@apply text-base mb-3;
+	}
 </style>
