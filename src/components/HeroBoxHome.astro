@@ -12,24 +12,23 @@ import { Image } from "astro:assets";
 	<div class="container" transition:animate={animations.myFadeSlide}>
 		<h1>Médecine esthétique & Anti-âge</h1>
 		<p class="baseline">
-			Les docteurs Lefèvre & Chami vous accueillent dans leurs cabinets de
-			Saint-Denis et Saint-Leu à la Réunion
+			 Les docteurs Lefèvre & Chami vous accueillent dans leurs centres de médecine esthétique de Saint-Denis et Saint-Leu à la Réunion
 		</p>
 		<a href="#" class="cta white sktn big">Découvrir nos traitements</a>
 	</div>
 </section>
 <style lang="scss">
 	.herobox-home {
-		@apply top-0 w-full overflow-clip  flex flex-col justify-center items-center text-white xl:aspect-[16/8] lg:aspect-[16/7.5] md:aspect-[16/10] sm:aspect-[16/12] aspect-[16/20] mt-0 z-0;
+		@apply top-0 w-full overflow-clip  flex flex-col justify-center items-center text-white xl:aspect-[16/6] lg:aspect-[16/6] md:aspect-[16/6] sm:aspect-[16/10] aspect-[16/12] mt-0 z-0;
 
 		.container {
 			@apply -mt-10 md:max-w-7xl sm:max-w-6xl text-center xs:w-full max-w-full;
 		}
 		h1 {
-			@apply text-md sm:text-xxl md:text-xxxl font-bold text-white mb-6 sm:mb-8 md:mb-10;
+			@apply text-md sm:text-xl md:text-xl font-bold text-white mb-6 sm:mb-6 md:mb-6;
 		}
 		.baseline {
-			@apply xl:text-[24px]  text-white max-w-2xl mx-auto mb-10 sm:mb-8 md:mb-10;
+			@apply xl:text-[24px]  text-white max-w-2xl mx-auto mb-10 sm:mb-8 md:mb-6;
 		}
 		.intro {
 			@apply max-w-sm text-md xs:mx-auto sm:mr-auto sm:ml-0;

@@ -1,16 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import TarifsAcideHyaluronique from "../content/tarifs/detatouagelaser.md";
+import YoutubeLaserThumbnail from "../assets/img/youtube-laser-thumbnail.jpg";
 import Header from "../components/Header.astro";
 import HeroBox from "../components/HeroBox.astro";
 import Accordion from "../components/Accordion.astro";
 import TarifAvantage from "../components/TarifAvantage.astro";
 import ResultsGalleryDetatouage from "../components/Resultats/ResultsGalleryDetatouage.astro";
+import ApresPassageLaser from "../assets/img/apres-passage-laser.png";
 import { Image } from "astro:assets";
 import Footer from "../components/Footer.astro";
 ---
 
-<Layout title="Détatouage Laser Réunion | Médecine Esthétique | Laser Médical" description="Le laser Discovery Pico Plus laser est un laser picoseconde, méthode la plus efficace pour effacer les tatouages en toute sécurité..">
+<Layout
+	title="Détatouage Laser Réunion | Médecine Esthétique | Laser Médical"
+	description="Le laser Discovery Pico Plus laser est un laser picoseconde, méthode la plus efficace pour effacer les tatouages en toute sécurité..">
 	<div class="hero-element">
 		<div class="overlay"></div>
 
@@ -28,24 +32,50 @@ import Footer from "../components/Footer.astro";
 						Comment fonctionne le détatouage au laser ?
 					</h3>
 					<p class="text-base mb-3">
-						Véritable phénomène de mode depuis plusieurs années, le tatouage
-						peut parfois être source de regret (tatouage raté, limite
-						professionnelle, tatouage estompé avec le temps, lassitude …).
+						Véritable phénomène de mode depuis plusieurs années, <strong
+							>le tatouage peut parfois être source de regret</strong
+						> (tatouage raté, limite professionnelle, tatouage estompé avec le
+						temps, lassitude …).
 					</p>
 					<p class="text-base">
 						Le principe du détatouage laser repose sur l’effet photomécanique ou
 						photoacoustique. Le laser émet des impulsions très brèves qui
-						pulvérisent et fragmentent les pigments du tatouage dans la peau en
-						petites particules.
+						<strong>pulvérisent</strong> et <strong>fragmentent</strong> les
+						pigments du tatouage dans la peau en petites particules.
 					</p>
 				</div>
 				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
-					<img
-						class="rounded-md"
-						src="/img/detatouage1.jpg"
-						alt=""
-						loading="lazy"
-					/>
+					<div class="video-thumbnail rounded-lg">
+						<Image
+							src={YoutubeLaserThumbnail}
+							alt="xx"
+							width="795"
+							height="445"
+							class="featuredimg rounded-lg"
+						/>
+						<a
+							data-src="https://www.youtube.com/watch?v=f2Sth-DMcnc"
+							data-fancybox="video-gallery"
+							data-caption="Epilation au laser">
+							<div class="play-button-container">
+								<div class="circle circle-1"></div>
+								<div class="circle circle-2"></div>
+								<div class="circle circle-3"></div>
+								<svg
+									class="play-icon"
+									width="96"
+									height="96"
+									viewBox="0 0 96 96"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M48 96C74.5097 96 96 74.5097 96 48C96 21.4903 74.5097 0 48 0C21.4903 0 0 21.4903 0 48C0 74.5097 21.4903 96 48 96Z"
+									></path>
+									<path d="M62 48L42 60V36L62 48Z" fill="white"></path>
+								</svg>
+							</div>
+						</a>
+					</div>
 				</div>
 			</div>
 			<div class="lg:flex lg:flex-row-reverse gap-8 mb-24">
@@ -55,79 +85,24 @@ import Footer from "../components/Footer.astro";
 					</h3>
 					<p class="text-base mb-3">
 						Ces débris sont ensuite reconnus comme étrangers par l’organisme et
-						vont être éliminés par le système immunitaire dans les semaines qui
-						suivent.
+						vont être <strong>éliminés</strong> par le système immunitaire dans
+						les semaines qui suivent.
 					</p>
 					<p class="text-base">
 						Le laser picoseconde est une véritable révolution dans le détatouage
 						laser. Grâce à ses durées d’impulsion ultra-courtes (de l’ordre de
 						la picoseconde) et à ses niveaux de puissance élevés, ce laser est
-						actuellement la technologie esthétique médicale de détatouage la
-						plus efficace et la plus sécuritaire.
+						actuellement la <strong
+							>technologie esthétique médicale de détatouage la plus efficace et
+							la plus sécuritaire</strong
+						>.
 					</p>
 				</div>
 				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
-					<img
+					<Image
 						class="rounded-md"
-						src="/img/detatouage2.jpg"
-						alt=""
-						loading="lazy"
-					/>
-				</div>
-			</div>
-
-			<div class="lg:flex lg:flex-row gap-8 mb-6">
-
-
-
-
-
-				<div class="col lg:w-1/2 flex flex-col justify-center">
-					<h3 class="text-lg md:text-xl lg:text-xxl mb-6">En savoir plus</h3>
-					<p class="text-base mb-3">
-						Plus les temps d’impacts sont courts, plus <strong
-							>l’effet photomécanique</strong
-						> est important avec très peu d’effet thermique évitant ainsi le
-						risque d’effet indésirable. Plus la durée d’impulsion est courte,
-						plus la puissance (rapport de l’énergie sur le temps) est élevée
-						permettant de <strong
-							>fragmenter plus efficacement les pigments en profondeur.</strong
-						>
-					</p>
-					<p class="text-base mb-3">
-						<strong
-							>Comparativement aux classiques lasers Q-switched nanosecondes</strong
-						> (10-9 secondes), les<strong> lasers picoseconde</strong>
-						permettent de traiter les tatouages plus efficacement et en moins de
-						séance. <strong>Les suites sont plus simples</strong> permettant des
-						séances plus rapprochées. La survenue de complications (cicatrices,
-						hypo ou hyperpigmentation) est considérablement réduite voire
-						inexistante.
-					</p>
-					<p class="text-base mb-3">
-						Nos centres sont équipés des derniers laser picoseconde de
-						détatouage : le laser Discovery Pico Plus et le laser Picoway qui
-						comprennent plusieus<strong>&nbsp;longueurs d’onde</strong>
-						permettant de traiter toutes les couleurs de tatouage sur tout type
-						de peau.
-						<ul>
-							<li>FD Nd :Yag 532 nm (KTP) : efficace sur les tatouages à l’encre rouge, orange et jaune. </li>
-							<li>Ruby 694 nm : efficace sur les tatouages à l’encre bleue, verte et bleu ciel.</li>
-							<li>Cristal Titanium 730 nm : efficace sur les tatouages à l’encre bleue, verte et violette.</li>
-							<li>Nd :Yag 1064 nm : efficace sur les tatouages à l’encre noire, marron et bleu foncée.</li>
-						</ul>
-					</p>
-				</div>
-
-
-
-
-
-				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
-					<img
-						class="rounded-md"
-						src="/img/detatouage1.jpg"
-						alt=""
+						src={ApresPassageLaser}
+						alt="Après le passage du laser"
 						loading="lazy"
 					/>
 				</div>
@@ -172,7 +147,7 @@ import Footer from "../components/Footer.astro";
 						{
 							title: "Après la séance de détatouage",
 							answer:
-								"<p>Dans les jours suivant la séance, la peau est rouge, inflammatoire et peut être sensible. L’application d’une crème réparatrice permet d’a5énuer ces effets. Une éviction solaire de la zone traitée est recommandée jusqu’à disparition complète des rougeurs (environ 5 à 7 jours).</p>",
+								"<p>Dans les jours suivant la séance, la peau est rouge, inflammatoire et peut être sensible. L’application d’une crème réparatrice permet d’atténuer ces effets. Une éviction solaire de la zone traitée est recommandée jusqu’à disparition complète des rougeurs (environ 5 à 7 jours).</p>",
 						},
 					]}
 				/>
@@ -182,10 +157,11 @@ import Footer from "../components/Footer.astro";
 		<section class="bigtopo text-justify px-8 py-24 bg-white">
 			<h2 class="section-title text-center">Résultats du détatouage laser</h2>
 			<p class="text-center text-base max-w-[850px] mx-auto mb-8">
-				Le nombre de séance pour un résultat optimal de détatouage laser
-				picoseconde dépend de plusieurs paramètres : type de tatouage (amateur,
-				professionnel), densité du pigment, couleur de l’encre, taille et
-				localisation du tatouage, phototype du patient …
+				Grâce à ses temps de pulse extrêmement courts et à ses niveaux de
+				puissance élevés, les lasers picoseconde <strong>permettent d’obtenir
+				d’excellents résultats sans risque de cicatrice ou de tatouage « fantôme
+				»</strong>. Le centre laser médical est le seul centre médico-esthétique de la
+				Réunion à utiliser cette technologie laser.
 			</p>
 			<div class="max-w-3xl mx-auto mb-8 shadow-md">
 				<Accordion
@@ -193,7 +169,7 @@ import Footer from "../components/Footer.astro";
 						{
 							title: "En savoir plus",
 							answer:
-								"<p>Le nombre de séances peut varier entre 2 (tatouage amateur de petite taille peu concentré en pigment, dermopigmentation des sourcils ou des lèvres) et 10 séances (tatouage professionnel de grande taille, avec plusieurs couleurs et une quantité de pigment importante sur des peaux très foncées).</p><p>Les séances de détatouage sont espacées de 6 à 8 semaines minimum. Pendant cette période, les fragments du pigment sont éliminés par l’organisme et le tatouage s’efface progressivement.</p><p>Grâce à ses temps de pulse extrêmement courts et à ses niveaux de puissance élevés, les lasers picoseconde permettent d’obtenir d’excellents résultats sans risque de cicatrice ou de tatouage « fantôme ».</p><p>Le centre laser médical est le seul centre médico-esthétique de la Réunion à utiliser cette technologie laser.</p>",
+								"<p>Les séances de détatouage sont espacées de 6 à 8 semaines minimum. Pendant cette période, les fragments du pigment sont éliminés par l’organisme et le tatouage s’efface progressivement.</p><p>Le nombre de séances peut varier entre 2 (tatouage amateur de petite taille peu concentré en pigment, dermopigmentation des sourcils ou des lèvres) et 10 séances (tatouage professionnel de grande taille, avec plusieurs couleurs et une quantité de pigment importante sur des peaux très foncées).</p><p>Ainsi le nombre peut varier entre 2 (tatouage amateur de petite taille peu concentré en pigment, dermopigmentation des sourcils ou des lèvres) et 10 séances (tatouage professionnel de grande taille, avec plusieurs couleurs et une quantité de pigment importante sur des peaux très foncées). </p>",
 						},
 					]}
 				/>
@@ -203,7 +179,9 @@ import Footer from "../components/Footer.astro";
 				<ResultsGalleryDetatouage />
 			</div>
 		</section>
-		<section class="tarifs pt-24 text-center pb-24 px-8 bg-grey-100" id="tarifs">
+		<section
+			class="tarifs pt-24 text-center pb-24 px-8 bg-grey-100"
+			id="tarifs">
 			<h2 class="section-title">Tarifs</h2>
 
 			<TarifsAcideHyaluronique />
@@ -216,7 +194,18 @@ import Footer from "../components/Footer.astro";
 </Layout>
 
 <Footer />
+<script>
+	import { Fancybox } from "@fancyapps/ui";
+	import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
+	function initFancybox() {
+		Fancybox.bind("[data-fancybox]", {
+			// Vos options personnalisées, si nécessaire
+		});
+	}
+	initFancybox();
+	document.addEventListener("astro:page-load", initFancybox);
+</script>
 <style lang="scss">
 	:root {
 		--swiper-theme-color: #d19f6b !important;
@@ -290,10 +279,75 @@ import Footer from "../components/Footer.astro";
 		}
 	}
 	.hero-element {
-		background: url("/img/hero-detatouage-laser.jpg") no-repeat center center;
+		background: url("/img/hero-detatouage-bck.webp") no-repeat center center;
 		@apply relative bg-cover bg-center;
 	}
 	.overlay {
 		@apply absolute top-0 bottom-0 left-0 right-0  bg-black bg-opacity-50 pointer-events-none  transition-all duration-500;
+	}
+
+	.video-thumbnail {
+		position: relative;
+		cursor: pointer;
+	}
+	.play-button-container {
+		position: absolute;
+		width: 128px; /* Assurez-vous que cela correspond à la taille de votre bouton SVG */
+		height: 128px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		.play-icon {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			fill: #d19f6b;
+			transition: 300ms ease all;
+			&:hover {
+				fill: #ff0000;
+				transition: 300ms ease all;
+			}
+		}
+		.circle {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border-radius: 50%;
+			background: #d19f6b;
+			animation: circleFade 3s infinite ease-out;
+		}
+
+		.circle-1 {
+			opacity: 0;
+			width: 140px;
+			height: 140px;
+		}
+
+		.circle-2 {
+			opacity: 0;
+			width: 160px;
+			height: 160px;
+			animation-delay: 1.4s; /* Délai pour le début de l'animation */
+		}
+
+		.circle-3 {
+			width: 180px;
+			height: 180px;
+			opacity: 0;
+			animation-delay: 2.1s;
+		}
+	}
+
+	@keyframes circleFade {
+		0% {
+			transform: translate(-50%, -50%) scale(0);
+			opacity: 1;
+		}
+		100% {
+			transform: translate(-50%, -50%) scale(1.2);
+			opacity: 0;
+		}
 	}
 </style>

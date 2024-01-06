@@ -5,6 +5,8 @@ import HeroBox from "../../components/HeroBox.astro";
 import Accordion from "../../components/Accordion.astro";
 import TarifsEpilationLaser from "../../components/TarifsEpilationLaser.astro";
 import TarifAvantage from "../../components/TarifAvantage.astro";
+import DeroulementSeanceLaser from "../../assets/img/deroulement-seance-laser.png";
+import YoutubeLaserThumbnail from "../../assets/img/youtube-laser-thumbnail.jpg";
 import { Image } from "astro:assets";
 import Footer from "../../components/Footer.astro";
 import EpilationLaser from "../../assets/img/epilation-laser.png";
@@ -14,12 +16,13 @@ import ResultatsLaser1 from "../../assets/img/resultats-laser-1.png";
 ---
 
 <Layout title="Page des composants" description="Ceci est la meta description">
+	
 	<div class="hero-element">
 		<div class="overlay"></div>
 		<Header />
 		<HeroBox
 			title="Epilation Laser"
-			body="L’épilation définitive au laser est devenue l’un des traitements esthétiques les plus répandus dans le monde. Tous les phototypes de peau (peau blanche, mate et noire) peuvent en bénéficier de l’épilation laser en toute sécurité et avec d’excellents résultats."
+			body="L’épilation définitive pour toutes les couleurs de peaux en toute sécurité."
 		/>
 	</div>
 	<main>
@@ -32,7 +35,7 @@ import ResultatsLaser1 from "../../assets/img/resultats-laser-1.png";
 					<p class="text-base mb-3">
 						Le principe du fonctionnement de l’épilation laser repose sur
 						l’émission d’une lumière absorbée par la <strong>mélanine</strong>
-						du poil (pigment responsable de sa couleur noire).
+						 du poil (pigment responsable de sa couleur noire).
 					</p>
 					<p class="text-base mb-3">
 						Cette absorption génère une augmentation de la température qui se
@@ -43,7 +46,7 @@ import ResultatsLaser1 from "../../assets/img/resultats-laser-1.png";
 					</p>
 					<p class="text-base">
 						Nos centres sont équipés de <strong>plateformes laser</strong>
-						GentleMax Pro Plus du fabriquant <strong>CANDELA®</strong>, marque
+						 GentleMax Pro Plus du fabriquant <strong>CANDELA®</strong>, marque
 						référente dans l’épilation laser plébiscitée par les médecins
 						esthétiques. <strong
 							>Ces appareils sont strictement réservés à usage médical</strong
@@ -51,7 +54,37 @@ import ResultatsLaser1 from "../../assets/img/resultats-laser-1.png";
 					</p>
 				</div>
 				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
-					<Image src={EpilationLaser} alt="Epilation Laser" class="w-full" />
+					<div class="video-thumbnail rounded-lg">
+						<Image
+							src={YoutubeLaserThumbnail}
+							alt="xx"
+							width="795"
+							height="445"
+							class="featuredimg rounded-lg"
+						/>
+						<a
+							data-src="https://www.youtube.com/watch?v=ACsz2tfy_3c"
+							data-fancybox="video-gallery"
+							data-caption="Epilation au laser">
+							<div class="play-button-container">
+								<div class="circle circle-1"></div>
+								<div class="circle circle-2"></div>
+								<div class="circle circle-3"></div>
+								<svg
+									class="play-icon"
+									width="96"
+									height="96"
+									viewBox="0 0 96 96"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M48 96C74.5097 96 96 74.5097 96 48C96 21.4903 74.5097 0 48 0C21.4903 0 0 21.4903 0 48C0 74.5097 21.4903 96 48 96Z"
+									></path>
+									<path d="M62 48L42 60V36L62 48Z" fill="white"></path>
+								</svg>
+							</div>
+						</a>
+					</div>
 				</div>
 			</div>
 			<div class="lg:flex lg:flex-row-reverse gap-8 mb-6">
@@ -61,21 +94,30 @@ import ResultatsLaser1 from "../../assets/img/resultats-laser-1.png";
 					</h3>
 					<p class="text-base mb-3">
 						Nos plateformes associent différentes lumières lasers : le laser
-						<strong>Alexandrite et le laser Nd:Yag</strong> permettant d’adapter notre traitement à la couleur de peau et au type de poil.
+						<strong>Alexandrite et le laser Nd:Yag</strong> permettant d’adapter
+						notre traitement à la couleur de peau et au type de poil.
 					</p>
 					<p class="text-base mb-3">
-						Grâce à sa longueur d’onde de 1064nm, <strong>le laser Nd:Yag</strong> permet une absorption d’énergie suffisante pour détruire les poils tout en
-						préservant la peau foncée.
+						Grâce à sa longueur d’onde de 1064nm, <strong
+							>le laser Nd:Yag</strong
+						> permet une absorption d’énergie suffisante pour détruire les poils
+						tout en préservant la peau foncée.
 					</p>
 					<p class="text-base mb-3">
-						<strong>Les peaux mates, noires</strong> ainsi que les <strong>peaux bronzées</strong> pourront être traitées <strong>efficacement et de manière sûre</strong> grâce au laser Nd:Yag.
+						<strong>Les peaux mates, noires</strong> ainsi que les <strong
+							>peaux bronzées</strong
+						> pourront être traitées <strong
+							>efficacement et de manière sûre</strong
+						> grâce au laser Nd:Yag.
 					</p>
 					<p class="text-base">
-						<strong>Les peaux blanches</strong> seront traitées préférentiellement avec <strong>le laser Alexandrite</strong> (adapté aux poils fins).
+						<strong>Les peaux blanches</strong> seront traitées
+						préférentiellement avec <strong>le laser Alexandrite</strong>
+						(adapté aux poils fins).
 					</p>
 				</div>
 				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
-					<Image src={PeauMate} alt="Peau mate" class="w-full" />
+					<Image src={PeauMate} alt="Peau mate" class="w-full rounded-lg" />
 				</div>
 			</div>
 
@@ -99,18 +141,39 @@ import ResultatsLaser1 from "../../assets/img/resultats-laser-1.png";
 			</h2>
 			<div class="max-w-3xl mx-auto">
 				<p class="mb-3 text-base">
-					<strong>Toutes les couleurs de peaux</strong> peuvent profiter du traitement d’<strong>épilation définitive</strong> au laser. Il peut être réalisé sur toute partie du corps présentant des poils suffisamment épais.
+					<strong>Toutes les couleurs de peaux</strong> peuvent profiter du
+					traitement d’<strong>épilation définitive</strong> au laser. Il peut
+					être réalisé sur toute partie du corps présentant des poils
+					suffisamment épais.
 				</p>
 				<p class="mb-3 text-base">
-					Cependant, seuls les <strong>poils bruns</strong> peuvent être ciblés par le laser. Les poils blancs, roux, blonds ou trop fins comme les duvets ne sont pas accessibles au traitement car ils sont pauvres en mélanine (pigment noir de la peau et des poils).
+					Cependant, seuls les <strong>poils bruns</strong> peuvent être ciblés
+					par le laser. Les poils blancs, roux, blonds ou trop fins comme les
+					duvets ne sont pas accessibles au traitement car ils sont pauvres en
+					mélanine (pigment noir de la peau et des poils).
 				</p>
-				<h2 class="text-center mt-10 mb-6">Poil incarné</h2>
+				<h3 class="text-center mt-10 mb-6">Poil incarné</h3>
 				<p class="mb-3 text-base">
-					<strong>L’épilation définitive au laser</strong> est le seul traitement efficace pour les patients sujets aux poils incarnés. Le poil incarné est <strong>un follicule pileux repoussant sous la peau</strong>. Cette affection est secondaire à l’épilation (cire ou électrique) et au rasage d’une zone du corps avec des poils drus (maillot, jambes, barbe). Le poil incarné peut être douloureux et se complique souvent de furoncles (bouton blanc inflammatoire centré par un poil) laissant des tâches foncées sur la peau.
+					<strong>L’épilation définitive au laser</strong> est le seul
+					traitement efficace pour les patients sujets aux poils incarnés. Le
+					poil incarné est <strong
+						>un follicule pileux repoussant sous la peau</strong
+					>. Cette affection est secondaire à l’épilation (cire ou électrique)
+					et au rasage d’une zone du corps avec des poils drus (maillot, jambes,
+					barbe). Le poil incarné peut être douloureux et se complique souvent
+					de furoncles (bouton blanc inflammatoire centré par un poil) laissant
+					des tâches foncées sur la peau.
 				</p>
-				<h2 class="text-center mt-10 mb-6">Hirsutisme</h2>
+				<h3 class="text-center mt-10 mb-6">Hirsutisme</h3>
 				<p class="mb-6 text-base">
-					L’épilation définitive au laser a également une place importante dans la prise en charge thérapeutique de l’hirustisme. Il est défini par le développement d’une <strong>pilosité importante</strong> dans les <strong>régions du corps où elle est normalement absente chez la femme</strong> : visage , poitrine, ventre, dos, fesses. On distingue l’hirsutisme de l’<strong>hypertrichose</strong>, définie comme le développement excessif de la pilosité dans des zones qui sont normalement pourvues chez la femme ( jambes, aisselles ..)
+					L’épilation définitive au laser a également une place importante dans
+					la prise en charge thérapeutique de l’hirustisme. Il est défini par le
+					développement d’une <strong>pilosité importante</strong> dans les <strong
+						>régions du corps où elle est normalement absente chez la femme</strong
+					> : visage , poitrine, ventre, dos, fesses. On distingue l’hirsutisme
+					de l’<strong>hypertrichose</strong>, définie comme le développement
+					excessif de la pilosité dans des zones qui sont normalement pourvues
+					chez la femme ( jambes, aisselles ..)
 				</p>
 			</div>
 		</section>
@@ -131,13 +194,13 @@ import ResultatsLaser1 from "../../assets/img/resultats-laser-1.png";
 								{
 									title: "Epilation laser et exposition solaire",
 									answer:
-										"<p>Les recommandations varient en fonction du type de laser employé et de la couleur de peau;</p><p>Généralement, le traitement laser d’une <strong>peau blanche (phototype 1 à 3)</strong> requiert l’utilisation du laser Alexandrite nécessitant une <strong>éviction solaire pendant toute la durée du traitement.</strong></p><p>Le traitement des <strong>peaux foncées et bronzées (avec poils épais) peuvent s’exposer au soleil</strong>. On recommande tout de même l’application d’une protection solaire avec indice 50 entre les séances.</p>",
+										"<p>Les recommandations varient en fonction du type de laser employé et de la couleur de peau.</p><p>Généralement, le traitement laser d’une <strong>peau blanche (phototype 1 à 3)</strong> requiert l’utilisation du laser Alexandrite nécessitant une <strong>éviction solaire pendant toute la durée du traitement.</strong></p><p>Le traitement des <strong>peaux foncées et bronzées (avec poils épais) peuvent s’exposer au soleil</strong>. On recommande tout de même l’application d’une protection solaire avec indice 50 entre les séances.</p>",
 								},
 								{
 									title: "La séance",
 									answer:
 										"<p>La dernière épilation à la cire ou à la pince doit dater de plus de 3 semaines et la zone à traiter doit être rasée 24h avant la séance.</p><p>Un traitement d’<strong>épilation définitive</strong> laser nécessite <strong>en général 6 séances par zone</strong>, s’échelonnant sur 12 mois. La durée des séances varie de 5 à 45 min en fonction de la surface de peau à épiler.</p><p>Lors du traitement, les patients peuvent ressentir un picotement ou encore une sensation de chaleur.</p><p><strong>Immédiatement après le traitement</strong>, une rougeur et un gonflement autour de la racine du poil peuvent apparaître. Ces signes régressent en une durée de 24 à 48 heures avec l’application de crème hydratante. Une sensation de « coup de soleil » peut être ressentie au niveau de la zone traitée pendant quelques heures après la séance.</p><p><strong>Dans les semaines qui suivent la séance</strong>, tous les poils traités sont expulsés et tombent.</p><p>Les poils commenceront à repousser, en plus faible nombre, environ 5 semaines après votre dernière séance d’épilation.</p><p><strong>Le délai entre deux séances d’épilation laser est d’environ 6 à 8 semaines</strong> (temps nécessaire à la repousse des poils non traités).</p>",
-								}
+								},
 							]}
 							extraClass="clearaccordion"
 						/>
@@ -145,8 +208,8 @@ import ResultatsLaser1 from "../../assets/img/resultats-laser-1.png";
 				</div>
 				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
 					<Image
-						src={VideoLaser1}
-						alt="Video Laser"
+						src={DeroulementSeanceLaser}
+						alt="Déroulement d'une séance d'épiation au laser"
 						class="rounded-lg w-full"
 						loading="lazy"
 					/>
@@ -158,21 +221,27 @@ import ResultatsLaser1 from "../../assets/img/resultats-laser-1.png";
 						Résultats de l’épilation définitive
 					</h3>
 					<p class="text-base mb-3">
-						Après chaque séance d’épilation définitive, <strong>les poils se raréfient, sont plus fins et plus petits.</strong>
+						Après chaque séance d’épilation définitive, <strong
+							>les poils se raréfient, sont plus fins et plus petits.</strong
+						>
 					</p>
 					<p class="text-base mb-3">
-						<strong>Les publications d’études médicales</strong> sur l’efficacité et les résultats de l’épilation laser sont très nombreuses. Elles montrent que dans la plupart des cas, <strong>les 6 premières séances d’épilation laser permettent une élimination définitive de 90 à 100% des poils</strong>. En fin de traitement, Il peut persister quelque poils « récalcitrants », le plus souvent fins et clairs.
+						<strong>Les publications d’études médicales</strong> sur
+						l’efficacité et les résultats de l’épilation laser sont très
+						nombreuses. Elles montrent que dans la plupart des cas, <strong
+							>les 6 premières séances d’épilation laser permettent une
+							élimination définitive de 90 à 100% des poils</strong
+						>. En fin de traitement, Il peut persister quelque poils «
+						récalcitrants », le plus souvent fins et clairs.
 					</p>
 					<p class="text-base mb-3">
-						Exceptionnellement, la réduction des poils peut être faible à modérée et ceci sans explication connue. Il existe également une variabilité plus importante des résultats chez les hommes , particulièrement sur les zones du dos et épaules ainsi que sur les visages.
+						Exceptionnellement, la réduction des poils peut être faible à
+						modérée et ceci sans explication connue. Il existe également une
+						variabilité plus importante des résultats chez les hommes ,
+						particulièrement sur les zones du dos et épaules ainsi que sur les
+						visages.
 					</p>
-					<p class="text-base mb-3">
-						Afin de vous garantir un <strong>résultat optimal</strong>, il est important de suivre les recommandations de votre médecin.
-					</p>
-					<p class="text-base">
-						Celles- ci favoriseront le bon déroulement des séances d’épilation,
-						et amélioreront votre confort une fois le traitement terminé.
-					</p>
+
 				</div>
 				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
 					<Image
@@ -227,7 +296,7 @@ import ResultatsLaser1 from "../../assets/img/resultats-laser-1.png";
 	<!-- FIN DE GAUCHE DROITE -->
 
 	<section class="tarifs pt-24 text-center pb-24 px-8" id="tarifs">
-		<h2 class="section-title">Tarif</h2>
+		<h2 class="section-title">Tarifs</h2>
 		<TarifsEpilationLaser />
 		<a href="/demander-un-rdv/" class="cta rounded brown">Prendre RDV</a>
 		<TarifAvantage />
@@ -235,6 +304,18 @@ import ResultatsLaser1 from "../../assets/img/resultats-laser-1.png";
 </Layout>
 
 <Footer />
+<script>
+	import { Fancybox } from "@fancyapps/ui";
+	import "@fancyapps/ui/dist/fancybox/fancybox.css";
+
+	function initFancybox() {
+		Fancybox.bind("[data-fancybox]", {
+			// Vos options personnalisées, si nécessaire
+		});
+	}
+	initFancybox();
+	document.addEventListener("astro:page-load", initFancybox);
+</script>
 
 <style lang="scss">
 	main {
@@ -247,5 +328,74 @@ import ResultatsLaser1 from "../../assets/img/resultats-laser-1.png";
 	}
 	.overlay {
 		@apply absolute top-0 bottom-0 left-0 right-0  bg-black bg-opacity-50 pointer-events-none  transition-all duration-500;
+	}
+	.bigtopo {
+		h3 {
+			@apply text-md mb-6;
+		}
+	}
+	.video-thumbnail {
+		position: relative;
+		cursor: pointer;
+	}
+	.play-button-container {
+		position: absolute;
+		width: 128px; /* Assurez-vous que cela correspond à la taille de votre bouton SVG */
+		height: 128px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		.play-icon {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			fill: #d19f6b;
+			transition: 300ms ease all;
+			&:hover {
+				fill: #ff0000;
+				transition: 300ms ease all;
+			}
+		}
+		.circle {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border-radius: 50%;
+			background: #d19f6b;
+			animation: circleFade 3s infinite ease-out;
+		}
+
+		.circle-1 {
+			opacity: 0;
+			width: 140px;
+			height: 140px;
+		}
+
+		.circle-2 {
+			opacity: 0;
+			width: 160px;
+			height: 160px;
+			animation-delay: 1.4s; /* Délai pour le début de l'animation */
+		}
+
+		.circle-3 {
+			width: 180px;
+			height: 180px;
+			opacity: 0;
+			animation-delay: 2.1s;
+		}
+	}
+
+	@keyframes circleFade {
+		0% {
+			transform: translate(-50%, -50%) scale(0);
+			opacity: 1;
+		}
+		100% {
+			transform: translate(-50%, -50%) scale(1.2);
+			opacity: 0;
+		}
 	}
 </style>

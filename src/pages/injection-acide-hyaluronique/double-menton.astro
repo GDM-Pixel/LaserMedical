@@ -1,0 +1,112 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import HeroBox from "../../components/HeroBox.astro";
+import Accordion from "../../components/Accordion.astro";
+import TarifsMesolift from "../../content/tarifs/mesolift.md";
+import { Image } from "astro:assets";
+import Footer from "../../components/Footer.astro";
+import AutresSoinsInjections from "../../components/AutresSoinsInjections.astro";
+import ResultsGalleryInjectionsSillonNG from "../../components/Resultats/ResultsGalleryInjectionsSillonNG.astro";
+---
+
+<Layout
+	title="Comment perdre son double menton ? solutions en médecine esthétique"
+	description="Les causes du « double menton » sont multiples (excès graisseux, faible projection du menton, relâchement cutané). Selon l’origine du double menton différentes techniques peuvent être combinées (cryolipolyse, injections acide hyaluronique..).">
+	<div class="hero-element">
+		<div class="overlay"></div>
+		<Header />
+		<HeroBox
+			title="Double menton"
+			body="Retrouvez un menton bien dessiné et un ovale du visage redessiné."
+		/>
+	</div>
+	<main>
+		<section class="container gauche-droite pt-24 pb-18">
+			<div class="lg:flex lg:flex-row gap-8 mb-24">
+				<div class="col lg:w-1/2 flex flex-col justify-center">
+					<h3 class="text-lg md:text-xl lg:text-xxl mb-6">Le double menton</h3>
+					<p class="text-base mb-3">
+						Le double menton est défini par le comblement de l’angle formé entre
+						le cou et le menton. La limite entre la face et le cou est alors
+						difficile à distinguer de profil.
+					</p>
+					<p class="text-base mb-3">
+						Les causes du « double menton » sont multiples :
+					</p>
+					<ul class="text-base mb-3">
+						<li class="list-disc ml-6 mb-2">L’excès graisseux dans la zone sous-mentonnière secondaire à une surcharge pondérale.</li>
+						<li class="list-disc ml-6 mb-2">La faible projection du menton liée à la forme de la mandibule. Le double menton est constitutionnel avec un aspect de menton fuyant dès le plus jeune âge.</li>
+						<li class="list-disc ml-6 mb-2">Avec le temps, la peau et les muscles du visage se relâchent entrainant une ptôse (chute) des tissus mous et l’apparition d’un double menton.</li>
+					</ul>
+                    <p class="text-base mb-0">Selon l’origine du double menton différentes techniques peuvent être combinées.</p>
+				</div>
+				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
+					<img
+						src="/img/mesolift1.jpg"
+						alt="Mesolift, c'est quoi ?"
+						class="w-full rounded-lg"
+						loading="lazy"
+					/>
+				</div>
+			</div>
+			<div class="lg:flex lg:flex-row-reverse gap-8 mb-24">
+				<div class="col lg:w-1/2 flex flex-col justify-center">
+					<h3 class="text-lg md:text-xl lg:text-xxl mb-6">
+						Le traitement à l'acide hyaluronique
+					</h3>
+					<p class="text-base mb-3">
+						Afin d’atténuer le sillon nasogénien et le pli d’amertume, la
+						technique consiste à injecter directement au niveau du sillons ou
+						dans les joue en direction de ce pli. L’injection à la canule des
+						sillons apporte du soutien et réduit la ptôse des tissus.
+					</p>
+					<p class="text-base mb-3">
+						Le passage de la canule permet également de casser les adhérences
+						dermiques au niveau de ces plis améliorant ainsi le résultat.
+					</p>
+					<p class="text-base mb-3">
+						L’injection associée des pommettes et de la vallée des larmes
+						atténue également les sillons par effet lift.
+					</p>
+				</div>
+				<div class="col lg:w-1/2 lg:mt-0 mt-8 flex flex-col justify-center">
+					<img
+						src="/img/mesolift2.jpg"
+						alt="Comment agit Mesolift ?"
+						class="w-full rounded-lg"
+						loading="lazy"
+					/>
+				</div>
+			</div>
+		</section>
+
+		<section class="bigtopo text-justify px-8 py-24 bg-grey-400 text-white">
+			<h2 class="section-title dark text-center">
+				Résultats du traitement à l'acide hyaluronique
+			</h2>
+
+			<div class="max-w-3xl mx-auto">
+				<ResultsGalleryInjectionsSillonNG />
+			</div>
+		</section>
+		<AutresSoinsInjections />
+	</main>
+	<!-- FIN DE GAUCHE DROITE -->
+</Layout>
+
+<Footer />
+
+<style lang="scss">
+	main {
+		margin: auto;
+	}
+
+	.hero-element {
+		background: url("/img/hero-mesolift.jpg") no-repeat center center;
+		@apply relative bg-cover bg-center;
+	}
+	.overlay {
+		@apply absolute top-0 bottom-0 left-0 right-0  bg-black bg-opacity-50 pointer-events-none  transition-all duration-500;
+	}
+</style>

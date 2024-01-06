@@ -5,31 +5,90 @@ import AutreDoubleMenton from "../assets/img/autre-double-menton.png";
 import AutreSillonNG from "../assets/img/autre-sillon-nasogenien.png";
 import AutreCernes from "../assets/img/autre-cernes.png";
 ---
+
 <section class="autresoins bg-white-400 pt-12 pb-16 text-center">
-			<h2 class="text-grey-800 section-title">Autres injections</h2>
-			<div class="flex flex-col md:flex-row items-center justify-center gap-6 mb-8">
-				<div>
-					<Image src={AutreLevre} alt="Lèvres" /><h4 class="text-grey-800 mt-2">
-						Lèvres
-					</h4>
-				</div>
-				<div>
-					<Image src={AutreDoubleMenton} alt="Double menton" /><h4
-						class="text-grey-800 mt-2">
-						Double menton
-					</h4>
-				</div>
-				<div>
-					<Image src={AutreSillonNG} alt="Sillons nasogéniens" /><h4
-						class="text-grey-800 mt-2">
-						Sillons nasogéniens
-					</h4>
-				</div>
-				<div>
-					<Image src={AutreCernes} alt="Cernes" /><h4 class="text-grey-800 mt-2">
-						Cernes
-					</h4>
-				</div>
-			</div>
-			<a href="/demander-un-rdv/" class="cta rounded brown">Prendre RDV</a>
-		</section>
+	<h2 class="text-grey-800 section-title">Autres injections</h2>
+	<div class="othertreatcontainer">
+		<div>
+			<Image src={AutreCernes} alt="Cernes" /><h4 class="text-grey-800 mt-2">
+				<a href="/injection-acide-hyaluronique/bajoues-et-ovale-du-visage/"
+					>Bajoues et ovale du visage</a
+				>
+			</h4>
+		</div>
+		<div>
+			<Image src={AutreCernes} alt="Cernes" /><h4 class="text-grey-800 mt-2">
+				<a href="/injection-acide-hyaluronique/cernes/">Cernes</a>
+			</h4>
+		</div>
+		<div>
+			<Image src={AutreLevre} alt="Lèvres" /><h4 class="text-grey-800 mt-2">
+				<a href="/injection-acide-hyaluronique/injection-levre/">Lèvres</a>
+			</h4>
+		</div>
+		<div>
+			<Image src={AutreDoubleMenton} alt="Injection pommette" /><h4
+				class="text-grey-800 mt-2">
+				<a href="/injection-acide-hyaluronique/injection-pommette/">Pommettes</a
+				>
+			</h4>
+		</div>
+
+		<div>
+			<Image src={AutreCernes} alt="Cernes" /><h4 class="text-grey-800 mt-2">
+				<a href="/injection-acide-hyaluronique/rajeunissement-des-mains/"
+					>Mains</a
+				>
+			</h4>
+		</div>
+
+		<div>
+			<Image src={AutreCernes} alt="Rajeunissement du front" /><h4
+				class="text-grey-800 mt-2">
+				<a href="/injection-acide-hyaluronique/rajeunissement-du-front/"
+					>Front</a
+				>
+			</h4>
+		</div>
+		<div>
+			<Image src={AutreCernes} alt="Rhinoplastie" /><h4
+				class="text-grey-800 mt-2">
+				<a href="/injection-acide-hyaluronique/rhinoplastie/">Rhinoplastie</a>
+			</h4>
+		</div>
+		<div>
+			<Image src={AutreSillonNG} alt="Sillons nasogéniens" /><h4
+				class="text-grey-800 mt-2">
+				<a href="/injection-acide-hyaluronique/sillon-naso-genien/"
+					>Sillons nasogéniens</a
+				>
+			</h4>
+		</div>
+		<div>
+			<Image src={AutreCernes} alt="Cernes" /><h4 class="text-grey-800 mt-2">
+				<a href="/injection-acide-hyaluronique/tempes-et-pattes-doie/"
+					>Tempes et pattes d'oie</a
+				>
+			</h4>
+		</div>
+		<div>
+			<Image src={AutreCernes} alt="Cernes" /><h4 class="text-grey-800 mt-2">
+				<a href="/injection-acide-hyaluronique/vallee-des-larmes/"
+					>Vallée des larmes</a
+				>
+			</h4>
+		</div>
+		<div>
+			<Image src={AutreDoubleMenton} alt="Double menton" /><h4 class="text-grey-800 mt-2">
+				<a href="/injection-acide-hyaluronique/double-menton/"
+					>Double menton</a
+				>
+			</h4>
+		</div>
+	</div>
+	<a href="/demander-un-rdv/" class="cta rounded brown">Prendre RDV</a>
+</section>
+<style lang="scss">.othertreatcontainer {@apply grid grid-cols-4 gap-6 mb-8 container;
+img {@apply w-full text-center} }
+	
+</style>

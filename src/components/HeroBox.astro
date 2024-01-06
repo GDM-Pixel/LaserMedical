@@ -17,32 +17,38 @@ const { title, body } = Astro.props;
 		<p class="baseline">
 			{body}
 		</p>
-		<svg class="inline-block" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<svg class="sm:inline-block hidden" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M19.9395 34.7656C18.9629 35.7422 17.377 35.7422 16.4004 34.7656L1.40039 19.7656C0.423828 18.7891 0.423828 17.2031 1.40039 16.2266C2.37695 15.25 3.96289 15.25 4.93945 16.2266L18.1738 29.4609L31.4082 16.2344C32.3848 15.2578 33.9707 15.2578 34.9473 16.2344C35.9238 17.2109 35.9238 18.7969 34.9473 19.7734L19.9473 34.7734L19.9395 34.7656Z" fill="white"/>
 <path opacity="0.4" d="M19.9395 19.7656C18.9629 20.7422 17.377 20.7422 16.4004 19.7656L1.40039 4.76562C0.423828 3.78906 0.423828 2.20312 1.40039 1.22656C2.37695 0.25 3.96289 0.25 4.93945 1.22656L18.1738 14.4609L31.4082 1.23438C32.3848 0.257813 33.9707 0.257813 34.9473 1.23438C35.9238 2.21094 35.9238 3.79687 34.9473 4.77344L19.9473 19.7734L19.9395 19.7656Z" fill="white"/>
 </svg>
+<a class="mobile-rdv"href="/demander-un-rendez-vous/">Prendre RDV</a>
 
 		
 	</div>
 </section>
 <style lang="scss">
 	.herobox {
-		@apply top-0 w-full overflow-clip  flex flex-col justify-center items-center text-white xl:aspect-[16/8] lg:aspect-[16/7.5] md:aspect-[16/10] sm:aspect-[16/12] aspect-[16/20] mt-0 z-0;
+		@apply top-0 w-full overflow-clip  flex flex-col justify-center items-center text-white xl:aspect-[16/6] lg:aspect-[16/6] md:aspect-[16/10] sm:aspect-[16/12] aspect-[16/12] mt-0 z-0;
 
 		.container {
 			@apply -mt-10 md:max-w-7xl sm:max-w-6xl text-center xs:w-full max-w-full;
 		}
 		h1 {
-			@apply text-md sm:text-xxl md:text-xxxl font-bold text-white mb-6 sm:mb-8 md:mb-10;
+			@apply text-lg sm:text-xxl md:text-xxxl font-bold text-white mb-6 sm:mb-8 md:mb-10;
 		}
 		.baseline {
-			@apply xl:text-[24px]  text-white max-w-2xl mx-auto mb-10 sm:mb-8 md:mb-10;
+			@apply xl:text-[24px]  text-white max-w-2xl mx-auto mb-6 sm:mb-8 md:mb-10;
 		}
 		.intro {
 			@apply max-w-sm text-md xs:mx-auto sm:mr-auto sm:ml-0;
 		}
 		a.cta.white.sktn.big {
 			@apply mx-auto px-8 pt-4 pb-5 text-base block max-w-[250px] sm:max-w-full  sm:inline-block;
+		}
+		a.mobile-rdv {@apply mx-auto px-5 pt-2 pb-3 text-base block max-w-[250px] sm:max-w-full  sm:hidden xs:inline-block text-white border-2 border-solid border-white transition-all duration-300 ease-in-out;
+		&:hover {
+			@apply text-black bg-white transition-all duration-300 ease-in-out;
+		}
 		}
 		.c-breadcrumbs {
 			@apply text-white mx-auto px-6 py-2 capitalize bg-transparent relative;
